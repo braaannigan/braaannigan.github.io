@@ -1,0 +1,142 @@
+# Site settings
+
+url: "https://braaannigan.github.io"
+
+# If you're hosting your site at a Project repository on GitHub pages
+# (https://yourusername.github.io/repository-name)
+# and NOT your user repository (https://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+
+baseurl:
+
+google-tracking-id: "<YOUR GOOGLE TRACKING ID>"
+
+# Forces https everywhere in your website, except when you serve it locally
+
+force-https: True
+
+#############
+# HTML Head #
+#############
+
+author: "Liam Brannigan"
+lang: "en"
+title: " Liam Brannigan "
+#favicon: "/img/favicon.ico"
+description: "Personal website of Liam Brannigan"
+keywords: "Liam Brannigan, Oceanography, Geophysical Fluid Dynamics"
+
+################
+# Intro layout #
+################
+
+#black-favicon: "/img/black-lab-glass.ico"
+#background-img: "../img/intro-bg.jpg"
+background-img: "../img/mountain_yoga.jpg"
+#me-img: "/img/jetpacktocat.png"
+#me-img: "/img/jetpacktocat.png"
+#me-img: "/img/CesarRocha.jpg"
+
+##############################
+# Dynamic Text on the header #
+##############################
+
+dynamic-typing: True
+shuffle: True	# Shuffle the lines.
+loop: True
+loop-count:	False # Set False for infinite loop, or set any number for finite loop.
+type-speed:	10		# Default 10
+start-delay: 200	# Default 200
+delete-delay: 5000	# Default 5000
+lines:			# You can add HTML Tags in the Text
+  - text: "Geophysical fluid dynamics"
+  - text: "Physical oceanography"
+  - text: "Ocean biogeochemistry"
+  - text: "Computational fluid dynamics"
+
+########
+# Blog #
+########
+
+post-preview-words: 80
+
+jekyll-paginate: 5
+
+fb-share: True
+twitter-share: True
+google-plus-share: True
+linkedin-share: True
+disqus-shortname: ""
+
+###############
+# Life Events #
+###############
+
+#events:
+#  - image: "/img/career/Cesar_GFD.png"
+#    date: "Summer 2015"
+#    description: "Fellow of the Geophysical Fluids Dynamics Program"
+#  - image: "/img/career/Cesar_Coding.png"
+#    date: "September 2013"
+#    description: "Started coding in Python and using version control"
+#  - image: "/img/career/Cesar_Pier.jpg"
+#    date: "September 2013"
+#    description: "Joined the Climate-Ocean-Atmosphere Program at Scripps, UC San Diego"
+#  - image: "/img/career/ms.png"
+#    date: "July 2013"
+#    description: "Graduated with a MSc degree from University of Sao Paulo"
+ # - image: "/img/career/formandos.png"
+ #   date: "February 2011"
+ #   description: "Graduated with a BSc degree from University of Sao Paulo"
+
+# First image of the Career timeline
+#career-img: "/img/career/Cesar_Freshman.png"
+
+##################
+# Contact layout #
+##################
+
+email: "liam.brannigan@misu.su.se"
+
+##################
+# Social Buttons #
+##################
+
+social:
+  - title: "twitter"
+    url: "https://twitter.com/braaannigan"
+  - title: "github"
+    url: "https://github.com/braaannigan"
+
+############
+# 404 page #
+############
+#404-img: "/img/labtocat.png"
+
+################################################################################
+
+# Tread carefully if you want to change the variables below this point!
+
+# Navigation bar links
+# Blog link in the blog and post pages will point to the blog.html#blog
+# In the default page it will point to the preview of the last post
+
+pages_list:
+  About: 'about'
+  Blog: 'blog'
+  Career: 'career'
+  Code: 'code'
+  Collaborators: 'collaborators'
+  Contact: 'contact'
+  Publications: 'publications'
+
+
+# Pagination path
+paginate_path: "blog/page:num"
+
+# Enable minification SASS
+sass:
+  style: compressed
+
+# Exclusion list from the generated _site
+exclude: ["Rakefile", "LICENSE", "readme.markdown", "vendor"]
