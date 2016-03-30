@@ -47,7 +47,7 @@
 <h5>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is symmetric instability?</h5>
 <p>If you aren't familiar with symmetric instability, I've tried to describe the basic dynamics in my seminars.  The video below shows an excerpt from an early talk I gave on these results at IMEDEA on Mallorca in Spain in March 2015.<p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L4cYnVW2dFE?start=685" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src= "" data-src="https://www.youtube.com/embed/L4cYnVW2dFE?start=685" frameborder="0" allowfullscreen></iframe>
 <h5>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Physical overview of the instability</h5>
 
@@ -80,4 +80,13 @@
     
 
   </body>
+<script>
+function init() {
+var vidDefer = document.getElementsByTagName('iframe');
+for (var i=0; i<vidDefer.length; i++) {
+if(vidDefer[i].getAttribute('data-src')) {
+vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script> 
 </html>
