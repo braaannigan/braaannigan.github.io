@@ -19,17 +19,17 @@ url: "http://braaannigan.github.io/" # the base hostname & protocol for your sit
 twitter_username: braaannigan
 github_username:  braaannigan
 
+
 # Build settings
 markdown: kramdown
 
 me-img: "/img/mountain_yoga.jpg"
 
-#Copied from CRocha!
 twitter-share: True
 pages_list:
   About: 'about'
   Blog: 'blog'
-  Research: 'Research'
+  Research: 'research'
   Publications: 'publications'
   Career: 'career'
   Code: 'code'
