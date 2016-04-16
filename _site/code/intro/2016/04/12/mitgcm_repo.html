@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>And a site was born</title>
-  <meta name="description" content="This is my new website where I’ll be providing resources related tomy research and considering some of the bigger challenges facing ocean and climate researc...">
+  <title>Python repo for MITgcm</title>
+  <meta name="description" content="What’s out there?This week I opened a repowith python code for analysing MITgcm output that I’vebeen working on.  I’ve just started using python in the last ...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://braaannigan.github.io//jekyll/overview/2016/04/12/site-welcome.html">
+  <link rel="canonical" href="http://braaannigan.github.io//code/intro/2016/04/12/mitgcm_repo.html">
   <link rel="alternate" type="application/rss+xml" title="Liam Brannigan - The life of ocean eddies" href="http://braaannigan.github.io//feed.xml">
 </head>
 
@@ -69,30 +69,52 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">And a site was born</h1>
-    <p class="post-meta"><time datetime="2016-04-12T15:20:44+02:00" itemprop="datePublished">Apr 12, 2016</time></p>
+    <h1 class="post-title" itemprop="name headline">Python repo for MITgcm</h1>
+    <p class="post-meta"><time datetime="2016-04-12T16:35:24+02:00" itemprop="datePublished">Apr 12, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>This is my new website where I’ll be providing resources related to
-my research and considering some of the bigger challenges facing ocean and climate researchers.</p>
+    <h3 id="whats-out-there">What’s out there?</h3>
+<p>This week I opened a <a href="https://github.com/braaannigan/mitgcm_python">repo</a>
+with python code for analysing MITgcm output that I’ve
+been working on.  I’ve just started using python in the last few months, so I
+doubt that it’s a particularly sophisticated set of code.  However, I decided to open
+it up after doing a search for MITgcm code on github.com and discovering that
+there is a very limited amount of code out there.<br />
+<a href="https://github.com/rabernat/MITgcm_parallel_analysis">Ryan Abernathey</a>
+has put together what looks like a very nice package for analysing
+outputs in parallel.  <a href="https://bitbucket.org/edoddridge/mitgcm/">Ed Doddridge</a>
+has a nice object-oriented set of code for analysing the output in serial. Beyond that
+there a limited array of code from the offical website at
+<a href="http://mitgcm.org/viewvc/MITgcm/MITgcm/utils/python/MITgcmutils/MITgcmutils/">mitgcm.org</a>.
+I decided to make my repo with the idea that there are probably people out there
+looking for ideas about how to write their own code and who may be able to
+give me some input into what I’m doing.</p>
 
-<p>I’m a newcomer to building websites, having used a simple widget to put things
-together during my <a href="https://www2.physics.ox.ac.uk/contacts/people/brannigan">phd</a>.
-I’ve found the process of putting together a basic website to be surprisingly
-straighforward.  This is because I’ve built this site
-using <a href="https://jekyllrb.com/">jekyll</a>, an open source … something … for
-building websites.  I chose jekyll as it ties in nicely with github, where
-I’m hoping to be more open about posting the code I use to analyse observations
-and model simulations.</p>
+<h3 id="flat-bottomed">Flat-bottomed</h3>
+<p>I decided to develop my own package primarily to help me learn to code in
+python.  I also wanted code that is tailored to the particular type of
+model configuration that I’ve been working with recently: doubly-periodic
+domains with uniform Cartesian grids in the horizontal and flat bottoms. Code
+written for this kind of set-up can save a lot of time as it only needs
+the first two grid points in a tile to generate the horizontal grid and a single
+column of the vertical grid spacings to generate the vertical grid.  I’ll add
+options for slightly more complicated grids as and when I need them.  The code
+is written so that specified outputs and coordinate ranges - in x,y,z and time - can
+be loaded.  This greatly reduces the amount of reading that must be done.</p>
 
-<p>The main advantage of using jekyll is similar to the main advantage of using
-github in that you can access the code of other more advanced users to reduce
-the learning curve a bit.  I’ve found the websites of <a href="http://rabernat.github.io/">Ryan Abernathey</a>
-and <a href="https://crocha700.github.io/">Cesar Rocha</a> to be particularly inspiring.
-I also appreciate design guru <a href="https://rsms.me/">Rasmus Andersson</a> making
-his site code open source to see how simple but effective design works in
-practice.</p>
+<h3 id="easy-plotting">Easy plotting</h3>
+<p>One aim of the code is to allow rapid reading and plotting of the model
+output, whether you’re working in a jupyter notebook or from a
+python command line interpreter.  This is particularly useful in the early
+stages of running experiments when a visual check of the model output - including
+derived fields such as vorticity or stratification - is useful.  I hope to add
+more functionality for animations and 3D plotting in the future.</p>
+
+<h3 id="classless">Classless</h3>
+<p>I’ve used matlab for the last few years rather than an object-oriented language.
+That’s probably one reason why the code currently returns numpy data structures
+rather than a class approach that returns an object.</p>
 
   </div>
 
