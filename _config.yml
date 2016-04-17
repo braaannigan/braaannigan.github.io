@@ -13,7 +13,7 @@ defaults:
 # Site settings
 title: Liam Brannigan - The life of ocean eddies
 email: liam brannigan at misu su se
-description: Oceanographer at Stockholm University studying the physics of the upper ocean
+description: Oceanographer at Stockholm University
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://braaannigan.github.io/" # the base hostname & protocol for your site
 twitter_username: braaannigan
