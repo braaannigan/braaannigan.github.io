@@ -14,3 +14,6 @@ You can find me in a variety of places around the internet where my username is 
 
 - [Twitter](http://twitter.com/braaannigan) — news, views and papers
 - [GitHub](https://github.com/braaannigan) — code
+- [Google Scholar](https://scholar.google.co.uk/citations?user=43HnNKAAAAAJ&hl=en) - publications
+- [Resarchgate](- [Google Scholar](https://scholar.google.co.uk/citations?user=43HnNKAAAAAJ&hl=en) - publications
+) - something similar
