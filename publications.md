@@ -49,4 +49,4 @@ Journal of Physical Oceanography,
 *Submesoscale dynamics in the open ocean*,
 Thesis,
 <a href="https://ora.ox.ac.uk/objects/uuid:75e3dbf3-56d7-4534-8008-a351c9b36efe"
-target="_blank">doi:10.1002/2016GL067926</a>
+target="_blank">thesis (pdf on right)</a>
