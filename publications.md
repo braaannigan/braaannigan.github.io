@@ -48,5 +48,5 @@ Journal of Physical Oceanography,
 * __Brannigan, L.__, (2015):
 *Submesoscale dynamics in the open ocean*,
 Thesis,
-<a href="http://onlinelibrary.wiley.com/doi/10.1002/2016GL067926/full"
+<a href="https://ora.ox.ac.uk/objects/uuid:75e3dbf3-56d7-4534-8008-a351c9b36efe"
 target="_blank">doi:10.1002/2016GL067926</a>
