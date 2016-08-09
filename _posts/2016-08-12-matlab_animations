@@ -1,0 +1,95 @@
+---
+layout: post
+title:  "Easy animations in matlab"
+date:   2016-08-15 16:35:24 +0200
+categories: matlab animations visualisation
+---
+### Flow animations - don't you just love them?
+I love animations of fluid dynamics.  We are lucky to work in a field that
+lends itself so readily to visualisation, where models produce outputs that
+people can just look at to get an idea of what's going on. Animations are
+also great for capturing peoples' attention when presenting your work
+in person - particularly the tired, jet-lagged
+and possibly hungover population of most major scientific meetings.
+
+Producing publication-quality animations in two dimensions is straight-forward
+in matlab.  Once you know what you're doing -- as you soon will -- it's just
+a few lines of code that you add to the start and end of a loop.  Indeed, the
+issue isn't really producing publication-quality animations --- it's producing
+publication-quality animations with a filesize that a publisher will actually
+accept.  In my experience, naive use of the matlab writer commands produces
+files that are about 50 times larger.
+
+Sample code for generating an animation is below.
+x = linspace(0,2*pi,50);
+y = x;
+t = linspace(0,12*pi,120);
+[X,Y] = meshgrid(x,y);
+
+for k = 1:length(t)
+    z(:,:,k) = cos(X+t(k)).*cos(Y);
+end
+
+vid = VideoWriter('anim_name'); %Create video object and set output name
+vid.Quality = 70; %Runs from 0 (lowest quality) to 100 (highest quality)
+vid.FrameRate = 8; %Set the frame rate per second
+open(vid); %Open the animation object
+h=figure(1);clf %Open the figure window
+pause %Pause to open the figure window full-screen if necessary
+for k = 1:length(t)
+    figure(1);clf
+    pcolor(x,y,z(:,:,k))
+    shading flat
+    caxis([-1 1])
+    title(t(k)/t(end))
+    %pause(1e-1) %The pause command doesn't effect the frame rate
+    writeVideo(vid, getframe(h,[80 50 1400 1010]));
+    %Write the current frame to the animation file.  The 4-element vector
+    %at the end sets the boundaries of the box that will be captured in
+    %the animation.  The units are in pixels and are in the standard
+    %matlab format [left-hand-boundary lower-boundary width height].
+end
+close(vid) %Close the video.
+
+
+This week I opened a [repo](https://github.com/braaannigan/mitgcm_python)
+with python code for analysing MITgcm output that I've
+been working on.  I've just started using python in the last few months, so I
+doubt that it's a particularly sophisticated set of code.  However, I decided to open
+it up after doing a search for MITgcm code on github.com and discovering that
+there is a very limited amount of code out there.
+[Ryan Abernathey](https://github.com/rabernat/MITgcm_parallel_analysis)
+has put together what looks like a very nice package for analysing
+outputs in parallel.  [Ed Doddridge](https://bitbucket.org/edoddridge/mitgcm/)
+has a nice object-oriented set of code for analysing the output in serial. Beyond that
+there a limited array of code from the offical website at
+[mitgcm.org](http://mitgcm.org/viewvc/MITgcm/MITgcm/utils/python/MITgcmutils/MITgcmutils/).
+I decided to make my repo with the idea that there are probably people out there
+looking for ideas about how to write their own code and who may be able to
+give me some input into what I'm doing.
+
+### Flat-bottomed
+I decided to develop my own package primarily to help me learn to code in
+python.  I also wanted code that is tailored to the particular type of
+model configuration that I've been working with recently: doubly-periodic
+domains with uniform Cartesian grids in the horizontal and flat bottoms. Code
+written for this kind of set-up can save a lot of time as it only needs
+the first two grid points in a tile to generate the horizontal grid and a single
+column of the vertical grid spacings to generate the vertical grid.  I'll add
+options for slightly more complicated grids as and when I need them.  The code
+is written so that specified outputs and coordinate ranges - in x,y,z and time - can
+be loaded.  This greatly reduces the amount of reading that must be done.
+
+### Easy plotting
+One aim of the code is to allow rapid reading and plotting of the model
+output, whether you're working in a jupyter notebook or from a
+python command line interpreter.  This is particularly useful in the early
+stages of running experiments when a visual check of the model output - including
+derived fields such as vorticity or stratification - is useful.  I hope to add
+more functionality for animations and 3D plotting in the future.
+
+
+### Classless
+I've used matlab for the last few years rather than an object-oriented language.
+That's probably one reason why the code currently returns numpy data structures
+rather than a class approach that returns an object.
