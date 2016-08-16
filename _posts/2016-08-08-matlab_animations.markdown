@@ -26,7 +26,7 @@ accept.  In my experience, naive use of the matlab writer commands produces
 files that are about 50 times larger.
 
 Sample code for generating an animation is below.  The animation is of a domain
-with 50x50 pixels and 120 frames.  It comes out as an .avu file of less than 8 MB.
+with 50x50 pixels and 120 frames.  It comes out as an .avu file of less than 4 MB.
 
 First generate the data to be plotted
 
