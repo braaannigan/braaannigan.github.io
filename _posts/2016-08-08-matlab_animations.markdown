@@ -45,6 +45,7 @@ $$z(:,:,k) = \textrm{cos}(X+t(k)).*\textrm{cos}(Y)$$;
 end
 
 %Then open the video object and run the plot loop
+
 vid = VideoWriter('anim_name'); %Create video object and set output name
 
 vid.Quality = 70; %Runs from 0 (lowest quality) to 100 (highest quality)
