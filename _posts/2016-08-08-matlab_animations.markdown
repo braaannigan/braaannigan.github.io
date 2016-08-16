@@ -16,7 +16,7 @@ also great for capturing peoples' attention when presenting your work
 in person - particularly the tired, jet-lagged
 and possibly hungover population of most major scientific meetings.
 
-When $$a \ne 0$$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
 Producing publication-quality animations in two dimensions is straight-forward
@@ -29,7 +29,7 @@ files that are about 50 times larger.
 
 Sample code for generating an animation is below.
 
-$x = linspace(0,2*\pi,50);$
+$$x = linspace(0,2*\pi,50);$$
 y = x;
 t = linspace(0,12*pi,120);
 [X,Y] = meshgrid(x,y);
