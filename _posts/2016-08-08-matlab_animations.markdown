@@ -5,7 +5,7 @@ date:   2016-08-08 16:35:24 +0200
 categories: matlab animations visualisation
 ---
 <script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTM">
 </script>
 
 ### Flow animations - don't you just love them?
@@ -16,7 +16,7 @@ also great for capturing peoples' attention when presenting your work
 in person - particularly the tired, jet-lagged
 and possibly hungover population of most major scientific meetings.
 
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+When $$a \ne 0$$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
 Producing publication-quality animations in two dimensions is straight-forward
