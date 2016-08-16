@@ -29,7 +29,7 @@ files that are about 50 times larger.
 
 Sample code for generating an animation is below.
 
-x = linspace(0,2*pi,50);
+$x = linspace(0,2*\pi,50);$
 y = x;
 t = linspace(0,12*pi,120);
 [X,Y] = meshgrid(x,y);
