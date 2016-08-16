@@ -31,10 +31,10 @@ Sample code for generating an animation is below.
 
 First generate the data to be plotted
 
-$$x = \textrm{linspace}(0,2*\pi,50)$$;
+$$x = \textrm{linspace}(0,2\pi,50)$$;
 $$y = x$$;
-t = linspace(0,12*pi,120);
-[X,Y] = meshgrid(x,y);
+$$t = \textrm{linspace}(0,12\pi,120)$$;
+$$[X,Y] = \textrm{meshgrid}(x,y)$$;
 
 for k = 1:length(t)
     z(:,:,k) = cos(X+t(k)).*cos(Y);
