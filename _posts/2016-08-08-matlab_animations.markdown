@@ -16,7 +16,7 @@ also great for capturing peoples' attention when presenting your work
 in person - particularly the tired, jet-lagged
 and possibly hungover population of most major scientific meetings.
 
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+When $$a \ne 0$$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
 Producing publication-quality animations in two dimensions is straight-forward
@@ -28,6 +28,8 @@ accept.  In my experience, naive use of the matlab writer commands produces
 files that are about 50 times larger.
 
 Sample code for generating an animation is below.
+
+First generate the data to be plotted
 
 x = linspace(0,2*pi,50);
 y = x;
