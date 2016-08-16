@@ -21,6 +21,7 @@ accept.  In my experience, naive use of the matlab writer commands produces
 files that are about 50 times larger.
 
 Sample code for generating an animation is below.
+
 x = linspace(0,2*pi,50);
 y = x;
 t = linspace(0,12*pi,120);
