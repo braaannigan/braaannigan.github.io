@@ -42,26 +42,42 @@ $$[X,Y] = \textrm{meshgrid}(x,y)$$;
 for $$k = 1$:length($$t$$)
 
     $$z(:,:,k) = \textrm{cos}(X+t(k)).*cos(Y)$$;
-    
+
 end
 
 vid = VideoWriter('anim_name'); %Create video object and set output name
+
 vid.Quality = 70; %Runs from 0 (lowest quality) to 100 (highest quality)
+
 vid.FrameRate = 8; %Set the frame rate per second
+
 open(vid); %Open the animation object
+
 h=figure(1);clf %Open the figure window
+
 pause %Pause to open the figure window full-screen if necessary
-for k = 1:length(t)
+
+for $$k = 1$$:length($$t$$)
+
     figure(1);clf
+
     pcolor(x,y,z(:,:,k))
+
     shading flat
+
     caxis([-1 1])
+
     title(t(k)/t(end))
+
     %pause(1e-1) %The pause command doesn't effect the frame rate
+
     writeVideo(vid, getframe(h,[80 50 1400 1010]));
+
     %Write the current frame to the animation file.  The 4-element vector
     %at the end sets the boundaries of the box that will be captured in
     %the animation.  The units are in pixels and are in the standard
     %matlab format [left-hand-boundary lower-boundary width height].
+
 end
+
 close(vid) %Close the video.
