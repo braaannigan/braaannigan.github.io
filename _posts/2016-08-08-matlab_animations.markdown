@@ -41,7 +41,7 @@ $$[X,Y] = \textrm{meshgrid}(x,y)$$;
 
 for $$k = 1$$:length($$t$$)
 
-    $$z(:,:,k) = \textrm{cos}(X+t(k)).*cos(Y)$$;
+$$z(:,:,k) = \textrm{cos}(X+t(k)).*\textrm{cos}(Y)$$;
 
 end
 
@@ -59,24 +59,24 @@ pause %Pause to open the figure window full-screen if necessary
 
 for $$k = 1$$:length($$t$$)
 
-    figure(1);clf
+figure(1);clf
 
-    pcolor(x,y,z(:,:,k))
+pcolor(x,y,z(:,:,k))
 
-    shading flat
+shading flat
 
-    caxis([-1 1])
+caxis([-1 1])
 
-    title(t(k)/t(end))
+title(t(k)/t(end))
 
-    %pause(1e-1) %The pause command doesn't effect the frame rate
+%pause(1e-1) %The pause command doesn't effect the frame rate
 
-    writeVideo(vid, getframe(h,[80 50 1400 1010]));
+writeVideo(vid, getframe(h,[80 50 1400 1010]));
 
-    %Write the current frame to the animation file.  The 4-element vector
-    %at the end sets the boundaries of the box that will be captured in
-    %the animation.  The units are in pixels and are in the standard
-    %matlab format [left-hand-boundary lower-boundary width height].
+%Write the current frame to the animation file.  The 4-element vector
+%at the end sets the boundaries of the box that will be captured in
+%the animation.  The units are in pixels and are in the standard
+%matlab format [left-hand-boundary lower-boundary width height].
 
 end
 
