@@ -4,6 +4,10 @@ title:  "Easy animations in matlab"
 date:   2016-08-08 16:35:24 +0200
 categories: matlab animations visualisation
 ---
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 ### Flow animations - don't you just love them?
 I love animations of fluid dynamics.  We are lucky to work in a field that
 lends itself so readily to visualisation, where models produce outputs that
