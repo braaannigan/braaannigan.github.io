@@ -5,7 +5,7 @@ date:   2016-08-08 16:35:24 +0200
 categories: matlab animations visualisation
 ---
 <script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTM">
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 ### Flow animations - don't you just love them?
@@ -29,7 +29,7 @@ files that are about 50 times larger.
 
 Sample code for generating an animation is below.
 
-$$x = linspace(0,2*\pi,50);$$
+x = linspace(0,2*pi,50);
 y = x;
 t = linspace(0,12*pi,120);
 [X,Y] = meshgrid(x,y);
