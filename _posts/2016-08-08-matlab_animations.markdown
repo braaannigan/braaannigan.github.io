@@ -16,6 +16,9 @@ also great for capturing peoples' attention when presenting your work
 in person - particularly the tired, jet-lagged
 and possibly hungover population of most major scientific meetings.
 
+When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
 Producing publication-quality animations in two dimensions is straight-forward
 in matlab.  Once you know what you're doing -- as you soon will -- it's just
 a few lines of code that you add to the start and end of a loop.  Indeed, the
