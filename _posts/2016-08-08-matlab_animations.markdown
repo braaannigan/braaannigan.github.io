@@ -39,7 +39,7 @@ $$t = \textrm{linspace}(0,12*\pi,120)$$;
 
 $$[X,Y] = \textrm{meshgrid}(x,y)$$;
 
-for $$k = 1$:length($$t$$)
+for $$k = 1$$:length($$t$$)
 
     $$z(:,:,k) = \textrm{cos}(X+t(k)).*cos(Y)$$;
 
