@@ -81,3 +81,6 @@ writeVideo(vid, getframe(h,[80 50 1400 1010]));
 end
 
 close(vid) %Close the video.
+
+The output can be seen here:
+<iframe src="https://player.vimeo.com/video/179024540" width="640" height="462" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/179024540">Easy animation with matlab</a> from <a href="https://vimeo.com/user50105397">Liam Brannigan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
