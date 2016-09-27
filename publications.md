@@ -7,16 +7,16 @@ title: Publications
 
 ### In prep
 
-* __Brannigan, L.__, D. P. Marshall, A. C. Naveira Garabato and G. Nurser:
-  *Submesoscale instabilities in mesoscale eddies*, to be submitted to JPO.
-
  * __Brannigan, L.__, H. Johnson, C. Lique:
 *Generation of halocline anticyclones at under-ice fronts*, to be submitted to JPO.
 
-### Submitted
+### In review
 
 * Naveira Garabato, A. C. et al.: *Vigorous lateral export of the meltwater
-outflow from a thinning Antarctic ice shelf*, submitted to Nature.
+outflow from a thinning Antarctic ice shelf*, in review at Nature.
+
+* __Brannigan, L.__, D. P. Marshall, J. Kaiser, A. C. Naveira Garabato and G. Nurser:
+  *Submesoscale instabilities in mesoscale eddies*, in review at JPO.
 
 ### Peer-reviewed
 
