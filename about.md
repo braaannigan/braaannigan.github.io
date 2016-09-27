@@ -9,6 +9,9 @@ I'm an oceanographer at Stockholm University studying the dynamics of the turbul
 
 My aim is to improve our understanding of how the ocean works in order to help us understand past, present and future changes in climate.
 
+An up-to-date list of publications is kept [here](http://braaannigan.github.io/publications.html),
+while my CV is [here](https://www.dropbox.com/s/s38vhefzeqjuo58/Liam_Brannigan_CV_September_2016.pages?dl=0).
+
 You can find me in a variety of places around the internet where my username is typically 'braaannigan' (which is how my surname is pronounced with a Dundalk accent!)
 
 
