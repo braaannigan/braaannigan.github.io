@@ -8,7 +8,9 @@ title: Publications
 ### In prep
 
 * __Brannigan, L.__, D. P. Marshall, A. C. Naveira Garabato and G. Nurser:
-  *Submesoscale instabilities in mesoscale eddies*, to be submitted to JPO.
+  *Submesoscale instabilities in mesoscale eddies*, submitted to JPO
+  <a href="https://www.dropbox.com/s/qkm3c8q0awru3xz/eddy_subduction_August_2016.pdf?dl=0"
+  target="(submitted copy)"</a>.
 
  * __Brannigan, L.__, H. Johnson, C. Lique:
 *Generation of halocline anticyclones at under-ice fronts*, to be submitted to JPO.
