@@ -47,6 +47,5 @@ Journal of Physical Oceanography,
 ### Oxford PhD thesis
 * __Brannigan, L.__, (2015):
 *Submesoscale dynamics in the open ocean*,
-Thesis,
 <a href="https://ora.ox.ac.uk/objects/uuid:75e3dbf3-56d7-4534-8008-a351c9b36efe"
-target="_blank">thesis (link to pdf on right)</a>
+target="_blank">Thesis (link to pdf on right)</a>
