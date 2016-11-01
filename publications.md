@@ -21,8 +21,7 @@ title: Publications
 
 ### Peer-reviewed
 * Naveira Garabato, A. C. et al.: *Vigorous lateral export of the meltwater
-outflow from a thinning Antarctic ice shelf*, Nature (in press). [Code repo]
-(https://github.com/braaannigan/Vigorous_lateral_export)
+outflow from a thinning Antarctic ice shelf*, Nature (in press). [Code repo](https://github.com/braaannigan/Vigorous_lateral_export)
 
 * __Brannigan, L.__, (2016):
 *Intense submesoscale upwelling in anticyclonic eddies*,
