@@ -8,17 +8,20 @@ title: Publications
 ### In prep
 
 * __Brannigan, L.__, H. Johnson, C. Lique, J. Nilsson and J. Nycander:
-*Generation of halocline anticyclones at under-ice fronts*, to be submitted to JPO.
+*Generation of remote eddies at fronts*, to be submitted to JPO.
+
+* __Brannigan, L.__, J. Nilsson, J. Nycander, A. C. Naveira-Garabato and A. Jenkins:
+*Should plume models care about planetary rotation*, to be submitted to JGR.
+
 
 ### In review
 
-* Naveira Garabato, A. C. et al.: *Vigorous lateral export of the meltwater
-outflow from a thinning Antarctic ice shelf*, Nature (in press).
-
 * __Brannigan, L.__, D. P. Marshall, J. Kaiser, A. C. Naveira Garabato and G. Nurser:
-  *Submesoscale instabilities in mesoscale eddies*, in review at JPO.
+  *Submesoscale instabilities in mesoscale eddies*, in revision at JPO.
 
 ### Peer-reviewed
+* Naveira Garabato, A. C. et al.: *Vigorous lateral export of the meltwater
+outflow from a thinning Antarctic ice shelf*, Nature (in press).
 
 * __Brannigan, L.__, (2016):
 *Intense submesoscale upwelling in anticyclonic eddies*,
