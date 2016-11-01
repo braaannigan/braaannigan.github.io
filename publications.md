@@ -11,7 +11,7 @@ title: Publications
 *Generation of remote eddies at fronts*, to be submitted to JPO.
 
 * __Brannigan, L.__, J. Nilsson, J. Nycander, A. C. Naveira-Garabato and A. Jenkins:
-*Should plume models care about planetary rotation*, to be submitted to JGR.
+*Should plume models care about planetary rotation?*, to be submitted to JGR.
 
 
 ### In review
