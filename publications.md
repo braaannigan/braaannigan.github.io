@@ -21,7 +21,7 @@ title: Publications
 
 ### Peer-reviewed
 * Naveira Garabato, A. C. et al.: *Vigorous lateral export of the meltwater
-outflow from a thinning Antarctic ice shelf*, Nature (in press). 
+outflow from a thinning Antarctic ice shelf*, Nature (2017). 
 <a href="http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20825.html" target="_blank">doi:10.1038/nature20825</a>
 [Repo for numerical experiments](https://github.com/braaannigan/Vigorous_lateral_export)
 
