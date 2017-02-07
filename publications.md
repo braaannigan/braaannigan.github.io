@@ -8,7 +8,7 @@ title: Publications
 ### In prep
 
 * __Brannigan, L.__, H. Johnson, C. Lique, J. Nilsson and J. Nycander:
-*Generation of remote eddies at fronts*, to be submitted to JPO.
+*Generation of Arctic sub-surface anticyclones at surface fronts*, submitted to JPO.
 
 * __Brannigan, L.__, J. Nilsson, J. Nycander, A. C. Naveira-Garabato and A. Jenkins:
 *Should plume models care about planetary rotation?*, to be submitted to JGR.
