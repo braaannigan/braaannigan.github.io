@@ -7,21 +7,20 @@ title: Publications
 
 ### In prep
 
-* __Brannigan, L.__, H. Johnson, C. Lique, J. Nilsson and J. Nycander:
-*Generation of Arctic sub-surface anticyclones at surface fronts*, submitted to JPO.
-
-* __Brannigan, L.__, J. Nilsson, J. Nycander, A. C. Naveira-Garabato and A. Jenkins:
-*Should plume models care about planetary rotation?*, to be submitted to JGR.
 
 
 ### In review
+* __Brannigan, L.__, H. Johnson, C. Lique, J. Nilsson and J. Nycander:
+*Generation of Arctic sub-surface anticyclones at surface fronts*, in review at JPO.
+[Submitted version June 2017](https://www.dropbox.com/s/b3hifb6gksatbcu/arctic_eddy_fronts_submission_June_2017.pdf?dl=0)
+
 
 * __Brannigan, L.__, D. P. Marshall, J. Kaiser, A. C. Naveira Garabato and G. Nurser:
   *Submesoscale instabilities in mesoscale eddies*, in revision at JPO.
 
 ### Peer-reviewed
 * Naveira Garabato, A. C. et al.: *Vigorous lateral export of the meltwater
-outflow from a thinning Antarctic ice shelf*, Nature (2017). 
+outflow from a thinning Antarctic ice shelf*, Nature (2017).
 <a href="http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20825.html" target="_blank">doi:10.1038/nature20825</a>
 [Repo for numerical experiments](https://github.com/braaannigan/Vigorous_lateral_export)
 
