@@ -13,6 +13,7 @@ title: Publications
 * __Brannigan, L.__, H. Johnson, C. Lique, J. Nilsson and J. Nycander:
 *Generation of sub-surface anticyclones at Arctic surface fronts due to a surface stress*, in review at JPO.
 [Submitted version June 2017](https://www.dropbox.com/s/b3hifb6gksatbcu/arctic_eddy_fronts_submission_June_2017.pdf?dl=0)
+and
 [Animation at vimeo](https://vimeo.com/222181522)
 
 
