@@ -7,6 +7,11 @@ title: Publications
 
 ### In prep
 
+* __Brannigan, L.__, and J. Nilsson:
+*Making robust predictions in the Nordic Seas*.
+
+* __Brannigan, L.__, and J. Nycander:
+*Dynamics and constraints of cabelling driven convection*.
 
 
 ### In review
