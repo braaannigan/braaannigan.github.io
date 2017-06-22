@@ -29,7 +29,7 @@ open up automatically in your browser at http://localhost:5006/sliders_ex
 
 This kind of interactivity is also available with a matplotlib backend through the
 exciting [holoviews](holoviews.org) package.
-
+'''
 #Data imports
 import numpy as np
 import pandas as pd
@@ -116,3 +116,4 @@ offset.on_change('value', update_data)
 inputs = widgetbox(offset)
 curdoc().add_root(row(inputs, plot, width=800))
 curdoc().title = "Sliders"
+'''
