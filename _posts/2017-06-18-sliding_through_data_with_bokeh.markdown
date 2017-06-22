@@ -19,7 +19,7 @@ doing the replotting.  The Bokeh plot library in python is built with just this
 kind of interactivity in mind.  The code below creates two synthetic data series
 that are lagged in time by 12 months.  Going beyond the basic scatter plot, I've
 also added in a linear regression line calculated using sci-kit learn's linear regression
-and a text annotation with the $R^{2}$ coefficient of determination. This simple
+and a text annotation with the R^2 coefficient of determination. This simple
 set up satisfies both requirements to be useful - the data exploration with the
 slider is smooth while the code is straightforward to write.
 
