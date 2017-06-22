@@ -35,7 +35,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
-
+#Bokeh imports
 from bokeh.io import curdoc
 from bokeh.models.glyphs import Text
 from bokeh.layouts import row, widgetbox
@@ -50,11 +50,8 @@ x_in = np.cos(freq*t) #
 y_in = np.cos(freq*t + 2*np.pi*(0.33)) + (np.random.rand(len(t))-0.5) #Lagged by 6 months
 df = pd.DataFrame({'t':t, 'x':x_in, 'y':y_in})
 
-ax_lim = 1.1*np.max(np.abs(np.array([x_in,y_in])))
-
 def linear_regression(df):
-    """Calculate out the linear regression and r2 score"""
-#Do initiallinear
+    """Calculate the linear regression and r2 score"""
     model = LinearRegression()
     model.fit(df['x'][:,np.newaxis],df['y'])
     #Get the x- and y-values for the best fit line
@@ -75,6 +72,7 @@ text_source = ColumnDataSource(dict(x=r2_x, y=r2_y, text=text)) #R2 value
 line_source = ColumnDataSource(data=dict(x=x_plot, y=y_plot)) #Regression line
 
 # Set up initial plot
+ax_lim = 1.1*np.max(np.abs(np.array([x_in,y_in]))) #Axis limits
 plot = figure(plot_height=900, plot_width=900, title="Lagged scatter plot",
               tools="crosshair,pan,reset,save,wheel_zoom",
               x_range=[-ax_lim, ax_lim],
@@ -88,12 +86,13 @@ plot.xaxis.axis_label = 'X'
 plot.yaxis.axis_label = 'Y'
 
 # Set up slider
-offset = Slider(title="Time lag", value=0, start=-30, end=30, step=1)
+offset = Slider(title="Lag in months", value=0, start=-30, end=30, step=1)
 
+#Update the plot as the slider changes
 def update_data(attrname, old, new):
-    # Get the current slider values
+    # Get the new slider value for the lag
     lag = offset.value
-    # Generate the new plot
+    # Generate the dataframe for the new plot
     df = pd.DataFrame()
     if lag > 0:
         df['x'] = x_in[:-lag]
@@ -104,12 +103,14 @@ def update_data(attrname, old, new):
     else:
         df['x'] = x_in[-lag:]
         df['y'] = y_in[:lag]
+    #Update the linear regression values
     x_plot, y_plot, r2, r2_x, r2_y, text = linear_regression(df)
-
+    #Update the plot
     text_source.data = dict(x=r2_x, y=r2_y, text = text)
     source.data = dict(x=df['x'], y=df['y'])
     line_source.data = dict(x=x_plot, y=y_plot)
 
+#Actions when the slider value is changed
 offset.on_change('value', update_data)
 
 # Set up layouts and add to document
