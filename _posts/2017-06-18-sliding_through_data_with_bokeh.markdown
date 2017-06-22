@@ -9,7 +9,7 @@ categories: visualisation
 </script>
 
 ## Exploring parameter space smoothly
-Tim Hopper has written a great post about exploratory data analysis using a
+Tim Hopper has written a great [post](http://pythonplot.com/) about exploratory data analysis using a
 variety of libraries that wrap matplotlib. Something that can really help exploratory
 data analysis are dynamic plots that allow you to easily scan through a multidimensional
 parameter space without having to replot your data every time.  
@@ -23,8 +23,9 @@ and a text annotation with the $R^{2}$ coefficient of determination. This simple
 set up satisfies both requirements to be useful - the data exploration with the
 slider is smooth while the code is straightforward to write.
 
-To run the code, you'll need to have Bokeh installed through conda/pip.  Then
-in the comdand line you run $bokeh serve --show sliders_ex.py.  The plot should
+To run the code, you'll need to have Bokeh installed through conda/pip.
+Save the code below to a script called sliders_ex.py.  Then
+in the bash command line with the script you run $bokeh serve --show sliders_ex.py.  The plot should
 open up automatically in your browser at http://localhost:5006/sliders_ex
 
 This kind of interactivity is also available with a matplotlib backend through the
