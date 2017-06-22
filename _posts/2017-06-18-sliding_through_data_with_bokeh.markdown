@@ -15,7 +15,7 @@ data analysis are dynamic plots that allow you to easily scan through a multidim
 parameter space without having to replot your data every time.  
 
 Slider tools are very handy for this - if creating the slider widget is easier than
-doing the replotting.  The Bokeh plot library in python is built with just this
+doing the replotting.  The [Bokeh](https://github.com/bokeh/bokeh) plot library in python is built with just this
 kind of interactivity in mind.  The code below creates two synthetic data series
 that are lagged in time by 12 months.  Going beyond the basic scatter plot, I've
 also added in a linear regression line calculated using sci-kit learn's linear regression
@@ -23,9 +23,10 @@ and a text annotation with the R^2 coefficient of determination. This simple
 set up satisfies both requirements to be useful - the data exploration with the
 slider is smooth while the code is straightforward to write.
 
-To run the code, you'll need to have Bokeh installed through conda/pip.
+To run the code, you'll need to have Bokeh installed through conda/pip
+as well as the standard python packages numpy/pandas/sci-kit learn.
 Save the code below to a script called sliders_ex.py.  Then
-in the bash command line with the script you run $bokeh serve --show sliders_ex.py.  The plot should
+in the bash command line from the directory with the script you run $bokeh serve --show sliders_ex.py.  The plot should
 open up automatically in your browser at http://localhost:5006/sliders_ex
 
 This kind of interactivity is also available with a matplotlib backend through the
