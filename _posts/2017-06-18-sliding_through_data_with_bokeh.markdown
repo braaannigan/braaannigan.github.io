@@ -1,0 +1,118 @@
+---
+layout: post
+title:  "Sliding through the data with Bokeh"
+date:   2017-08-20 16:35:24 +0200
+categories: visualisation
+---
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+## Exploring parameter space smoothly
+Tim Hopper has written a great post about exploratory data analysis using a
+variety of libraries that wrap matplotlib. Something that can really help exploratory
+data analysis are dynamic plots that allow you to easily scan through a multidimensional
+parameter space without having to replot your data every time.  
+
+Slider tools are very handy for this - if creating the slider widget is easier than
+doing the replotting.  The Bokeh plot library in python is built with just this
+kind of interactivity in mind.  The code below creates two synthetic data series
+that are lagged in time by 12 months.  Going beyond the basic scatter plot, I've
+also added in a linear regression line calculated using sci-kit learn's linear regression
+and a text annotation with the $R^{2}$ coefficient of determination. This simple
+set up satisfies both requirements to be useful - the data exploration with the
+slider is smooth while the code is straightforward to write.
+
+To run the code, you'll need to have Bokeh installed through conda/pip.  Then
+in the comdand line you run $bokeh serve --show sliders_ex.py.  The plot should
+open up automatically in your browser at http://localhost:5006/sliders_ex
+
+This kind of interactivity is also available with a matplotlib backend through the
+exciting [holoviews](holoviews.org) package.
+
+#Data imports
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
+
+from bokeh.io import curdoc
+from bokeh.models.glyphs import Text
+from bokeh.layouts import row, widgetbox
+from bokeh.models import ColumnDataSource
+from bokeh.models.widgets import Slider, TextInput
+from bokeh.plotting import figure
+
+#Create datasets
+t = np.linspace(0,120,120) #Ten years in months
+freq = 2.*np.pi/18 #One cycle every 18 months
+x_in = np.cos(freq*t) #
+y_in = np.cos(freq*t + 2*np.pi*(0.33)) + (np.random.rand(len(t))-0.5) #Lagged by 6 months
+df = pd.DataFrame({'t':t, 'x':x_in, 'y':y_in})
+
+ax_lim = 1.1*np.max(np.abs(np.array([x_in,y_in])))
+
+def linear_regression(df):
+    """Calculate out the linear regression and r2 score"""
+#Do initiallinear
+    model = LinearRegression()
+    model.fit(df['x'][:,np.newaxis],df['y'])
+    #Get the x- and y-values for the best fit line
+    x_plot = np.linspace(-ax_lim,ax_lim)
+    y_plot = model.predict(x_plot[:,np.newaxis])
+    #Calculate the r2 score
+    r2 = r2_score(df['y'],model.predict(df['x'][:,np.newaxis]))
+    #Position for the r2 text annotation
+    r2_x = [-ax_lim + 0.1*ax_lim]
+    r2_y = [ax_lim - 0.1*ax_lim]
+    text = ["R^2 = %02f" % r2]
+    return x_plot, y_plot, r2, r2_x, r2_y, text
+
+x_plot, y_plot, r2, r2_x, r2_y, text = linear_regression(df)
+#Set the ColumnDataSource for the plot
+source = ColumnDataSource(data=dict(x=df['x'], y=df['y'])) #Scatter plot
+text_source = ColumnDataSource(dict(x=r2_x, y=r2_y, text=text)) #R2 value
+line_source = ColumnDataSource(data=dict(x=x_plot, y=y_plot)) #Regression line
+
+# Set up initial plot
+plot = figure(plot_height=900, plot_width=900, title="Lagged scatter plot",
+              tools="crosshair,pan,reset,save,wheel_zoom",
+              x_range=[-ax_lim, ax_lim],
+              y_range=[-ax_lim, ax_lim])
+
+plot.scatter('x', 'y', source=source)
+plot.line('x', 'y', source = line_source, color = 'black')
+glyph = Text(x="x", y="y", text="text", text_color="black")
+plot.add_glyph(text_source, glyph)
+plot.xaxis.axis_label = 'X'
+plot.yaxis.axis_label = 'Y'
+
+# Set up slider
+offset = Slider(title="Time lag", value=0, start=-30, end=30, step=1)
+
+def update_data(attrname, old, new):
+    # Get the current slider values
+    lag = offset.value
+    # Generate the new plot
+    df = pd.DataFrame()
+    if lag > 0:
+        df['x'] = x_in[:-lag]
+        df['y'] = y_in[lag:]
+    elif lag == 0:
+        df['x'] = x_in
+        df['y'] = y_in
+    else:
+        df['x'] = x_in[-lag:]
+        df['y'] = y_in[:lag]
+    x_plot, y_plot, r2, r2_x, r2_y, text = linear_regression(df)
+
+    text_source.data = dict(x=r2_x, y=r2_y, text = text)
+    source.data = dict(x=df['x'], y=df['y'])
+    line_source.data = dict(x=x_plot, y=y_plot)
+
+offset.on_change('value', update_data)
+
+# Set up layouts and add to document
+inputs = widgetbox(offset)
+curdoc().add_root(row(inputs, plot, width=800))
+curdoc().title = "Sliders"
