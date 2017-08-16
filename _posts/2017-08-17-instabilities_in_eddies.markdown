@@ -1,7 +1,8 @@
 ---
-layout: page
-title: Research
-permalink: /research/instabilities_in_eddies.md
+layout: post
+title:  "Submesoscale instabilities in mesoscale eddies"
+date:   2017-08-16 16:35:24 +0200
+categories: research
 ---
 
 <h2>
