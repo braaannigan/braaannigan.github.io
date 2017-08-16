@@ -4,6 +4,23 @@ title: Research
 permalink: /research/
 ---
 
+# Research projects
+
+## Submesoscale instabilities in mesoscale eddies
+The lateral buoyancy gradients along with lateral and vertical shear
+of the flow can mean mesoscale eddies are unstable to submesoscale instabilities,
+particularly in the mixed layer.
+A wind stress at the surface of a mesoscale eddy leads to the input of potential
+vorticity on one side of the eddy and the extraction of potential vorticity
+at the other side of the eddy.   This can lead to the type of instabilities
+that occur varying around the eddy as well as the growth rate of instabilities
+varying around the eddy.  I have examined the implications of this in a number
+of papers that are primarily based on idealised simulations of an eddying field.
+More information can be found here
+
+
+## Forming sub-surface eddies from the break-up of a submesoscale dipole
+
 <h2>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Submesoscale instabilities in mesoscale eddies</h2>
 
