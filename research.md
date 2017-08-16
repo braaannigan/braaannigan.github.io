@@ -15,7 +15,7 @@ vorticity on one side of the eddy and the extraction of potential vorticity
 at the other side of the eddy.   This can lead to the type of instabilities
 that occur varying around the eddy as well as the growth rate of instabilities
 varying around the eddy.
-<img src="/img/anticyc_schematic_final.jpg" width="50%" align="center">
+<img src="/img/anticyc_schematic_final.jpg">
 I have examined the implications of this in a number
 of papers that are primarily based on idealised simulations of an eddying field.
 [More information can be found here,](http://braaannigan.github.io/research/2017/08/16/instabilities_in_eddies.html)
