@@ -52,7 +52,7 @@ class: center, middle
 ---
 
 ## Observed sub-surface eddies in the Arctic
-<img src="img/arctic_dipoles/itp3_anticyc.jpg" width="70%">
+<img src="/img/arctic_dipoles/itp3_anticyc.jpg" width="70%">
 
 A sub-surface anticyclone observed around Day 143
 from an ice-tethered profiler in May 2006. The largest buoyancy anomaly
