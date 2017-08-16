@@ -16,7 +16,7 @@ at the other side of the eddy.   This can lead to the type of instabilities
 that occur varying around the eddy as well as the growth rate of instabilities
 varying around the eddy.  I have examined the implications of this in a number
 of papers that are primarily based on idealised simulations of an eddying field.
-More information can be found here
+[More information can be found here](http://braaannigan.github.io/research/instabilities_in_eddies.md)
 
 
 ## Forming sub-surface eddies from the break-up of a submesoscale dipole
