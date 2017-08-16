@@ -14,15 +14,16 @@ A wind stress at the surface of a mesoscale eddy leads to the input of potential
 vorticity on one side of the eddy and the extraction of potential vorticity
 at the other side of the eddy.   This can lead to the type of instabilities
 that occur varying around the eddy as well as the growth rate of instabilities
-varying around the eddy.  I have examined the implications of this in a number
+varying around the eddy.
+<img src="https://www.dropbox.com/s/29clk3y3y5kl1bb/GRL54169.pdf?dl=0" height="425" width="794">
+I have examined the implications of this in a number
 of papers that are primarily based on idealised simulations of an eddying field.
 [More information can be found here,](http://braaannigan.github.io/research/2017/08/16/instabilities_in_eddies.html)
 while two papers have been published on this:
 the first as part of our examination of [the seasonal cycle in a submesoscale
 model](http://www.sciencedirect.com/science/article/pii/S1463500315000803)
 and a second looking at [the mixed layer - thermocline exchange due to
-symmetric instability in an anticyclone.]
-(http://onlinelibrary.wiley.com/doi/10.1002/2016GL068009/full)
+symmetric instability in an anticyclone.](http://onlinelibrary.wiley.com/doi/10.1002/2016GL068009/full)
 A further paper is in review at JPO that looks at [the broader mix of
 submesoscale instabilities](https://www.dropbox.com/s/k290g7q4i0ddyn1/eddy_subduction_January_2017.pdf?dl=0)
 that may be found in mesoscale eddies
