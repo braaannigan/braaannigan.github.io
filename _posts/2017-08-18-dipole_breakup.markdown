@@ -196,7 +196,7 @@ Paper: Generation of sub-surface anticyclones at Arctic surface fronts due to a 
 
 
     </textarea>
-    <script src="img/arctic_dipoles/https://remarkjs.com/downloads/remark-latest.min.js">
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
       var slideshow = remark.create();
