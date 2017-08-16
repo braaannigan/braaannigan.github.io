@@ -24,7 +24,7 @@ and [Effect of Ekman transport on dipole at vimeo](https://vimeo.com/228193657)
 
 * __Brannigan, L.__, D. P. Marshall, J. Kaiser, A. C. Naveira Garabato and G. Nurser:
   *Submesoscale instabilities in mesoscale eddies*, in revision at JPO.
-
+[Submitted version July 2017](https://www.dropbox.com/s/k290g7q4i0ddyn1/eddy_subduction_January_2017.pdf?dl=0)
 ### Peer-reviewed
 * Naveira Garabato, A. C. et al.: *Vigorous lateral export of the meltwater
 outflow from a thinning Antarctic ice shelf*, Nature (2017).
