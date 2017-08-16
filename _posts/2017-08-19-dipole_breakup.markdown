@@ -1,4 +1,9 @@
-
+---
+layout: post
+title:  "Dipole breakup"
+date:   2017-08-19 16:35:24 +0200
+categories: research
+---
 
 
 <!DOCTYPE html>
@@ -23,12 +28,7 @@
     <textarea id="source">
 
 class: center, middle
----
-layout: post
-title:  "Dipole breakup"
-date:   2017-08-19 16:35:24 +0200
-categories: research
----
+
 
 # It's not you, it's me:
 ## Breakup of dipoles and formation of sub-surface anticyclones
