@@ -53,7 +53,7 @@ class: center, middle
 
 ## Observed sub-surface eddies in the Arctic
 
-<img src="img/arctic_dipoles/itp3_anticyc.jpg" width="70%">
+<img src="github.com/braaannigan/braaannigan.github.io/blob/master/img/arctic_dipoles/itp3_anticyc.jpg" width="70%">
 
 A sub-surface anticyclone observed around Day 143
 from an ice-tethered profiler in May 2006. The largest buoyancy anomaly
@@ -63,7 +63,7 @@ used for (a).
 
 ---
 ## Initial condition used for simulations
-<img src="img/arctic_dipoles/initial_cond_3d.jpg" width="70%">
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/initial_cond_3d.jpg" width="70%">
 
 The model domain is doubly-periodic and about 90 m deep. There are two
 independant fronts with opposite orientation. A positive zonal surface
@@ -72,7 +72,7 @@ stress at the southern front.
 
 ---
 #### Dipole formation with zero surface stress
-<img src="img/arctic_dipoles/rv_stress_comp_day44.jpg" width="65%" align="middle">
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/rv_stress_comp_day44.jpg" width="65%" align="middle">
 
 With zero surface stress (left panels) cyclone-anticyclone dipoles form.
 They tend to follow curved paths that bring them back to the front. The dipole
@@ -80,7 +80,7 @@ trajectory is shown by the black dots.
 
 ---
 #### Dipole formation under an upfront stress
-<img src="img/arctic_dipoles/rv_stress_comp_day44.jpg" width="65%">
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/rv_stress_comp_day44.jpg" width="65%">
 
 With an upfront surface stress (centre panels)
 dipoles also emerge from the front. However, in this case the mixed-layer
@@ -90,11 +90,11 @@ sub-surface eddy.  This is shown in the movie on the next slide.
 
 ---
 #### Dipole formation under an upfront stress
-<iframe src= "" data-src="img/arctic_dipoles/https://player.vimeo.com/video/222181522?loop=1" width="600" height="509" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src= "" data-src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/https://player.vimeo.com/video/222181522?loop=1" width="600" height="509" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 ---
 
 #### Dipole formation under a downfront stress
-<img src="img/arctic_dipoles/rv_stress_comp_day44.jpg" width="65%">
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/rv_stress_comp_day44.jpg" width="65%">
 
 With a constant downfront surface stress (right panels)
 dipoles do not emerge from the front. This is because the front is advected
@@ -102,7 +102,7 @@ by the Ekman transport in the same direction as the dipole propagation
 at a slightly faster rate than the dipole can propagate.
 ---
 ## Vertical strucure of dipoles
-<img src="img/arctic_dipoles/rv_vert_stress_comp_day44.jpg" width="60%" align="left">
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/rv_vert_stress_comp_day44.jpg" width="60%" align="left">
 
 The vertical structure of the dipoles shows why they are subject to
 breakup by a surface stress.
@@ -126,7 +126,7 @@ stress in different directions to see the effect on the dipole propagation.
 
 ---
 ## Effect of a surface stress of dipoles
-<img src="img/arctic_dipoles/day15trajectories.png" width="100%">
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/day15trajectories.png" width="100%">
 
 The dots show the trajectories for the surface cyclone (left panel) and the
 sub-surface anticyclone (right panel). The colour of the dots corresponds to
@@ -135,7 +135,7 @@ the curved trajectory for the case with zero surface stress.
 
 ---
 ## Effect of a surface stress of dipoles
-<img src="img/arctic_dipoles/day15trajectories.png" width="100%">
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/day15trajectories.png" width="100%">
 
 When the Ekman transport has a component advecting the cyclone away from the
 anticyclone (blue and red colours), the cyclone travels away from the anticyclone
@@ -143,7 +143,7 @@ in the direction of the Ekman transport.
 
 ---
 ## Effect of a surface stress of dipoles
-<img src="img/arctic_dipoles/day15trajectories.png" width="100%">
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/day15trajectories.png" width="100%">
 
 When the Ekman transport pushes the cyclone towards the anticyclone (green colours)
 the entire dipole trajectory is affected.
@@ -152,17 +152,17 @@ the dipole remains coherent but follows a less curved path.
 In both these cases the anticyclone does a fast loop of the cyclone.
 ---
 ## Effect of a surface stress of dipoles
-<img src="img/arctic_dipoles/day15trajectories.png" width="100%">
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/day15trajectories.png" width="100%">
 
 An animated version of this plot is shown on the next slide.
 
 ---
 ## Effect of a surface stress of dipoles
-<iframe src= "" data-src="img/arctic_dipoles/https://player.vimeo.com/video/228193657?loop=1" width="760" height="380" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src= "" data-src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/https://player.vimeo.com/video/228193657?loop=1" width="760" height="380" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ---
 ## Model of eddy advection due to Ekman transport
-<img src="img/arctic_dipoles/cyclone_scaling.png" width="60%" align="right">
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/cyclone_scaling.png" width="60%" align="right">
 
 We derive a surface quasi-geostrophic (SQG) model for the effect of
 a surface stress on a mixed layer eddy. This model predicts that when
@@ -173,7 +173,7 @@ velocity in the model shows a good match.
 
 ---
 ## Kinematic model of eddy advection
-<img src="img/arctic_dipoles/kinemResOut0500Exp128Tx038Ty-38.png" width="100%" >
+<img src="/home/lbran/Documents/braaannigan.github.io/img/arctic_dipoles/kinemResOut0500Exp128Tx038Ty-38.png" width="100%" >
 
 We also derive a simple kinematic model for the joint effect of dipole
 self-propagation and the advection due to Ekman transport. This model
