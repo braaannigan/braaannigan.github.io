@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sliding through the data with Bokeh"
-date:   2017-08-20 16:35:24 +0200
+date:   2017-06-21 16:35:24 +0200
 categories: visualisation
 ---
 <script type="text/javascript" async
