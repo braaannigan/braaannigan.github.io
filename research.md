@@ -35,5 +35,5 @@ these are thought to originate from the instabilities of surface fronts. We
 carry out idealised simulations of surface fronts subject to a surface
 stress. We find that sub-surface eddies can form when cyclone-anticyclone
 dipoles are broken-up by the effect of the Ekman transport on the surface-layer
-cyclone. [A short slideshow setting out the main results can be found here]
+cyclone. [A short slideshow setting out the main results can be found here](http://braaannigan.github.io/dipole_breakup.html)
 while [the paper in JPO can be found here](https://www.dropbox.com/s/b3hifb6gksatbcu/arctic_eddy_fronts_submission_June_2017.pdf?dl=0))
