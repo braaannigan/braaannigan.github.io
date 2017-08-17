@@ -6,7 +6,8 @@ categories: research
 ---
 
 Our paper on dipole breakup and sub-surface eddy formation has been accepted
-in the Journal of Physical Oceanography.  
-<img src="/img/arctic_dipoles/day15trajectories.png" width="100%">
+in the Journal of Physical Oceanography. Hurrah!
 [A short slideshow setting out the main results can be found here](http://braaannigan.github.io/dipole_breakup.html)
-while [the paper in JPO can be found here](https://www.dropbox.com/s/b3hifb6gksatbcu/arctic_eddy_fronts_submission_June_2017.pdf?dl=0))
+while [the paper in JPO can be found here.](https://www.dropbox.com/s/b3hifb6gksatbcu/arctic_eddy_fronts_submission_June_2017.pdf?dl=0)
+
+<img src="/img/arctic_dipoles/day15trajectories.png" width="100%">
