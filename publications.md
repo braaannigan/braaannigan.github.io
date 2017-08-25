@@ -18,8 +18,7 @@ title: Publications
 * __Brannigan, L.__, H. Johnson, C. Lique, J. Nilsson and J. Nycander:
 *Generation of sub-surface anticyclones at Arctic surface fronts due to a surface stress*, in press at JPO.
 [Submitted version August 2017](https://www.dropbox.com/s/b3hifb6gksatbcu/arctic_eddy_fronts_submission_June_2017.pdf?dl=0),
-[Animation of instability and dipole break-up at vimeo](https://vimeo.com/222181522)
-and [Effect of Ekman transport on dipole at vimeo](https://vimeo.com/228193657)
+[short ovewview of results.](http://braaannigan.github.io/dipole_breakup.html#1)
 
 
 * __Brannigan, L.__, D. P. Marshall, J. Kaiser, A. C. Naveira Garabato and G. Nurser:
