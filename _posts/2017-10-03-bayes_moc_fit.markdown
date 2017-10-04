@@ -2,11 +2,9 @@
 layout: post
 title:  "Bayesian inference of MOC variability"
 date:   2017-10-03 10:35:24
-categories: communication
+categories: statistics
 ---
 
-
-<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
 <title>bayes_moc_gaussian</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
