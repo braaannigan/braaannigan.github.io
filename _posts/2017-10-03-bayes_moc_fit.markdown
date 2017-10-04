@@ -2,7 +2,7 @@
 layout: post
 title:  "Bayesian inference of MOC variability"
 date:   2017-10-03 10:35:24
-categories: statistics
+categories: communication
 ---
 
 <html>
