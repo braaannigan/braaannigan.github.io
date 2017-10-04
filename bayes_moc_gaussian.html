@@ -16211,7 +16211,9 @@ sigma:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Evaluating-the-model">Evaluating the model<a class="anchor-link" href="#Evaluating-the-model">&#182;</a></h2><p>While we can always fit the model, the crucial step is evaluating the fit in order to understand where the model fails and how we might improve it.  We can first compare the statistical distribution of the observations from the training set with the simulated data. To do so we first define the following plotting function.</p>
+<h2 id="Evaluating-the-model">Evaluating the model<a class="anchor-link" href="#Evaluating-the-model">&#182;</a></h2><p>While it's nice to fit the model and get the PDFs for the parameters $\mu$ and $\sigma$, we still don't know <em>whether the model is any good or not</em>.  The real power of Bayesian analysis is that we can use the PDFs for the parameters to simulate data from the statistical model.  We can then compare this simulated data with the real data to understand where the model fails and how we might improve it.</p>
+<p>To generate the simulated data, we <em>sample</em> from the PDFs of $\mu$ and $\sigma$.  This means that we use a random number generate to pick a value with reference to the PDF of $\mu$ - say we get $\mu$ = -0.284.  We do the same for $\sigma$ - say we get $\sigma$ = 4.087.  We then use a random number geneator to pick a value from a Gaussian distribution with N(-0.284, 4.087^{2}).  We then have our first simulated data point.  We can repeat this same procedure as many times as we want to produce the simulated dataset.  This process occurs in the PyMC3 function above in the line with the method pm.sample_ppc(trace = trace, model = model).</p>
+<p>We can first compare the statistical distribution of the observations from the training set with the simulated data. To do so we first define the following plotting function.</p>
 
 </div>
 </div>
