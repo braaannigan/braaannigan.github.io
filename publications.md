@@ -15,6 +15,7 @@ title: Publications
 
 
 ### In review
+### Peer-reviewed
 * __Brannigan, L.__, H. Johnson, C. Lique, J. Nilsson and J. Nycander:
 *Generation of sub-surface anticyclones at Arctic surface fronts due to a surface stress*,
 [*in press doi:10.1175/JPO-D-17-0022.1*, JPO.](http://journals.ametsoc.org/doi/abs/10.1175/JPO-D-17-0022.1)
@@ -22,9 +23,9 @@ and a [short overview of results.](http://braaannigan.github.io/dipole_breakup.h
 
 
 * __Brannigan, L.__, D. P. Marshall, J. Kaiser, A. C. Naveira Garabato and G. Nurser:
-  *Submesoscale instabilities in mesoscale eddies*, in revision at JPO.
+  *Submesoscale instabilities in mesoscale eddies*, in press at JPO.
 [Submitted version July 2017](https://www.dropbox.com/s/k290g7q4i0ddyn1/eddy_subduction_January_2017.pdf?dl=0)
-### Peer-reviewed
+
 * Naveira Garabato, A. C. et al.: *Vigorous lateral export of the meltwater
 outflow from a thinning Antarctic ice shelf*, Nature (2017).
 <a href="http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20825.html" target="_blank">doi:10.1038/nature20825</a>
