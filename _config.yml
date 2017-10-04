@@ -10,6 +10,7 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+future: true
 # Site settings
 title: Liam Brannigan - The life of ocean eddies
 email: liam brannigan at misu su se
