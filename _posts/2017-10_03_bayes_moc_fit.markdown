@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bayesian inference of MOC variability"
-date:   2017-10-04 10:35:24
+date:   2017-10-03 10:35:24
 categories: communication
 ---
 
@@ -8459,15 +8459,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11241,7 +11241,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11684,7 +11684,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11738,14 +11738,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -15187,7 +15187,7 @@ In this case we'll train the model on the data up to 2012 and test it on the per
 <span class="sd">    output: &#39;trace&#39; is the trace of the model fit, &#39;map_est&#39; is the estimates of the most likely values </span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">with</span> <span class="n">pm</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span> 
+    <span class="k">with</span> <span class="n">pm</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
         <span class="c1"># Specify priors</span>
         <span class="n">mu</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;mu&#39;</span><span class="p">,</span> <span class="n">mu</span> <span class="o">=</span> <span class="n">mu_prior</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">],</span> <span class="n">sd</span> <span class="o">=</span> <span class="n">mu_prior</span><span class="p">[</span><span class="s1">&#39;sd&#39;</span><span class="p">])</span> <span class="c1">#Specify the standard deviation rather than the variance</span>
         <span class="n">sigma</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">HalfNormal</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">,</span> <span class="n">sd</span> <span class="o">=</span> <span class="n">sigma_prior</span><span class="p">[</span><span class="s1">&#39;sd&#39;</span><span class="p">])</span>
@@ -15240,7 +15240,7 @@ In this case we'll train the model on the data up to 2012 and test it on the per
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Auto-assigning NUTS sampler...
 Initializing NUTS using advi...
-Average ELBO = -18,099: 100%|██████████| 200000/200000 [00:20&lt;00:00, 9890.21it/s] 
+Average ELBO = -18,099: 100%|██████████| 200000/200000 [00:20&lt;00:00, 9890.21it/s]
 Finished [100%]: Average ELBO = -18,099
 100%|██████████| 500/500 [00:01&lt;00:00, 428.48it/s]
 100%|██████████| 500/500 [00:02&lt;00:00, 221.25it/s]
@@ -16326,13 +16326,13 @@ mu:
 
   Mean             SD               MC Error         95% HPD interval
   -------------------------------------------------------------------
-  
+
   -0.248           0.052            0.003            [-0.350, -0.148]
 
   Posterior quantiles:
   2.5            25             50             75             97.5
   |--------------|==============|==============|--------------|
-  
+
   -0.349         -0.287         -0.247         -0.213         -0.146
 
 
@@ -16340,13 +16340,13 @@ sigma:
 
   Mean             SD               MC Error         95% HPD interval
   -------------------------------------------------------------------
-  
+
   4.103            0.034            0.002            [4.042, 4.169]
 
   Posterior quantiles:
   2.5            25             50             75             97.5
   |--------------|==============|==============|--------------|
-  
+
   4.030          4.079          4.102          4.126          4.165
 
 </pre>
@@ -18055,9 +18055,9 @@ IYQQQgghRMqTwkYIIYQQQgiR8v4fec9CHgWVS08AAAAASUVORK5CYII=
         <span class="n">mu</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;mu&#39;</span><span class="p">,</span> <span class="n">mu</span> <span class="o">=</span> <span class="n">mu_prior</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">],</span> <span class="n">sd</span> <span class="o">=</span> <span class="n">mu_prior</span><span class="p">[</span><span class="s1">&#39;sd&#39;</span><span class="p">])</span> <span class="c1">#Specify the standard deviation rather than the variance</span>
         <span class="n">lam</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">HalfNormal</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">,</span> <span class="n">sd</span> <span class="o">=</span> <span class="n">scale_prior</span><span class="p">[</span><span class="s1">&#39;sd&#39;</span><span class="p">])</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="s1">&#39;df&#39;</span><span class="p">,</span> <span class="n">degrees_of_freedom_prior</span><span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">],</span> <span class="n">degrees_of_freedom_prior</span><span class="p">[</span><span class="s1">&#39;high&#39;</span><span class="p">])</span>
-        
+
         <span class="n">Y_obs</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">StudentT</span><span class="p">(</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">,</span> <span class="n">mu</span> <span class="o">=</span> <span class="n">mu</span><span class="p">,</span> <span class="n">lam</span> <span class="o">=</span> <span class="n">lam</span><span class="p">,</span> <span class="n">nu</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">observed</span> <span class="o">=</span> <span class="n">observed</span><span class="p">)</span>
-        
+
         <span class="n">trace</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">draws</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
         <span class="n">train_samples</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample_ppc</span><span class="p">(</span><span class="n">trace</span> <span class="o">=</span> <span class="n">trace</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="p">)</span>
         <span class="n">map_est</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">find_MAP</span><span class="p">(</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="p">)</span>
@@ -20430,12 +20430,12 @@ EELEvf8Hc5Dn1nAZ8YIAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">models</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;train_data&#39;</span><span class="p">:</span><span class="n">train_samples</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;test_data&#39;</span><span class="p">:</span><span class="n">train_samples</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Gaussian&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span> <span class="p">},</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">models</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;train_data&#39;</span><span class="p">:</span><span class="n">train_samples</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;test_data&#39;</span><span class="p">:</span><span class="n">train_samples</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Gaussian&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span> <span class="p">},</span>
          <span class="p">{</span><span class="s1">&#39;train_data&#39;</span><span class="p">:</span><span class="n">train_samples_student</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;test_data&#39;</span><span class="p">:</span><span class="n">train_samples_student</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Student-T&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span> <span class="p">}]</span>
 <span class="n">axkwargs</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span><span class="s1">&#39;title&#39;</span> <span class="p">:</span> <span class="s1">&#39;Training period&#39;</span><span class="p">,</span> <span class="s1">&#39;xlabel&#39;</span><span class="p">:</span> <span class="s1">&#39;Sverdrups&#39;</span><span class="p">,</span> <span class="s1">&#39;ylabel&#39;</span><span class="p">:</span> <span class="s1">&#39;Probability&#39;</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;title&#39;</span> <span class="p">:</span> <span class="s1">&#39;Testing period&#39;</span><span class="p">,</span> <span class="s1">&#39;xlabel&#39;</span><span class="p">:</span> <span class="s1">&#39;Sverdrups&#39;</span><span class="p">,</span> <span class="s1">&#39;ylabel&#39;</span><span class="p">:</span> <span class="s1">&#39;Probability&#39;</span><span class="p">}]</span>
-<span class="n">compare_models</span><span class="p">(</span><span class="n">train_data</span><span class="o">=</span><span class="n">moc_anomalies_train</span><span class="p">,</span> <span class="n">test_data</span> <span class="o">=</span> <span class="n">moc_anomalies_test</span><span class="p">,</span> 
+<span class="n">compare_models</span><span class="p">(</span><span class="n">train_data</span><span class="o">=</span><span class="n">moc_anomalies_train</span><span class="p">,</span> <span class="n">test_data</span> <span class="o">=</span> <span class="n">moc_anomalies_test</span><span class="p">,</span>
                <span class="n">models</span> <span class="o">=</span> <span class="n">models</span><span class="p">,</span> <span class="n">axkwargs</span> <span class="o">=</span> <span class="n">axkwargs</span><span class="p">)</span>
 </pre></div>
 
@@ -21511,7 +21511,7 @@ HGnMCiGEEEIIIYRwnP8PWY026LtPyFcAAAAASUVORK5CYII=
   </div>
 </body>
 
- 
+
 
 
 </html>
