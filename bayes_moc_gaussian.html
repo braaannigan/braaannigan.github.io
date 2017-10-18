@@ -13518,6 +13518,8 @@ kiQ1mIG9JEmSJEkNZmAvSZIkSVKDGdhLkiRJktRg/x/fC4y5SmFjgQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Extracting-the-anomalies-from-the-full-time-series">Extracting the anomalies from the full time series<a class="anchor-link" href="#Extracting-the-anomalies-from-the-full-time-series">&#182;</a></h2><p>This plot of the full time series shows that the seasonal cycle accounts for a significant portion of the variability in the time series.  To understand the non-seasonal variability, we remove the seasonal cycle.  We take advantage of time series functionality in xaray to calculate a monthly-mean MOC climatology and then calculate the MOC anomaly with respect to this monthly mean.  We also remove the linear trend.</p>
+<p>There is clearly a strong autocorrelation in the anomaly time series. For the sake of simplicity we ignore 
+the autocorrelation here, but this would have to be accounted for in a full analysis.</p>
 
 </div>
 </div>
