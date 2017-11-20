@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Fast looping with Numba"
-date:   2017-11-20 16:35:24 +0200
+date:   2017-11-20 10:35:24 +0200
 categories: numerics
 ---
 <script type="text/javascript" async
