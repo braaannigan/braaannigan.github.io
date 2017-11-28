@@ -63,7 +63,14 @@ jupyter notebook
 
 A notebook should then open in your web browser.  Click the 'new' button on the top right and see if 'work3' is listed as an installation.  If not, then let me know.
 
-Finally, to make sure everything is installed correctly, create a directory on your system called workshop_python and download the attached notebook to that directory.  Navigate to that directory from your terminal.  Check that you have activated the work3 environment and then open a jupyter notebook with the command
+Finally, to make sure everything is installed correctly, run the test notebook.
+Navigate to this page in your web browser:
+https://raw.githubusercontent.com/braaannigan/explore_data/master/workshop_installation_check.ipynb
+
+Click ctrl + s to save the file as workshop_installation_check.ipynb.
+
+Navigate to the directory where you saved the .ipynb file from your terminal.  
+Check that you have activated the work3 environment and then open a jupyter notebook with the command
 ```
 jupyter notebook
 ```
