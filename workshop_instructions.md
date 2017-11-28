@@ -64,8 +64,7 @@ jupyter notebook
 A notebook should then open in your web browser.  Click the 'new' button on the top right and see if 'work3' is listed as an installation.  If not, then let me know.
 
 Finally, to make sure everything is installed correctly, run the test notebook.
-Navigate to this page in your web browser:
-https://raw.githubusercontent.com/braaannigan/explore_data/master/workshop_installation_check.ipynb
+Navigate to [this page in your web browser](https://raw.githubusercontent.com/braaannigan/explore_data/master/workshop_installation_check.ipynb)
 
 Click ctrl + s to save the file as workshop_installation_check.ipynb.
 
