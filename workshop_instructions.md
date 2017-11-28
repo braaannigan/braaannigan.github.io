@@ -105,4 +105,8 @@ Execute the two cells​ by pressing shift-enter in each cell.
 The first cell imports the necessary
 packages.  The second cell checks that the package versions are up-to-date.
 
+There may be a slight issue with xarray.  You should have version 0.9 or 0.10,
+the code I've written may suggest there's a problem when you have 0.10, but this
+can be ignored.
+
 If there is a problem, send me the output from the second cell.
