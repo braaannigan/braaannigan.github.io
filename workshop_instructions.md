@@ -1,5 +1,6 @@
 ---
 layout: default
+visible: 1
 ---
 
 # Python installation
