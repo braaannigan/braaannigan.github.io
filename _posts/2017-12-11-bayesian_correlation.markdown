@@ -30,5 +30,6 @@ to a dataset is also available in the repository.
 
 ## Offline and interactive on your local machine
 If you'd prefer to run the notebook on your own machine, you can clone or
-download [**the same repository**](https://github.com/braaannigan/explore_data)using the green button on the top-right.  This will also
+download [**the same repository**](https://github.com/braaannigan/explore_data)
+using the green button on the top-right.  This will also
 download the data files that are in the *data* sub-directory.
