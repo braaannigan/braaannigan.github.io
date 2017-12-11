@@ -7,8 +7,8 @@ categories: bayesian
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<img src="https://github.com/braaannigan/braaannigan.github.io/blob/master/img/correl_image.png">
 
-![](../img/correl_image.png)
 Bayesian methods are a powerful tool for understanding uncertainty in our
 datasets and the strengths and weaknesses of our models.  I'm writing a series
 of blog posts about how Bayesian methods can be used in practice in oceanography.
