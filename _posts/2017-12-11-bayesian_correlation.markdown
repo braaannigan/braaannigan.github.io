@@ -13,12 +13,12 @@ datasets and the strengths and weaknesses of our models.  I'm writing a series
 of blog posts about how Bayesian methods can be used in practice in oceanography.
 
 The second post in this series shows how to estimate correlation using a
-Bayesian approach.  The post is written as an interactive Jupyter notebook that
+Bayesian approach.  The post is an interactive Jupyter notebook that
 you can access in two ways.
 
 ## Online and interactive from the cloud
 You can run the notebook from the cloud
-[by going to this repository](https://github.com/braaannigan/explore_data) and
+[**by going to this repository**](https://github.com/braaannigan/explore_data) and
 hitting the 'launch binder' button in the readme below the file list.  
 You then hit the launch
 button on the next page and wait patiently for a minute while the interactive
