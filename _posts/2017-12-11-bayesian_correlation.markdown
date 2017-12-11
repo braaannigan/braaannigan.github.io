@@ -25,11 +25,12 @@ button on the next page and wait patiently for a minute while the interactive
 notebook environment is created.  You then open the 'bayes_correlation.ipynb'
 notebook and you can then use it as you would a notebook on your own machine.
 
-The first notebook in the series on fitting a statistical distribution
+The first notebook 'bayes_moc_gaussian.ipynb' on fitting a statistical distribution
 to a dataset is also available in the repository.
 
 ## Offline and interactive on your local machine
 If you'd prefer to run the notebook on your own machine, you can clone or
 download [**the same repository**](https://github.com/braaannigan/explore_data)
-using the green button on the top-right.  This will also
+using the green button on the top-right of the repository page.  Cloning
+or downloading the repository will also
 download the data files that are in the *data* sub-directory.
