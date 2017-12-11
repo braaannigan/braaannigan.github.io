@@ -16,6 +16,7 @@ The second post in this series shows how to estimate correlation using a
 Bayesian approach.  The post is written as an interactive Jupyter notebook that
 you can access in two ways.
 
+## Online and interactive from the cloud
 You can run the notebook from the cloud
 [by going to this repository](https://github.com/braaannigan/explore_data) and
 hitting the 'launch binder' button in the readme below the file list.  
@@ -27,6 +28,7 @@ notebook and you can then use it as you would a notebook on your own machine.
 The first notebook in the series on fitting a statistical distribution
 to a dataset is also available in the repository.
 
+## Offline and interactive on your local machine
 If you'd prefer to run the notebook on your own machine, you can clone or
 download the repository using the green button on the top-right.  This will also
 download the data files that are in the *data* sub-directory.
