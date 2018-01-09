@@ -3,5 +3,13 @@ layout: page
 section-type: cv
 title: CV
 ---
-<embed src="https://braaannigan.github.io/pdfs/CV_LBrannigan_long.pdf"
-type="application/pdf" width="100%" />
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting...</title>
+{% assign redirect_url = "/pdfs/CV_LBrannigan_long.pdf" | prepend: site.baseurl | prepend: site.url %}
+<link rel="canonical" href="{{ redirect_url }}">
+<meta http-equiv="refresh" content="0; url={{ redirect_url }}">
+<h1>Redirecting...</h1>
+<a href="{{ redirect_url }}">Click here if you are not redirected.</a>
+<script>location="{{ redirect_url }}"</script>
