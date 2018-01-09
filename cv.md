@@ -3,4 +3,4 @@ layout: page
 section-type: cv
 title: CV
 ---
-You can find my up-to-date CV here
+<embed src="https://braaannigan.github.io/pdfs/CV_LBrannigan_long.pdf" type="application/pdf" />
