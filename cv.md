@@ -4,7 +4,6 @@ section-type: cv
 title: CV
 ---
 
-<!DOCTYPE html>
 <meta charset="utf-8">
 <title>Redirecting...</title>
 {% assign redirect_url = "/pdfs/CV_LBrannigan_long.pdf" | prepend: site.baseurl | prepend: site.url %}
