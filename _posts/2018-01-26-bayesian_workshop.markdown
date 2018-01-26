@@ -19,46 +19,44 @@ section.
 There may be a version of python installed on your system already.  However,
 to make sure that we are all using the same version we will use
 the Anaconda distribution of python.  If you have never downloaded Anaconda,
-you go to the page below (changing the operating system if necessary)
-and download the **python 3** version.
+you go to [this page](https://www.anaconda.com/download/
+) and download the **python 3** version.
 
-https://www.anaconda.com/download/
 
 The anaconda installer may ask your permission to do various things such as
-appending to your .bashrc file during installation.  
-You can agree to all the points it asks.
-
-If you are using windows you then open the Anaconda prompt (you can search for
-Anaconda prompt from the Start menu).  All of the commands set out
-below occur in the terminal (mac/unix) or the Anaconda prompt (windows),
-rather than inside python.
+appending to your .bashrc file during installation. You can agree to all the points it asks.
 
 For mac/linux you need to start a new terminal
 session once Anaconda is installed.
 
-In the terminal/Anaconda prompt enter
+If you are using windows you open the Anaconda prompt (you can search for
+"Anaconda prompt" from the Start menu).  All of the commands set out
+below occur in the terminal (mac/unix) or the Anaconda prompt (windows),
+rather than inside python.
+
+To check that the installation has worked, enter in the terminal/Anaconda prompt
 ```
 conda info
 ```
-to check that conda is available.  ```conda``` is the command line utility that
+In this case ```conda``` is the command line utility that
 will allow you to manage virtual environments.  You can learn more
-about ```conda``` [here](http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/).
+about what ```conda``` does [in this blog post](http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/).
 
 
 # Virtual environment
-It is good programming practice to create 'virtual environments' on your
+It is good practice to create virtual environments on your
 machine.  A virtual environment is like a 'walled-off' installation of a
-program -- such as python -- on your machine.  
-Using a virtual environment lets you play around
+program -- such as python -- on your machine.  Using a virtual environment lets you play around
 with different installation set-ups on the same machine.  For example, you might
-have one virtual environment that holds the set up for one project
-that you started a couple of years ago while you have another virtual environment
-that has the most recent version of the packages for a new project.
+have one virtual environment that holds the set-up for one project
+that you started a couple of years ago with older versions of the packages while you have another virtual environment
+for a new project that has the most recent version of the packages.
 
-For this workshop, we will create a virtual environment called 'bayes'
-that has the packages that we need for the workshop installed.
+For this workshop, we will create a virtual environment called 'bayes'. This
+virtual environment will have the packages that we need for the workshop installed.
 
-You can create this environment using the conda virtual environment manager by running the following command
+You can create this environment and install the necessary pacakges using  
+conda by running the following command
 in the terminal (mac/linux) or the Anaconda prompt (windows):
 ```
 conda create -n bayes python=3.6.1 ipython jupyter scipy pystan pandas scikit-learn xarray holoviews bokeh seaborn
@@ -79,7 +77,7 @@ or in windows
 activate bayes
 ```
 
-You should see 'bayes' now appearing at the start of the command prompt.
+You should see 'bayes' now appearing at the start of the command prompt.  
 
 You can deactivate and return to your root environment with the command:
 ```
@@ -90,45 +88,30 @@ or in windows:
 deactivate bayes
 ```
 
-In mac/linux you can set default virtual environment by adding a line to your
- .bashrc file.  This file lives in your home directory.  It may have a slightly
- different name on your system.  You can find it by moving to your home directory
- ```
- cd ~
- ```
- and listing all the files, including the files beginning with . such as .bashrc
- that are normally hidden:
- ```
- ls - a .*
-```
-You set the default environment for new terminal windows by adding a line to the .bashrc file:
-```
-source deactivate bayes
-```
-
-# ipython kernel
-We will be using interactive jupyter notebooks in the workshop.  
-You need to make sure that the notebook sees the python installation
+# Ipython kernel for the Jupyter notebooks
+We will be using interactive jupyter notebooks in the workshop.  You need to
+make sure that the notebook sees the python installation
 in the ```bayes``` virtual environment.  
 You do this with the command
 ```
 python -m ipykernel install --user --name bayes --display-name "bayes"
 ```
 
-# Test installation
+# Test the installation
 You can test whether the installation has worked by opening a jupyter notebook.  In the command line enter:
 ```
 jupyter notebook
 ```
 
 A notebook should then open in your web browser.  Click the 'new' button
-on the top right and see if 'python bayes' is listed as an option.  
-If not, then let me know.
+on the top right and see if 'bayes' is listed as an option amongst the
+kernels.  If bayes does not appear, then open a new terminal and try running the
+ipython kernel creation command again.  If that fails then let me know.
 
 Finally, to make sure everything is installed correctly, run the test notebook.
-Navigate to [this page in your web browser](https://raw.githubusercontent.com/braaannigan/explore_data/master/_00_installation_check.ipynb)
+Navigate to [this page in your web browser](https://raw.githubusercontent.com/braaannigan/explore_data/master/_00_installation_check.ipynb).
 
-Click ctrl + s to save the file as ```_00_installation_check.ipynb```.
+Click ctrl + s and save the file as ```_00_installation_check.ipynb```.
 
 Navigate to the directory where you saved this .ipynb file from your terminal.  
 Check that you have activated the bayes environment - it should say ```bayes```
