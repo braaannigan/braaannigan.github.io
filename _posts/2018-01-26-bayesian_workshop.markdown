@@ -85,7 +85,14 @@ activate bayes
 
 You should see 'bayes' now appearing at the start of the command prompt.  
 
-You can deactivate and return to your root environment with the command:
+There may be a problem with installing xarray.  To install it
+explicitly run
+```
+pip install xarray
+```
+
+You can deactivate your environment and return
+to your root environment with the command:
 ```
 source deactivate bayes
 ```
@@ -131,7 +138,14 @@ or in the Anaconda prompt in windows
 ```
 activate bayes
 ```
-and then open a jupyter notebook with the command
+
+There is a small issue with Theano that occurs in windows. This can be
+addressed by running in the Anaconda prompt
+```
+set MKL_THREADING=GNU
+```
+
+You then open a jupyter notebook with the command
 ```
 jupyter notebook
 ```
@@ -141,12 +155,6 @@ Open the file: ```_00_installation_check.ipynb```.
 Follow the instructions to see if the model fits and the plot appears at the end.
 It might take a couple of minutes to run everything.
 
-You may get an error message saying that the xarray package has not been found.
-In this case you should close down the notebook in the browser and in
-the command line.  You then run
-```
-pip install xarray
-```
-and try again to open a notebook and run ```_00_installation_check.ipynb```.
+
 
 Contact me if there are any problems.
