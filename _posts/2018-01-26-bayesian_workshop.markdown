@@ -17,7 +17,8 @@ section below.
 # Python installation
 There may be a version of python installed on your system already.  However,
 it is unlikely that it will be up-to-date enough for the
-workshop software to run on it.  
+workshop software to run with that software.  
+
 To make sure that we are all using the same software we will use
 the Anaconda distribution of python.  If you have never downloaded Anaconda,
 you go to [this page](https://www.anaconda.com/download/
@@ -26,11 +27,11 @@ you go to [this page](https://www.anaconda.com/download/
 The anaconda installer may ask your permission to do various things such as
 appending to your .bashrc file during installation. You can agree to all the points it asks.
 
-For *mac/linux* you need to start a new terminal
+For **mac/linux** you need to start a new terminal
 session once Anaconda is installed.
 
-If you are using *windows* you open the Anaconda prompt (you can search for
-"Anaconda prompt" from the Start menu).  All of the commands set out
+If you are using **windows** you open the Anaconda prompt (you can search for
+"Anaconda prompt" from the Start menu).  **All of the commands** set out
 below occur in the terminal (mac/linux) or the Anaconda prompt (windows),
 rather than inside python.
 
@@ -40,7 +41,8 @@ conda info
 ```
 This will display some information about the version of ```conda``` that you
 are using.  In this case ```conda``` is the command line utility that
-will allow you to manage virtual environments.  If you are interested you
+will allow you to manage the packages that are installed in your
+virtual environments.  If you are interested you
 can learn more about what ```conda``` does [in this blog post](http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/).
 
 
@@ -51,8 +53,8 @@ program -- such as python -- on your machine.  Using a virtual environment lets 
 with different software set-ups on the same machine.  For example, you might
 have one virtual environment that holds the set-up for one project
 that you started a couple of years ago with older versions of package.
-When you start a new project you create a new environment with
-the most recent version of package without disturbing the older project.
+When you start a new project you create a new virtual environment with
+more recent version of packages without disturbing the older project.
 You can then switch between these environments with a single command.
 
 For this workshop, we will create a virtual environment called 'bayes'. This
@@ -64,17 +66,18 @@ in the terminal (mac/linux) or the Anaconda prompt (windows):
 ```
 conda create -n bayes python=3.6.1 ipython jupyter scipy pymc3 pandas scikit-learn xarray holoviews bokeh seaborn
 ```
-Say yes to any questions the installer asks.
+Answer yes to any questions the installer asks.
 
 
 This command 1) creates an environment called 'bayes', 2) sets python 3.6.1 as the
 python version and then 3) installs the packages listed from ipython:seaborn.  
 
-You can then 'activate' (switch-to) this virtual environment with the command:
+You can then 'activate' (switch-to) this virtual environment from
+the terminal in mac/linux with the command:
 ```
 source activate bayes
 ```
-or in windows
+or in windows from the Anaconda prompt
 
 ```
 activate bayes
@@ -101,13 +104,14 @@ python -m ipykernel install --user --name bayes --display-name "bayes"
 ```
 
 # Test the installation
-You can test whether the installation has worked by opening a jupyter notebook.  In the command line enter:
+You can test whether the installation has worked by opening a jupyter notebook.  
+In the terminal (mac/linux) or the Anaconda prompt (windows) enter:
 ```
 jupyter notebook
 ```
 
 A notebook should then open in your web browser.  Click the 'new' button
-on the top right and see if 'bayes' is listed as an option amongst the
+on the top right and check that 'bayes' is listed as an option amongst the
 kernels.  If bayes does not appear, then open a new terminal and try running the
 ipython kernel creation command again.  If that fails then let me know.
 
