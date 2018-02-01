@@ -74,15 +74,17 @@ Answer yes to any questions the installer asks.
 
 This command:
 1) creates an environment called 'bayes'
+
 2) sets python 3.6.1 as the python version
+
 3) installs the packages listed from ipython:seaborn.  
 
 You can then 'activate' (switch-to) this virtual environment from
-the terminal in mac/linux with the command:
+the terminal in **mac/linux** with the command:
 ```
 source activate bayes
 ```
-or in windows from the Anaconda prompt
+or in **windows** from the Anaconda prompt
 
 ```
 activate bayes
