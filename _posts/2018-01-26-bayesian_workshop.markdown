@@ -112,6 +112,7 @@ You can make sure the notebooks knows about the ```bayes``` environment with the
 ```
 python -m ipykernel install --user --name bayes --display-name "bayes"
 ```
+---
 ### Potential issue for mac/linux:
 After running the command above in mac/linux you may get a long error message that ends with a line that is *similar*
 to the following:
@@ -139,7 +140,7 @@ On a **linux** laptop you need to find the same files.  They are in a sub-direct
 of your anaconda installation.  If you installed anaconda in your home directory,
 then the files would be in ```~/anaconda3/envs/bayes/etc/conda/activate```
 and you can then follow the macbook instructions above.
-
+---
 # Test the installation
 You can test whether the installation has worked by opening a jupyter notebook.  
 In the terminal (mac/linux) or the Anaconda prompt (windows) enter:
