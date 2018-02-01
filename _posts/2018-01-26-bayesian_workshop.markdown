@@ -209,7 +209,7 @@ virtual environment.  To address this:
 
 5) open a new jupyter notebook from the terminal
 
-6) try to run ```_00_installation_check.ipynb``` again.
+try to run ```_00_installation_check.ipynb``` again.
 
 
 An alternative issue that might arise leads to a very long error message
