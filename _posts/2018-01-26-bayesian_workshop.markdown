@@ -156,9 +156,9 @@ If bayes does not appear amongst the list of kernels, then open a new terminal a
 ipython kernel creation command again.  If that fails then let me know.
 
 Finally, to make sure everything is installed correctly, run the test notebook.
-Navigate to [this page in your web browser](https://raw.githubusercontent.com/braaannigan/explore_data/master/_00_installation_check.ipynb).
+You can download the test notebook by [navigating to this page in your web browser](https://raw.githubusercontent.com/braaannigan/explore_data/master/_00_installation_check.ipynb).
 
-Click ctrl + s and save the file as ```_00_installation_check.ipynb```. Remove
+Click ctrl + s somewhere on the page and save the file as ```_00_installation_check.ipynb```. Remove
 any .txt extension from the file name.
 
 Navigate to the directory where you saved this .ipynb file from your terminal.  
@@ -180,7 +180,7 @@ The * means that the code is running.  If you see:
 ```
 In [6]
 ```
-where the 6 could be any number, it means that the code has run successfully.
+--where the 6 could be any number -- it means that the code has run successfully.
 
 If you see:
 ```
@@ -200,11 +200,15 @@ This error message means that the package did not install correctly when we crea
 virtual environment.  To address this:
 
 1) close down the notebook in your browser and in the terminal
+
 2) make sure that you have activated the bayes environment in your terminal/Anaconda prompt
-3) run pip install <package_name>
-where <package_name> is the module that was not found in the notebook.
+
+3) run pip install <package_name> where <package_name> is the module that was not found in the notebook
+
 4) open a new terminal window
+
 5) open a new jupyter notebook from the terminal
+
 6) try to run ```_00_installation_check.ipynb``` again.
 
 
