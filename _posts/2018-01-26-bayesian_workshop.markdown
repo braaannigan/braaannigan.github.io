@@ -73,6 +73,7 @@ conda create -n bayes python=3.6.1 ipython jupyter scipy pymc3 pandas scikit-lea
 Answer yes to any questions the installer asks.
 
 This command:
+
 1) creates an environment called ```bayes```
 
 2) sets python 3.6.1 as the python version
@@ -90,7 +91,7 @@ or in **windows** from the Anaconda prompt
 activate bayes
 ```
 
-You should see '``bayes``` now appearing at the start of the command prompt.  
+You should see ```bayes``` now appearing at the start of the command prompt.  
 
 You can deactivate your environment and return
 to your root environment with the command:
@@ -120,17 +121,24 @@ ModuleNotFoundError: No module named '_sysconfigdata_x86_64
 This error arises because a recent version of conda has included some files that
 think you want to set up a compiler for the C and C++ languages in this environment.
 As we don't want to set up these compilers in this environment, we need to delete
-these files from the installation.  On mac you can use the spotlight search (the
+these files from the installation.  
+
+To address this error on a **macbook** you can use the spotlight search (the
   magnifying glass in the top right) to look for a folder called ```activate.d```.
 Go to the ```activate.d``` folder and make sure that it is in your ```bayes```
 environment - the directory path should be something
-like ```\envs\bayes\etc\conda\activate```.  Delete the two files
+like ```/envs/bayes/etc/conda/activate```.  Delete the two files
 :that begin ```activate_clang``` and ```activate_clangxx```.  
 Once you have deleted these files, go up one level in the directory
 tree and you will find another sub-directory called ```deactivate```.
 Delete the two corresponding deactivate files in this directory.  
 You may need to open a new terminal, activate the bayes environment and then
 try running the ```python -m ipykernel...``` command above again.
+
+On a **linux** laptop you need to find the same files.  They are in a sub-directory
+of your anaconda installation.  If you installed anaconda in your home directory,
+then the files would be in ```~/anaconda3/envs/bayes/etc/conda/activate```
+and you can then follow the macbook instructions above.
 
 # Test the installation
 You can test whether the installation has worked by opening a jupyter notebook.  
