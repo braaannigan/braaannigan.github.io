@@ -192,6 +192,9 @@ and corrections to them are set out below.
 
 ## Potential issues with the installation test
 You may get an error after the first code cell that says something like:
+
+---
+### Module not found error
 ```
 ModuleNotFoundError: No module named xarray
 ```
@@ -210,7 +213,9 @@ virtual environment.  To address this:
 5) open a new jupyter notebook from the terminal
 
 try to run ```_00_installation_check.ipynb``` again.
+---
 
+### Theano error
 
 An alternative issue that might arise leads to a very long error message
 after the first code block that ends with something like:
@@ -223,5 +228,6 @@ block of the notebook (with the second line added in to show where it goes)
 %env MKL_THREADING_LAYER=GNU
 import numpy as np
 ```
+---
 
 Contact me if there are any problems.
