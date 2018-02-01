@@ -73,7 +73,7 @@ conda create -n bayes python=3.6.1 ipython jupyter scipy pymc3 pandas scikit-lea
 Answer yes to any questions the installer asks.
 
 This command:
-1) creates an environment called 'bayes'
+1) creates an environment called ```bayes```
 
 2) sets python 3.6.1 as the python version
 
@@ -90,7 +90,7 @@ or in **windows** from the Anaconda prompt
 activate bayes
 ```
 
-You should see 'bayes' now appearing at the start of the command prompt.  
+You should see '``bayes``` now appearing at the start of the command prompt.  
 
 You can deactivate your environment and return
 to your root environment with the command:
@@ -104,7 +104,7 @@ deactivate bayes
 
 # Ipython kernel for the Jupyter notebooks
 We will be using interactive jupyter notebooks in the workshop. Notebooks allow
-you to run code and view outputs in your web browser. To use the notebooks
+you to run code and view plots in your web browser. To use the notebooks
 you need to make sure that the notebook knows about the python installation
 that you created above in the ```bayes``` virtual environment.  
 You can make sure the notebooks knows about the ```bayes``` environment with the command
