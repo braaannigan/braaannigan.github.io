@@ -25,7 +25,7 @@ python on your machine -- and it also provides an *environment manager* called
 conda.  conda is discussed further below.
 
 If you have never downloaded Anaconda,
-you go to [this page](https://www.anaconda.com/download/
+[you go to this page](https://www.anaconda.com/download/
 ) and download the **python 3** version.
 
 The anaconda installer may ask your permission to do various things such as
@@ -33,7 +33,8 @@ appending to your .bashrc file during installation. You can agree to all the poi
 
 For **mac/linux** you need to open a new terminal window once Anaconda is installed.
 
-If you are using **windows** you open the Anaconda prompt (you can search for
+If you are using **windows** you open the Anaconda prompt once the installation
+has finished (you can search for
 "Anaconda prompt" from the Start menu).  **All of the commands** set out
 below occur in the terminal (mac/linux) or the Anaconda prompt (windows),
 rather than inside python.
@@ -45,25 +46,25 @@ conda info
 This will display some information about the version of ```conda``` that you
 are using.  In this case ```conda``` is the command line utility that
 will allow you to manage the packages that are installed in your
-virtual environments.  If you are interested you
+virtual environments.  If you are interested, you
 can learn more about what ```conda``` does [in this blog post](http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/).
 
 
 # Virtual environment
 It is good practice to create virtual environments on your
 machine.  A virtual environment is like a 'walled-off' installation of a
-program -- such as python -- on your machine.  Using a virtual environment lets you play around
-with different software set-ups on the same machine.  For example, you might
+program such as python.  Using a virtual environment lets you play around
+with different software set-ups on the same computer.  For example, you might
 have one virtual environment that holds the set-up for one project
-that you started a couple of years ago with older versions of package.
-When you start a new project you create a new virtual environment with
+that you started a couple of years ago with older versions of packages.
+When you start a new project you can create a new virtual environment with
 more recent version of packages without disturbing the older project.
 You can then switch between these environments with a single command.
 
-For this workshop, we will create a virtual environment called 'bayes'. This
+For this workshop, we will create a virtual environment called ```bayes```. This
 virtual environment will have the packages that we need for the workshop installed.
 
-You can create this environment and install the necessary packages using  
+You can create this ```bayes``` environment and install the necessary packages using  
 conda by running the following command
 in the terminal (mac/linux) or the Anaconda prompt (windows):
 ```
@@ -71,8 +72,10 @@ conda create -n bayes python=3.6.1 ipython jupyter scipy pymc3 pandas scikit-lea
 ```
 Answer yes to any questions the installer asks.
 
-This command 1) creates an environment called 'bayes', 2) sets python 3.6.1 as the
-python version and then 3) installs the packages listed from ipython:seaborn.  
+This command:
+1) creates an environment called 'bayes'
+2) sets python 3.6.1 as the python version
+3) installs the packages listed from ipython:seaborn.  
 
 You can then 'activate' (switch-to) this virtual environment from
 the terminal in mac/linux with the command:
