@@ -140,15 +140,16 @@ On a **linux** laptop you need to find the same files.  They are in a sub-direct
 of your anaconda installation.  If you installed anaconda in your home directory,
 then the files would be in ```~/anaconda3/envs/bayes/etc/conda/activate```
 and you can then follow the macbook instructions above.
+
 ---
-# Test the installation
+# Test the installation (all users)
 You can test whether the installation has worked by opening a jupyter notebook.  
 In the terminal (mac/linux) or the Anaconda prompt (windows) enter:
 ```
 jupyter notebook
 ```
 A notebook should then open in your web browser.  Click the 'new' button
-on the top right and check that 'bayes' is listed as an option amongst the
+on the top right and check that ```bayes``` is listed as an option amongst the
 kernels. A `kernel` in this context means an installation of python on your machine
 such as the installation in the bayes environment.
 If bayes does not appear amongst the list of kernels, then open a new terminal and try running the
