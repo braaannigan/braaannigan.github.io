@@ -12,9 +12,9 @@ defaults:
       layout: "default"
 future: true
 # Site settings
-title: Liam Brannigan - The life of ocean eddies
-email: liam brannigan at misu su se
-description: Oceanographer at Stockholm University
+title: Liam Brannigan - Embracing uncertainty
+email: braaannigan@gmail.com
+description: Data Scientist
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://braaannigan.github.io/" # the base hostname & protocol for your site
 twitter_username: braaannigan
