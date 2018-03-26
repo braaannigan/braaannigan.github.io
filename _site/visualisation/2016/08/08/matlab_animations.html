@@ -1,0 +1,81 @@
+<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h3 id="flow-animations---dont-you-just-love-them">Flow animations - don’t you just love them?</h3>
+<p>I love animations of fluid dynamics.  We are lucky to work in a field that
+lends itself so readily to visualisation, where models produce outputs that
+people can just look at to get an idea of what’s going on. Animations are
+also great for capturing peoples’ attention when presenting your work
+in person - particularly the tired, jet-lagged
+and possibly hungover population of most major scientific meetings.</p>
+
+<h3 id="getting-the-right-size">Getting the right size</h3>
+<p>Producing publication-quality animations in two dimensions is straight-forward
+in matlab.  Once you know what you’re doing – as you soon will – it’s just
+a few lines of code that you add to the start and end of a loop.  Indeed, the
+issue isn’t really producing publication-quality animations — it’s producing
+publication-quality animations with a filesize that a publisher will actually
+accept.  In my experience, naive use of the matlab writer commands produces
+files that are about 50 times larger.</p>
+
+<p>Sample code for generating an animation is below.  The animation is of a domain
+with 50x50 pixels and 120 frames.  It comes out as an .avu file of less than 4 MB.</p>
+
+<p>First generate the data to be plotted</p>
+
+<p><script type="math/tex">x = \textrm{linspace}(0,2*\pi,50)</script>;</p>
+
+<p><script type="math/tex">y = x</script>;</p>
+
+<p><script type="math/tex">t = \textrm{linspace}(0,12*\pi,120)</script>;</p>
+
+<p><script type="math/tex">[X,Y] = \textrm{meshgrid}(x,y)</script>;</p>
+
+<p>for <script type="math/tex">k = 1</script>:length(<script type="math/tex">t</script>)</p>
+
+<p><script type="math/tex">z(:,:,k) = \textrm{cos}(X+t(k)).*\textrm{cos}(Y)</script>;</p>
+
+<p>end</p>
+
+<p>%Then open the video object and run the plot loop</p>
+
+<p>vid = VideoWriter(‘anim_name’); %Create video object and set output name</p>
+
+<p>vid.Quality = 70; %Runs from 0 (lowest quality) to 100 (highest quality)</p>
+
+<p>vid.FrameRate = 8; %Set the frame rate per second</p>
+
+<p>open(vid); %Open the animation object</p>
+
+<p>h=figure(1);clf %Open the figure window</p>
+
+<p>pause %Pause to open the figure window full-screen if necessary</p>
+
+<p>for <script type="math/tex">k = 1</script>:length(<script type="math/tex">t</script>)</p>
+
+<p>figure(1);clf</p>
+
+<p>pcolor(x,y,z(:,:,k))</p>
+
+<p>shading flat</p>
+
+<p>caxis([-1 1])</p>
+
+<p>title(t(k)/t(end))</p>
+
+<p>%pause(1e-1) %The pause command doesn’t effect the frame rate</p>
+
+<p>writeVideo(vid, getframe(h,[80 50 1400 1010]));</p>
+
+<p>%Write the current frame to the animation file.  The 4-element vector
+%at the end sets the boundaries of the box that will be captured in
+%the animation.  The units are in pixels and are in the standard
+%matlab format [left-hand-boundary lower-boundary width height].</p>
+
+<p>end</p>
+
+<p>close(vid) %Close the video.</p>
+
+<p>The output can be seen here:</p>
+<iframe src="https://player.vimeo.com/video/179024540" width="640" height="462" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<p><a href="https://vimeo.com/179024540">Easy animation with matlab</a> from <a href="https://vimeo.com/user50105397">Liam Brannigan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>

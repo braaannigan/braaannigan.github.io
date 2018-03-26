@@ -6,13 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 defaults:
   -
-    scope:
-      path: "" # an empty string here means all files in the project
+    scope: 
+      path: "_posts" # an empty string here means all files in the project
     values:
       layout: "default"
 future: true
 # Site settings
-title: Liam Brannigan - Embracing uncertainty
+title: Liam Brannigan
 email: braaannigan@gmail.com
 description: Data Scientist
 baseurl: "" # the subpath of your site, e.g. /blog
