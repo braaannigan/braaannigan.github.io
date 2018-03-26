@@ -27,12 +27,3 @@ markdown: kramdown
 me-img: "/img/mountain_yoga.jpg"
 
 twitter-share: True
-pages_list:
-  About: 'about'
-  Blog: 'blog'
-  Research: 'research'
-  Publications: 'publications'
-  Career: 'career'
-  Code: 'code'
-  Collaborators: 'collaborators'
-  Contact: 'contact'
