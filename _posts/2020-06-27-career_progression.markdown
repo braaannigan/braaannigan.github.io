@@ -29,7 +29,7 @@ I started to make some headway in this area by analyzing text data (i.e. NLP) re
 
 ## A new postdoc every month
 
-As well as tools moving fast projects move fast as well. Whereas I worked on 2 or 3 different projects during my postdoc I might be working on a different project every month. In addition these projects can be highly diverse - at one point I was simultaneously working on analysis of protein sequences, spatial patterns of illegal dumping and mapping building usage. This places an emphasis on being able to get up to speed fast while trying to tap your domain expert partner for their knowledge as much as possible.
+As well as tools moving fast projects move fast as well. Whereas I worked on 2 or 3 different projects during my postdoc I might be working on a different project every month. In addition these projects can be highly diverse - at one point I was simultaneously working on analysis of protein sequences, spatial patterns of illegal dumping and analyzing text. This places an emphasis on being able to get up to speed fast while trying to tap your domain expert partners for their knowledge as much as possible.
 
 **Lesson number 4** You may have to be comfortable making good enough progress across a range of problems rather than seeking perfection in a particular niche.
 
@@ -42,11 +42,13 @@ Once I had fit my first models to actual client data with good results I thought
 - you have to monitor your model's performance so that you know if it starts going crazy; you might have to build an app that serves your model once it's in the cloud 
 - you might have to quantize your model so that it can run in a lambda function and so on and so on. 
 
-In comparison to the multitude of blog posts out there that show you how to fit a model in scikit learn or PyTorch there are very few posts out there that cover these much trickier issues of deployment.
+In comparison to the multitude of blog posts out there that show you how to fit a model in scikit learn or PyTorch there are very few posts out there that cover these much trickier issues of deployment. 
 
 **Lesson number 5** There's a lot more to data science than fitting models. Try to deploy a very simple app to the cloud if you want to learn more. 
 
-One major point to be aware of is that all od this is based on my experience in a particular type of company. In other companies there may be much more pressure to work longer hours or travel extensively. Overall, I'd say that you have less idea what working conditions to expect starting at a new company compared to starting at a new lab, even if it was in a different country.
+## Every company is different
 
-Overall, I'm very happy with the change I've made. I have a good work-life balance that has allowed me to meet the many challenges of having a young family.  In addition, my work at Analytics Engines has been every bit as intellectually stimulating as my research. Obviously, the change has meant that I haven't been able to focus on the environmental problems we face - though I have still had opportunities to work on environmental challenges - but I'm confident that the new set of skills I've picked up will allow me to make a fresh contribution in time.
+One major point to be aware of is that all of this is based on my experience in one company. In other companies there may be much more pressure to work longer hours or travel extensively. Overall, I'd say that you have less idea what working conditions to expect starting at a new company compared to starting at a new lab as a postdoc.
+
+Overall, I'm very happy with the change I've made. I have a good work-life balance that has allowed me to work hard while meeting the many challenges of having a young family.  In addition, my work at Analytics Engines has been every bit as intellectually stimulating as my research. Obviously, the change has meant that I haven't been able to focus on the environmental problems I care about but I'm confident that the new set of skills I've picked up will allow me to make a fresh contribution in time.
 
