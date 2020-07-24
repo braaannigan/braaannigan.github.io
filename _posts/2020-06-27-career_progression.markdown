@@ -5,13 +5,17 @@ date:   2020-06-26 10:35:24 +0200
 categories: career
 ---
 
-In the last two years I've made a transition from research scientist in physical oceanography to data scientist in industry. I discussed this recently participated in a panel run by the Euro Geosciences Union and thought that I should share the joys of this transition and lessons learnt in more detail. 
+In the last two years I've changed from being a research scientist in physical oceanography to data scientist in industry with Analytics Engines. I discussed this change recently in a [panel run by the European Geosciences Union](https://www.youtube.com/watch?v=iBM1YG4VbqM&t=118s) and thought that I should share the joys of this transition and lessons learnt in more detail. 
 
-I joined Analytics Engines in April 2018 after being put in touch by a recruiter.  The process was very fast compared to the timescales of academic fellowship applications - from a chat with an interviewer through two interviews and a job offer in 4 days.  I started 2 weeks later.
+I joined Analytics Engines in April 2018 after being put in touch by a recruiter.  The process was very fast compared to the timescales of academic fellowship applications - from a chat through two interviews and a job offer in 4 days.  I started 2 weeks later.
 
-In some ways I took on a risky position was the most risky to take - to be the first data scientist at a company. Many have found out the perils of this position - you arrive to find that there is little quality data and spend most of your time trying just to organise it rather than generating useful insights.  In this case the risk was a little lower as I was surrounded by experienced front- and back- end software engineers who were experts in setting up databases and building visualisations. 
+## Taking a job offer
+
+In some ways I took on a risky position - to be the first data scientist at a company. Many have found out the perils of this position - you arrive to find that there is little quality data and spend most of your time trying just to organise it rather than generating useful insights.  In the case of Analytics Engines the risk was lower as I was surrounded by experienced data engineers who were experts in setting up databases and building visualisations. 
 
 **Lesson number 1** Don't be the first data scientist in an organisation that doesn't have data engineering infrastructure. You'll end up being given a million spreadsheets that are the data equivalent of reading a book that's been shredded.
+
+## Machine learning IRL
 
 I had done some machine learning in my postdoc where I looked at Bayesian time series forecasting. I soon realised that this would be of limited use. This limited utility is because it is much harder to come across time series data that is stable enough to provide useful insights outside of research. For example, in one project we had decades of reports on food fraud. However, the pattern of such fraud is that when it is detected the fraudsters jump to a new area - and there are many to choose from. This means that the level of fraud stays roughly constant in time, but the type of fraud varies in a very unpredictable way.
 
