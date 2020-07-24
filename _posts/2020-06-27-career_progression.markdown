@@ -17,21 +17,32 @@ In some ways I took on a risky position - to be the first data scientist at a co
 
 ## Machine learning IRL
 
-I had done some machine learning in my postdoc where I looked at Bayesian time series forecasting. I soon realised that this would be of limited use. This limited utility is because it is much harder to come across time series data that is stable enough to provide useful insights outside of research. For example, in one project we had decades of reports on food fraud. However, the pattern of such fraud is that when it is detected the fraudsters jump to a new area - and there are many to choose from. This means that the level of fraud stays roughly constant in time, but the type of fraud varies in a very unpredictable way.
+I had done some machine learning in my postdoc where I looked at Bayesian time series forecasting. I soon realised that this experience would be of limited use because in most organisations it is much harder to find time series data that is stable enough to provide useful insights outside of research. For example, in one project we had decades of reports on food fraud. However, the pattern of such fraud is that when it is detected the fraudsters jump to a new area - and there are many to choose from. This means that the level of fraud stays roughly constant in time, but the type of fraud varies in a very unpredictable way. 
 
 **Lesson number 2** Be prepared to meet much more messy data than you might be used to as a researcher.
+
+## Building and maintaining machine learning knowledge
 
 I started to make some headway in this area by analyzing text data (i.e. NLP) related to news stories. Few climate scientists work with text data but in the private and public sector it is ubiquitous.  The challenge was that I knew I was ignorant of how to go about text analysis, but as the only data scientist I didn't have a more experienced colleague to turn to.  Instead I dived into NLP twitter and followed everyone who put out interesting stuff.  After a few months of reading blog posts, watching lectures and trying tutorials I started to get a grip on the current methods and was starting to do interesting stuff by myself. One advantage of getting into machine learning at the moment is that revolutions come so quick and fast that you can often get up to speed much faster than in a scientific discipline that has been maturing for decades.
 
 **Lesson number 3** Progress in data science in recent years is much faster than in most modern branches of science so you have to invest time continuously to keep up.
 
-As well as tools moving fast projects move fast as well. Whereas I worked on 2 or 3 different projects during my postdoc I might be working on 2 or 3 different projects in a month. In addition these projects can be highly diverse - at one point I was simultaneously working on analysis of protein sequences, spatial patterns of illegal dumping and mapping building usage. This places an emphasis on being able to get up to speed fast while trying to tap your domain expert partner for their knowledge as much as possible.
+## A new postdoc every month
+
+As well as tools moving fast projects move fast as well. Whereas I worked on 2 or 3 different projects during my postdoc I might be working on a different project every month. In addition these projects can be highly diverse - at one point I was simultaneously working on analysis of protein sequences, spatial patterns of illegal dumping and mapping building usage. This places an emphasis on being able to get up to speed fast while trying to tap your domain expert partner for their knowledge as much as possible.
 
 **Lesson number 4** You may have to be comfortable making good enough progress across a range of problems rather than seeking perfection in a particular niche.
 
-Some patterns of working with new tools and methods were very familiar to me from my research days. I knew not to be too surpised when things like 'much hyped new tool doesn't actually improve performance on your data' cropped up. Or when a new tool that promised to give you a massive performance acceleration turned out to actually slow things down.
+## It's all about production
 
-Once I had fit my first models to actual client data with good results I thought I'd finally made it.  This was wrong. Because, in order for your models to be of any use to anyone they have to be deployed into production. This means that you have to package your model in such a way that it can keep working regardless of what happens. At large companies there are dedicated professionals who do this as their full-time job. At start-ups, on the other hand, you do this yourself. The challenges of this were many: you will have to build your model into a docker container (eventually you'll learn to do this from the start); you might have to build a serverless function in the cloud that can run your model (make sure you've got all your permissions and credentials files in the right place); you might have to synchronize your data with a database; you have to monitor your model's performance so that you know if it starts going crazy; you might have to build an app that serves your model once it's in the cloud; you might have to quantize your model so that it can run in a lambda function and so on and so on. In comparison to the multitude of blog posts out there that show you how to fit a model in scikit learn or PyTorch there are very few posts out there that cover these much trickier issues.
+Once I had fit my first models to actual client data with good results I thought I'd finally made it.  This was wrong. In order for your models to be of any use they have to be deployed into production. This means that you have to package your model in such a way that it can keep working regardless of what comes at it. At large companies there are dedicated professionals who do this as their full-time job. At start-ups you learn to do this yourself. The challenges of this move to production are manifold: 
+- you will have to build your model into a docker container (eventually you'll learn to do this from the start)
+- you might have to build a serverless function in the cloud that can run your model (make sure you've got all your permissions and credentials files in the right place) 
+- you might have to synchronize your data with a database 
+- you have to monitor your model's performance so that you know if it starts going crazy; you might have to build an app that serves your model once it's in the cloud 
+- you might have to quantize your model so that it can run in a lambda function and so on and so on. 
+
+In comparison to the multitude of blog posts out there that show you how to fit a model in scikit learn or PyTorch there are very few posts out there that cover these much trickier issues of deployment.
 
 **Lesson number 5** There's a lot more to data science than fitting models. Try to deploy a very simple app to the cloud if you want to learn more. 
 
