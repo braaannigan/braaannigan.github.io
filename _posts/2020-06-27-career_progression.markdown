@@ -35,14 +35,7 @@ As well as tools moving fast projects move fast as well. Whereas I worked on 2 o
 
 ## It's all about production
 
-Once I had fit my first models to actual client data with good results I thought I'd finally made it.  This was wrong. In order for your models to be of any use they have to be deployed into production. This means that you have to package your model in such a way that it can keep working regardless of what comes at it. At large companies there are dedicated professionals who do this as their full-time job. At start-ups you learn to do this yourself. The challenges of this move to production are manifold: 
-- you will have to build your model into a docker container (eventually you'll learn to do this from the start)
-- you might have to build a serverless function in the cloud that can run your model (make sure you've got all your permissions and credentials files in the right place) 
-- you might have to synchronize your data with a database 
-- you have to monitor your model's performance so that you know if it starts going crazy; you might have to build an app that serves your model once it's in the cloud 
-- you might have to quantize your model so that it can run in a lambda function and so on and so on. 
-
-In comparison to the multitude of blog posts out there that show you how to fit a model in scikit learn or PyTorch there are very few posts out there that cover these much trickier issues of deployment. 
+Once I had fit my first models to actual client data with good results I thought I'd finally made it.  This was wrong. In order for your models to be of any use they have to be deployed into production. This means that you have to package your model in such a way that it can keep working regardless of what comes at it. At large companies there are dedicated professionals who do this as their full-time job. At start-ups you learn to do this yourself. The challenges of this move to production are manifold. In comparison to the multitude of blog posts out there that show you how to fit a model in scikit learn or PyTorch there are very few posts out there that cover these much trickier issues of deployment. 
 
 **Lesson number 5** There's a lot more to data science than fitting models. Try to deploy a very simple app to the cloud if you want to learn more. 
 
