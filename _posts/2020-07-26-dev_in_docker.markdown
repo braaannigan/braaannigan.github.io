@@ -81,4 +81,9 @@ if [ "${TARGET}" == "share" ]; then
 docker run -it   your-image-name:latest /bin/bash
 fi
 ```
+You run this script from the command line as ```bash deploy.sh dev``` or ```bash deploy.sh share``` (where ```dev``` and ```share``` correspond to the names of the multi-stage builds in the Dockerfile).
+
+The main difference from standard practice in the ```docker build``` command is the ```--target``` option. This specifies how far through the multi-stage build in the Dockerfile the script should proceed. In addition, we are setting an inline environment variable (i.e. an environment variable that only applies to the command that follows).This is ```DOCKER_BUILDKIT=1``` and tells docker to use its new BuildKit method for building images that is faster and produces smaller images.
+
+If you provide the ```dev``` option to deploy.sh then you mount your local directory into the container with ```$(pwd):/usr/src/app```. When the container starts running you can run ```ls``` in the command line to check that all of your files are there.
 
