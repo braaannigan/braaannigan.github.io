@@ -7,11 +7,9 @@ categories: software
 # Dev in Docker
 
 ## Tl;dr
-Use multi-stage builds and virtual environments to rapdily build and re-build your docker images.
+Developing in docker gives you a consistent runtime environment that's great for sharing. Use multi-stage builds and virtual environments to rapdily build and re-build your docker images.
 
-Note: my post is inspired by this post by [Itamar Turing-Trauring](https://pythonspeed.com/articles/multi-stage-docker-python/) where you can see more detail on these ideas and some alternative approaches. 
-
-I've also been trying to digest this great talk on [Dockerfile best practices](https://www.youtube.com/watch?v=JofsaZ3H1qM&t=1087s) and this [article on best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
+Note: my post is inspired by this post by [Itamar Turing-Trauring](https://pythonspeed.com/articles/multi-stage-docker-python/) where you can see more detail on these ideas and some alternative approaches. I've also been trying to digest this great talk on [Dockerfile best practices](https://www.youtube.com/watch?v=JofsaZ3H1qM&t=1087s) and this [article on best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 
 ## Why should you dev in Docker?
 
@@ -28,12 +26,12 @@ If you hear all of this and decide you'll give developing in Docker a go, you'll
 
 Developing in docker we want:
 - to have a consistent and isolated runtime for our analysis
-- to have a docker container that you can run in just a few second after the initial build
+- to have a docker container that you can run in just a few seconds after the initial build
 - to be able to track changes to your scripts using Git during development
 - to be able to package everything up when you are ready to share without needing a new Dockerfile.
 
 ## Let's cut to the chase
-So we ca acheive all of this with the following Dockerfile. We'll discuss the associated bash script below.
+We can acheive this with the following Dockerfile. We'll discuss the associated bash script below.
 ```
 ## First stage of build for dev
 FROM python:3.8-slim-buster as dev
@@ -55,7 +53,7 @@ COPY training.py ./
 ```
 
 ## Use a multi-stage build
-The first point is that we use a multi-stage build. The first image is called ```dev``` and the second image is called ```share```. We develop in ```dev```. In this image we don't copy our script ```training.py``` to the image as we're going to mount that file from our file system when we do ```docker run``` (see bash script below). Mounting ```training.py``` means that we can edit it as normal but the changes will be reflected inside the running container.
+To handle our demand to both develop and sjare efficiently we use a multi-stage build. The first stage image is called ```dev``` and the second stage image is called ```share```. In the ```dev``` image we don't copy our script ```training.py``` to the image as we're going to mount that file from our file system when we do ```docker run``` (see bash script below). Mounting ```training.py``` means that we can edit it as normal but the changes will be reflected inside the running container.
 
 When we're ready to share the image with someone else we build the ```share``` image. In this image we need ```training.py``` to be included in the image as the other user won't be able to access it on our file system.
 
@@ -66,14 +64,14 @@ Using a virtual environment doesn't make much difference when we are working in 
 This means that we have copied over all of the installed packages with no need to re-install them with ```pip```.
 
 ## Think about the order of the Dockerfile
-To be able to rapidly re-build your docker image means knowing how often the commands on different lines are changed and how often the files that you ```COPY``` into the image change.  Basically, if there have been no changes in the sequence of commands and the underlying files have not changed then you can re-build the image quickly because docker uses its cache. HOwever, when you change a command that is ```RUN``` or a file that you ```COPY``` then docker re-runs that line and all subsequent lines. This means that you should put lines that will change rarely earlier in the dockerfile and lines that change regularly at the bottom.
+To be able to rapidly re-build your docker image means knowing how often the commands on different lines are changed and how often the files that you ```COPY``` into the image change.  Basically, if there have been no changes in the sequence of commands and the underlying files have not changed then you can re-build the image quickly because docker uses its cache. However, when you change a command that is ```RUN``` or a file that you ```COPY``` then docker re-runs that line and all subsequent lines. This means that you should put lines that will change rarely earlier in the dockerfile and lines that change regularly at the bottom.
 
-There is an additional complication with the lines containing ```requirements.txt``` and the ```pip``` installation. As these can be quite slow you generally want these to be as early in the Dockerfile as possible. However, early in development I sometimes find that these change quite regularly. However, I may also have a single huge download -- generally PyTorch -- that occupies 90%+ of the time but rarely changes. In this case I might do the ```pip ``` install of PyTorch early in the Dockerfile and then place the requirements.txt in a more appropriate place later in the sequence.
+There is an additional complication with the lines containing ```requirements.txt``` and the ```pip``` installation. As the pip download and installation can be quite slow you generally want these lines to be as early in the Dockerfile as possible.Early in development I sometimes find that the packages change regularly. However, I may also have a single huge download -- generally PyTorch -- that takes 90%+ of the time but rarely changes. In this case I might do the ```pip ``` install of PyTorch early in the Dockerfile and then place the ```requirements.txt``` in a more appropriate place later in the sequence.
 
 ## Deploy with bash
-To run your image in interactive mode you can use the following bash script
+To run your image in interactive mode you use the following bash script
 ```
-#Target can be 'dev', 'share' as per Dockerfile stage names
+#Target is the command line option and can be 'dev', 'share' as per Dockerfile stage names
 TARGET=$1
 
 DOCKER_BUILDKIT=1 docker build -t your-image-name --target ${TARGET} .
@@ -89,7 +87,9 @@ fi
 ```
 You run this script from the command line as ```bash deploy.sh dev``` or ```bash deploy.sh share``` (where ```dev``` and ```share``` correspond to the names of the multi-stage builds in the Dockerfile).
 
-The main difference from standard practice in the ```docker build``` command is the ```--target``` option. This specifies how far through the multi-stage build in the Dockerfile the script should proceed. In addition, we are setting an inline environment variable (i.e. an environment variable that only applies to the command that follows).This is ```DOCKER_BUILDKIT=1``` and tells docker to use its new BuildKit method for building images that is faster and produces smaller images.
+The main difference from standard practice in the ```docker build``` command is the ```--target``` option. This specifies how far through the multi-stage build in the Dockerfile the script should proceed. In addition, we are setting an inline environment variable (i.e. an environment variable that only applies to the command that follows). This is ```DOCKER_BUILDKIT=1``` and tells docker to use its new BuildKit method for building images that is faster and produces smaller images.
 
 If you provide the ```dev``` option to deploy.sh then you mount your local directory into the container with ```$(pwd):/usr/src/app```. When the container starts running you can run ```ls``` in the command line to check that all of your files are there.
+
+If you have questions/comments get in touch on twitter [@braaannigan](https://twitter.com/braaannigan) or submit a PR for this open source blog post!
 
