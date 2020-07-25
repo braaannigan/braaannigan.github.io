@@ -35,7 +35,7 @@ Developing in docker we want:
 So we ca acheive all of this with the following Dockerfile. We'll discuss the associated bash script below.
 ```
 ## First stage of build for dev
-FROM python:3.7 as dev
+FROM python:3.8-slim-buster as dev
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 # Create a python virtual env so we can install in dev image and copy to test and deploy
@@ -75,7 +75,7 @@ To run your image in interactive mode you can use the following bash script
 #Target can be 'dev', 'share' as per Dockerfile stage names
 TARGET=$1
 
-DOCKER_BUILDKIT=1 docker build -t your-image-name --target ${TARGET}
+DOCKER_BUILDKIT=1 docker build -t your-image-name --target ${TARGET} .
 
 if [ "${TARGET}" == "dev" ]; then
 # Mount the local directory so can track changes in Git
