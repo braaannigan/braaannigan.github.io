@@ -22,6 +22,8 @@ Docker containers are also great for collaboration and reproducibility. As you c
 
 If you hear all of this and decide you'll give developing in Docker a go, you'll probably find it a frustrating experience. You might find that you have to frequently rebuild the docker image and it takes ages each time to do so. In addition, you might find that you now have to keep track of changes to the same files both on your regular system and in the container.
 
+Recently in my work at [Analytics Engines](https://analyticsengines.com/2020/07/02/insights-semantic-search-pop-soda/) I've started to implement a dev in Docker workflow that has started to address some of these pain points.
+
 ## What are the goals for developing in Docker?
 
 Developing in docker we want:
