@@ -8,13 +8,16 @@ categories: software
 ## Tl;dr
 Use multi-stage builds and virtual environments to rapdily build and re-build your docker images.
 
+Note: my post is inspired by this post by (Itamar Turing-Trauring)[https://pythonspeed.com/articles/multi-stage-docker-python/] where you can see more detail on these ideas and some alternative approaches. 
+
+I've also been trying to digest this great talk on (Dockerfile best practices)[https://www.youtube.com/watch?v=JofsaZ3H1qM&t=1087s] and this (article on best practices)[https://docs.docker.com/develop/develop-images/dockerfile_best-practices/].
+
 ## Why should you dev in Docker?
 
 Docker containers are like a mini operating system that you can run on your computer. Developing inside these containers has many advantages for anyone doing data analysis. The containers provide isolated environments so that you can have different software stacks for different projects without them interfering with each other. Unlike python virtual environments these containers cover the operating system as well as the analysis software. This depth of the stack becomes particularly import when using more complicated software such as deep learning libraries like Tensorflow or PyTorch that have dependencies in C++ and CUDA that make them much more brittle and sensitive to the exact version of any packages you use. 
 
 Docker containers are also great for collaboration and reproducibility. As you choose the operating system inside the container it no longer matters whether other users are running a different Linux distribution, MacOS or even Windows. It is also straightforward to share the containers either by using a Dockerfile (just a text file with docker commands for setting up the container) or a docker image hosted on Dockerhub.  
 
-Note: my post is inspired by this post by (Itamar Turing-Trauring)[https://pythonspeed.com/articles/multi-stage-docker-python/]
 
 ## Why does it seem like a pain to dev in Docker?
 
