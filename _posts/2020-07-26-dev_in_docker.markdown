@@ -10,7 +10,7 @@ Use multi-stage builds and virtual environments to rapdily build and re-build yo
 
 Note: my post is inspired by this post by [Itamar Turing-Trauring](https://pythonspeed.com/articles/multi-stage-docker-python/) where you can see more detail on these ideas and some alternative approaches. 
 
-I've also been trying to digest this great talk on [Dockerfile best practices])https://www.youtube.com/watch?v=JofsaZ3H1qM&t=1087s) and this [article on best practices)[https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
+I've also been trying to digest this great talk on [Dockerfile best practices](https://www.youtube.com/watch?v=JofsaZ3H1qM&t=1087s) and this [article on best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 
 ## Why should you dev in Docker?
 
