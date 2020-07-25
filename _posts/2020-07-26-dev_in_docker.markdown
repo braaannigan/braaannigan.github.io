@@ -42,10 +42,22 @@ FROM dev as share
 # Copy over the installed python packages from dev
 COPY --from=dev /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
-COPY pytest.ini /usr/src/app ./
-COPY training.py test_training.py ./
+COPY training.py ./
 ```
 
 ## Use a multi-stage build
-The first 
+The first point is that we use a multi-stage build. The first image is called ```dev``` and the second image is called ```share```. We develop in ```dev```. In this image we don't copy our script ```training.py``` to the image as we're going to mount that file from our file system when we do ```docker run``` (see bash script below). Mounting ```training.py``` means that we can edit it as normal but the changes will be reflected inside the running container.
+
+When we're ready to share the image with someone else we build the ```share``` image. In this image we need ```training.py``` to be included in the image as the other user won't be able to access it on our file system.
+
+## Use a virtual environment
+When we build the ```dev``` image we copy the ```requirements.txt``` file listing all of our python dependencies into the container and run ```pip install -r requirements.txt``` to install these python packages into the container. By creating a virtual environment with ```RUN python -m venv /opt/venv``` and adding it to the path with ```ENV PATH="/opt/venv/bin:$PATH"``` we ensure that all of these packages are installed into the virtual environment.  
+
+Using a virtual environment doesn't make much difference when we are working in the ```dev``` image. Instead, the virtual environment comes in handy when we build the ```share``` image. In this case we use a command to copy the virtual environment directory from the ```dev``` image over to the ```share``` image ```COPY --from=dev /opt/venv /opt/venv```.
+This means that we have copied over all of the installed packages with no need to re-install them with ```pip```.
+
+## Think about the order of the Dockerfile
+To be able to rapidly re-build your docker image means knowing how often the commands on different lines are changed and how often the files that you ```COPY``` into the image change.  Basically, if there have been no changes in the sequence of commands and the underlying files have not changed then you can re-build the image quickly because docker uses its cache. HOwever, when you change a command that is ```RUN``` or a file that you ```COPY``` then docker re-runs that line and all subsequent lines. This means that you should put lines that will change rarely earlier in the dockerfile and lines that change regularly at the bottom.
+
+There is an additional complication with the lines containing ```requirements.txt``` and the ```pip``` installation. As these can be quite slow you generally want these to be as early in the Dockerfile as possible. However, early in development I sometimes find that these change quite regularly. However, I may also have a single huge download -- generally PyTorch -- that occupies 90%+ of the time but rarely changes. In this case I might do the ```pip ``` install of PyTorch early in the Dockerfile and then place the requirements.txt in a more appropriate place later in the sequence.
 
