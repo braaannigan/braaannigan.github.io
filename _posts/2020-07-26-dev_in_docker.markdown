@@ -24,9 +24,9 @@ Developing in docker we want:
 - to be able to package everything up when you are ready to share without needing a new Dockerfile.
 
 ## Let's cut to the chase
-So we ca acheive all of this with the following Dockerfile and associated bash script to run it.
-'''
-# First stage of build for dev
+So we ca acheive all of this with the following Dockerfile. We'll discuss the associated bash script below.
+```
+## First stage of build for dev
 FROM python:3.7 as dev
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
@@ -44,5 +44,8 @@ COPY --from=dev /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 COPY pytest.ini /usr/src/app ./
 COPY training.py test_training.py ./
-'''
+```
+
+## Use a multi-stage build
+The first 
 
