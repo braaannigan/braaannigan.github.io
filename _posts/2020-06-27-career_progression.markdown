@@ -45,3 +45,5 @@ One major point to be aware of is that all of this is based on my experience in 
 
 Overall, I'm very happy with the change I've made. I have a good work-life balance that has allowed me to work hard while meeting the many challenges of having a young family.  In addition, my work at Analytics Engines has been every bit as intellectually stimulating as my research. Obviously, the change has meant that I haven't been able to focus on the environmental problems I care about but I'm confident that the new set of skills I've picked up will allow me to make a fresh contribution in time.
 
+Thanks to Gwyn Evans (@https://twitter.com/D_GwynEvans) for comments!
+

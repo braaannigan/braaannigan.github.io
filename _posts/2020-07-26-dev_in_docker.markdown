@@ -5,6 +5,9 @@ date:   2020-07-26 10:35:24 +0200
 categories: software
 ---
 
+## Tl;dr
+Use multi-stage builds and virtual environments to rapdily build and re-build your docker images.
+
 ## Why should you dev in Docker?
 
 Docker containers are like a mini operating system that you can run on your computer. Developing inside these containers has many advantages for anyone doing data analysis. The containers provide isolated environments so that you can have different software stacks for different projects without them interfering with each other. Unlike python virtual environments these containers cover the operating system as well as the analysis software. This depth of the stack becomes particularly import when using more complicated software such as deep learning libraries like Tensorflow or PyTorch that have dependencies in C++ and CUDA that make them much more brittle and sensitive to the exact version of any packages you use. 
@@ -60,4 +63,22 @@ This means that we have copied over all of the installed packages with no need t
 To be able to rapidly re-build your docker image means knowing how often the commands on different lines are changed and how often the files that you ```COPY``` into the image change.  Basically, if there have been no changes in the sequence of commands and the underlying files have not changed then you can re-build the image quickly because docker uses its cache. HOwever, when you change a command that is ```RUN``` or a file that you ```COPY``` then docker re-runs that line and all subsequent lines. This means that you should put lines that will change rarely earlier in the dockerfile and lines that change regularly at the bottom.
 
 There is an additional complication with the lines containing ```requirements.txt``` and the ```pip``` installation. As these can be quite slow you generally want these to be as early in the Dockerfile as possible. However, early in development I sometimes find that these change quite regularly. However, I may also have a single huge download -- generally PyTorch -- that occupies 90%+ of the time but rarely changes. In this case I might do the ```pip ``` install of PyTorch early in the Dockerfile and then place the requirements.txt in a more appropriate place later in the sequence.
+
+## Deploy with bash
+To run your image in interactive mode you can use the following bash script
+```
+#Target can be 'dev', 'share' as per Dockerfile stage names
+TARGET=$1
+
+DOCKER_BUILDKIT=1 docker build -t your-image-name --target ${TARGET}
+
+if [ "${TARGET}" == "dev" ]; then
+# Mount the local directory so can track changes in Git
+docker run -it  -v $(pwd):/usr/src/app  your-image-name:latest /bin/bash
+fi
+
+if [ "${TARGET}" == "share" ]; then
+docker run -it   your-image-name:latest /bin/bash
+fi
+```
 
