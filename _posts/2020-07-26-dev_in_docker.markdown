@@ -4,6 +4,7 @@ title:  "Dev in docker"
 date:   2020-07-26 10:35:24 +0200
 categories: software
 ---
+# Dev in Docker
 
 ## Tl;dr
 Use multi-stage builds and virtual environments to rapdily build and re-build your docker images.

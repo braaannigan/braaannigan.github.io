@@ -4,6 +4,7 @@ title:  "Career progression"
 date:   2020-06-26 10:35:24 +0200
 categories: career
 ---
+# Career progression - lessons learned
 
 In the last two years I've changed from being a research scientist in physical oceanography to data scientist in industry with Analytics Engines. I discussed this change recently in a [panel run by the European Geosciences Union](https://www.youtube.com/watch?v=iBM1YG4VbqM&t=118s) and thought that I should share the joys of this transition and lessons learnt in more detail. 
 
