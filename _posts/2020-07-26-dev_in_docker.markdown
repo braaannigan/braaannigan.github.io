@@ -14,6 +14,8 @@ Docker containers are like a mini operating system that you can run on your comp
 
 Docker containers are also great for collaboration and reproducibility. As you choose the operating system inside the container it no longer matters whether other users are running a different Linux distribution, MacOS or even Windows. It is also straightforward to share the containers either by using a Dockerfile (just a text file with docker commands for setting up the container) or a docker image hosted on Dockerhub.  
 
+Note: my post is inspired by this post by (Itamar Turing-Trauring)[https://pythonspeed.com/articles/multi-stage-docker-python/]
+
 ## Why does it seem like a pain to dev in Docker?
 
 If you hear all of this and decide you'll give developing in Docker a go, you'll probably find it a frustrating experience. You might find that you have to frequently rebuild the docker image and it takes ages each time to do so. In addition, you might find that you now have to keep track of changes to the same files both on your regular system and in the container.
