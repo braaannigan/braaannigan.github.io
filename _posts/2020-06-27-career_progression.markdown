@@ -12,7 +12,7 @@ I joined Analytics Engines in April 2018 after being put in touch by a recruiter
 
 ## Taking a job offer
 
-In some ways I took on a risky position - to be the first data scientist at a company. Many have found out the perils of this position - you arrive to find that there is little quality data and spend most of your time trying just to organise it rather than generating useful insights.  In the case of Analytics Engines the risk was lower as I was surrounded by experienced data engineers who were experts in setting up databases and building visualisations. 
+In some ways I took on a risky position - to be the first data scientist at a company. Many have found out the perils of this position - you arrive to find that there is little quality data and spend most of your time trying just to organise it rather than generating useful insights.  In the case of [Analytics Engines](www.analyticsengines.com) the risk was lower as I was surrounded by experienced data engineers who were experts in setting up databases and building visualisations. 
 
 **Lesson number 1** Don't be the first data scientist in an organisation that doesn't have data engineering infrastructure. You'll end up being given a million spreadsheets that are the data equivalent of reading a book that's been shredded.
 
