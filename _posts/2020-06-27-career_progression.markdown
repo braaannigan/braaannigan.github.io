@@ -11,6 +11,8 @@ The number of articles has increased over time. However, while I expected a more
 The increase in the number of articles published is due to an increase in the number of issues per year and the number of
 articles per issue. In recent years there is generally about 15 articles across 12 issues. In contrast, in 1972 there were just 4 issues and the first issue had just a single article ("A Study of the Bottom Boundary Layer of the Florida Current" by G. Weatherly).
 
+![Example](./img/totalArticles.svg)
+
 ## Length of titles
 If we are looking for near-perpetual growth in oceanography the place to look is the length of article titles. These titles have seen growth from a pithy average of 62 characters in 1971 to 88 characters in 2020.  We fit a geometric model to this time series to find that title length growth is about 0.065% per annum. These longer titles are mainly due to more words in titles, but there has also been a small increase in the mean length of words in titles.
 
