@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "JPO at 50: Part I"
-date:   2020-06-26 10:35:24 +0200
+date:   2021-01-01 10:35:24 +0200
 categories: oceanography, nlp
 ---
 
