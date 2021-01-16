@@ -53,3 +53,13 @@ The longest abstract was found in the 1980 article "A Numerical Study of Loop Cu
 
 One feature that has almost disappeared in recent years is the 'tweetable' abstract - that is an abstract of less than 280 characters. Consider this example from 1992 "The rapid changes in density observed near the continental slope in association with internal waves are explained as nonlinear features of wave reflection". In this case the abstract was just twice the length of the title.  Until 2000 there were at least a few of these short abstracts every year but in recent years even the shortest
 abstracts have had more than 700 characters or 200 words.
+
+# Emergent terms
+We can get a quick sense of how the first has varied over the decades by looking at some common terms that were much more popular in some periods than in others. For simplicity we divide the 50 years in to 3 periods (1971-1987,1988-2004 and 2005-2020). The table below shows 2- and 3- word phrases that were in much higher usage in one of these periods compared to the other two:
+Period | Common phrases
+---|---
+1971-1987 | **Continential shelf slope/waves**, Kelvin Waves, North Pacific, Gulf Stream
+1988-2004 | Tropical Pacific, Western Pacific, Deep western bounary currents,  Topex-Posedion, Deep convection, Potential vorticity, General circulation models, Reduced gravity model
+2005-2020 | Global ocean,Arctic ocean, Southern ocean, South china sea, Antarctic circumpolar current, Kuroshio extension
+Sea surface height, Large eddy simulations, Interannual variability, Eddy fluxes, Overturning circulation, Diapycnal mixing,Internal tides
+
