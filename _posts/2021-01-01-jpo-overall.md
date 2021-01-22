@@ -59,7 +59,7 @@ We can get a quick sense of how the science has varied over the decades by looki
 
 Period | Common phrases
 ---|---
-1971-1987 | Continential shelf slope/waves, Kelvin Waves, North Pacific, Gulf Stream
-1988-2004 | Tropical Pacific, Western Pacific, Deep western bounary currents,  Topex-Posedion, Deep convection, Potential vorticity, General circulation models, Reduced gravity model
-2005-2020 | Global ocean,Arctic ocean, Southern ocean, South china sea, Antarctic circumpolar current, Kuroshio extension, Sea surface height, Large eddy simulations, Interannual variability, Eddy fluxes, Overturning circulation, Diapycnal mixing,Internal tides
+1971-1987 | Coastal upwelling, Continential shelf slope/waves, Kelvin Waves, Gravity waves, Vertical Eddy Viscosity, Double Diffusive Convection, North Pacific, Gulf Stream, Sargasso Sea, Lake Ontario
+1988-2004 | Tropical Pacific, Western Pacific, South Atlantic, Deep western bounary currents,  Topex-Posedion, Acoustic Doppler Current Profiler, Deep convection, Potential vorticity, General circulation models, Primitive Equation Models, Reduced gravity model, Boundary current Separation
+2005-2020 | Global ocean, Arctic ocean, Southern Ocean, South China Sea, Antarctic Circumpolar Current, Kuroshio extension, Loop Current, Sea surface height, Large eddy simulations, Linear stability, Monentum fluxes, Energy budget, Eddy-permitting, Interannual variability, Eddy fluxes, Overturning circulation, Diapycnal mixing,Internal tides, Inertial Waves, Turbulent Dissipation
 
