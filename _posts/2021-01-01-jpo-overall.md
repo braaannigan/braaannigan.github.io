@@ -17,7 +17,7 @@ abstract I have a final dataset of 7400 articles. As I am focusing on text I do 
 
 I have limited the text analysis to title and abstract as these reflect what the authors think are the essence of the article. I'm  splitting the analysis into a number of posts that can be thought of as *where*, *what*, *why* and *how*. 
 
-[Part II (Where) is here.](https://braaannigan.github.io/oceanography,/nlp/2021/01/10/jpo-where.html)
+[Part II (Where research is carried out) is here.](https://braaannigan.github.io/oceanography,/nlp/2021/01/10/jpo-where.html)
 
 In this introductory post I look at some overall patterns in the publication patterns. I show how the number of articles grew rapidly - but only for a while - and how titles have experienced constant expansion while abstracts have been brought under control. Finally, I set the scene for the following posts by showing some of the common terms that have come in and out of fashion over the decades.
 
