@@ -11,6 +11,8 @@ establishment 50 years ago. I want to look back over this period from a differen
 
 I'm doing this to see if we can identify longer-term changes in oceanography that are not obvious except to those who experienced the changes first-hand. I'm also trying to understand whether an NLP-based approach can generate any additional insight for a very quantiative environmental science.
 
+Comments on this series are welcome: you can tweet me [@braaannigan](https://twitter.com/braaannigan). Thank you to Baylor Fox-Kemper for some comments on an early version.
+
 The data I use are the titles and abstracts from every issue of JPO along with year of publication.
 This gives almost 7800 articles. Once I exclude articles that are replies, editorials, comments etc. or are simply missing their
 abstract I have a final dataset of 7400 articles. As I am focusing on text I do not use other data such as authors, affiliations or citations. This may be worth coming back to later on.
