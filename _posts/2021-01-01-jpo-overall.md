@@ -22,6 +22,10 @@ I have limited the text analysis to title and abstract as these reflect what the
 
 In addition, in this introductory article I look at the text in aggregations to see some overall patterns. We see how the number of articles grew rapidly - but only for a while - and how titles have experienced constant expansion while abstracts have been brought under control.
 
+## Methods
+
+To identify topics I simply look for the presence of key words that I know are related to this topic. I allow for synomyns e.g. but conductivity-temperature-depth and CTD, acronyms and hierarchichal references for example when tracking references to the Atlantic I include references to the Sargasso Sea.  The method isn't perfect of course - an article that mentions the presence of North Atlantic Deep Water in the Southern Ocean will be labelled as both Atlantic and Southern Ocean, but inspection of the results shows that the overall picture presented by this method is acceptable.
+
 
 
 ## Number of articles
@@ -55,11 +59,11 @@ One feature that has almost disappeared in recent years is the 'tweetable' abstr
 abstracts have had more than 700 characters or 200 words.
 
 # Emergent terms
-We can get a quick sense of how the science has varied over the decades by looking at some common terms that were much more popular in some periods than in others. For simplicity we divide the 50 years in to 3 periods (1971-1987,1988-2004 and 2005-2020). The table below shows 2- and 3- word phrases that were in much higher usage in one of these periods compared to the other two:
+We can get a quick sense of how the field has varied over the decades by looking at some common terms that were much more popular in one period than in others. For simplicity we divide the 50 years into 3 periods (1971-1987,1988-2004 and 2005-2020). The table below shows 1, 2- and 3- word phrases that were in much higher usage in one of these periods compared to the other two
 
-Period | Common phrases
----|---
-1971-1987 | Coastal upwelling, Continential shelf slope/waves, Kelvin Waves, Gravity waves, Vertical Eddy Viscosity, Double Diffusive Convection, North Pacific, Gulf Stream, Sargasso Sea, Lake Ontario
-1988-2004 | Tropical Pacific, Western Pacific, South Atlantic, Deep western bounary currents,  Topex-Posedion, Acoustic Doppler Current Profiler, Deep convection, Potential vorticity, General circulation models, Primitive Equation Models, Reduced gravity model, Boundary current Separation
-2005-2020 | Global ocean, Arctic ocean, Southern Ocean, South China Sea, Antarctic Circumpolar Current, Kuroshio extension, Loop Current, Sea surface height, Large eddy simulations, Linear stability, Monentum fluxes, Energy budget, Eddy-permitting, Interannual variability, Eddy fluxes, Overturning circulation, Diapycnal mixing,Internal tides, Inertial Waves, Turbulent Dissipation
+Period | Geographic | Methods | Topics |
+ --- | --- | --- | --- | --- |
+1971-1987 | North Pacific, Gulf Stream, Sargasso Sea, Lake Ontario | Bathythermograph | Coastal upwelling, Continential shelf slope/waves, Kelvin Waves, Gravity waves, Vertical Eddy Viscosity, Double Diffusive Convection
+1988-2004 | Tropical Pacific, Western Pacific, South Atlantic | Topex-Poseidon, Acoustic Doppler Current Profiler, General circulation models, Primitive Equation Models, Reduced gravity model | Deep western bounary currents, Deep convection, Potential vorticity, , Boundary current Separation
+2005-2020 | Global ocean, Arctic Ocean, Southern Ocean, South China Sea, Antarctic Circumpolar Current, Kuroshio extension, Loop Current | Large eddy simulations, ARGO | Submesoscale, Sea surface height, Linear stability, Monentum fluxes, Energy budget, Eddy-permitting, Interannual variability, Eddy fluxes, Overturning circulation, Diapycnal mixing,Internal tides, Inertial Waves, Turbulent Dissipation
 
