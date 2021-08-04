@@ -21,7 +21,7 @@ Because you want a software stack that is reproducible, isolated from your opera
 
 The base of any Docker image is some flavour of linux kernel be that ubuntu, alpine, arch and so on. However, for your particular application you may know that your software stack will focus around a particular language such as python or julia. 
 
-You can specify your stack in the Dockerfile by choosing your favourite linux kernel and then installing the language you need. For example, if you have a debian kernel such as ubuntu and want to run in python then you can run 
+You can specify your stack in the Dockerfile by choosing your favourite linux kernel and then installing the language you need. For example, if you have a debian kernel such as ubuntu and want to run in python then you can run:
 ```Dockerfile
 FROM ubuntu:16.0.4
 RUN apt-get update && apt-get install python
@@ -29,7 +29,7 @@ RUN apt-get update && apt-get install python
 
 There are a number of problems with this approach. The first problem is that as we have to run ```apt-get update``` to get a live package list this step can't be cached and so Docker will run the whole command each time we build the image. The second problem is that we are not specifying which version of python we want and so the version will change over time when the same Dockerfile is re-run.
 
-A better way of developing in Docker in this case is to use a python base image with a specified version for example starting your Dockerfile with
+A better way of developing in Docker in this case is to use a python base image with a specified version for example starting your Dockerfile with:
 
 ```
 FROM python:3.8.8
@@ -97,6 +97,8 @@ The set of practices set out here are the default in current (mid-2021) versions
 ```Dockerfile
 # syntax=docker/dockerfile:experimental
 ```
+
+You can tell if you need to make these adjustments by trying to build an image. If the Docker build output to the terminal isn't blue text then you've probably got the old version and need the modifications.
 
 
 
