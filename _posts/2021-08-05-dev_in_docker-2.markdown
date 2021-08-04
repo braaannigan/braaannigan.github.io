@@ -7,11 +7,15 @@ categories: software
 # Dev in Docker without going insane
 
 ## Tl;dr
-Developing in docker is designed to make your life better but done the wrong way this workflow can seem to be very slow. I share here some crucial modifications to [my original dev in docker post](https://braaannigan.github.io/software/2020/07/26/dev_in_docker.html) that enhance the dev in docker experience. These changes are to specify the right base image and to cache pip installations.
+Developing in docker is designed to make your life better but done the wrong way this workflow can seem very slow. I share here some crucial modifications to [my original dev in docker post](https://braaannigan.github.io/software/2020/07/26/dev_in_docker.html) that enhance the dev in docker experience. These changes are to specify the right base image and to cache pip installations.
 
 ## What are the main headaches of dev in docker?
 
 The main headache of developing in docker can be that you frequently rebuild the image that you are working in. This rebuilding can be a time-consuming task if your image build requires downloading lots of third-party packages such as python installations or third-party packages installed with pip. However, if you choose your image carefully and use new innovations introduced recently by Docker then the time-cost of this process is minimal.
+
+## Why do you want to do this again? 
+
+Because you want a software stack that is reproducible, isolated from your operating system and easy to share and deploy remotely. Day-to-day the main advantages I gain are that I can return to old projects with confidence the code will run and that I can switch from my laptop to another machine without any fuss. 
 
 ## Choosing the right image
 
