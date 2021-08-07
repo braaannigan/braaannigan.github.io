@@ -59,7 +59,7 @@ COPY requirements.txt .
 RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt
 ```
 
-So in this Dockerfule I 
+So in this Dockerfile I 
 1. choose a sensible base image
 2. specify my working directory 
 3. copy my `requirements.txt` file into the image
