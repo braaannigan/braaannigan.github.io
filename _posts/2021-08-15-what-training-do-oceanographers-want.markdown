@@ -22,7 +22,7 @@ The survey was open to researchers at the National Oceanography Centres in South
 
 The survey results can be seen below. We have grouped the responses into a number of high-level categories
 and coloured each bar by its category.
-[![Survey results]](/img/noc_survey_results.svg)
+![Survey results](/img/noc_survey_results.svg)
 
 The top 2 categories are relate to different aspects of basic programming. Some respondents said they are particularly interested in support for those who have or would like to transfer from matlab to python. Another respondent said they would also like support for using a linux operating system effectively.
 
