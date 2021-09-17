@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "What software engineering do oceanographers want to learn"
+title:  "What software skills do oceanographers want to learn"
 date:   2021-09-15 10:35:24 +0200
-categories: software, data science, oceanography, docker, git
+categories: software
 ---
 # tl:dr
 A small survey of oceanographers shows there is high demand for training to improve their software engineering skills. The range of topics is broad ranging from basic programming to advanced machine learning and visualisation. Overall we can see that oceanographers want training to be able to produce analysis that is more reproducible, scales to large datasets and allows them to test hypotheses more efficiently.
@@ -18,5 +18,6 @@ The survey was open to researchers at the National Oceanography Centres in South
 
 # Survey results
 
-The survey results can be seen below.
-[![Survey results](img/noc_survey_results.svg)](img/noc_survey_results.svg)
+The survey results can be seen below. We have grouped the responses into a number of high-level categories
+and coloured each bar by its category.
+[![Survey results]](/img/noc_survey_results.svg)
