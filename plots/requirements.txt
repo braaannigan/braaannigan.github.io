@@ -1,0 +1,5 @@
+pandas==1.3.2
+pytest==6.2.2
+jupyterlab==3.0.7
+altair==4.1.0
+streamlit==0.76.0
