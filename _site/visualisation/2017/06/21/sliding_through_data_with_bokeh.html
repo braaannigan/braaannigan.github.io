@@ -1,4 +1,37 @@
-<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Sliding through the data with Bokeh | Liam Brannigan</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Sliding through the data with Bokeh" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data Scientist" />
+<meta property="og:description" content="Data Scientist" />
+<link rel="canonical" href="http://0.0.0.0:4000/visualisation/2017/06/21/sliding_through_data_with_bokeh.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/visualisation/2017/06/21/sliding_through_data_with_bokeh.html" />
+<meta property="og:site_name" content="Liam Brannigan" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-06-21T09:35:24-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sliding through the data with Bokeh" />
+<script type="application/ld+json">
+{"url":"http://0.0.0.0:4000/visualisation/2017/06/21/sliding_through_data_with_bokeh.html","@type":"BlogPosting","headline":"Sliding through the data with Bokeh","dateModified":"2017-06-21T09:35:24-05:00","datePublished":"2017-06-21T09:35:24-05:00","description":"Data Scientist","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/visualisation/2017/06/21/sliding_through_data_with_bokeh.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=7a18c2c95540c5e25cb727688cbebc4ca453676a">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://0.0.0.0:4000/">Liam Brannigan</a></h1>
+      
+
+      <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 <h2 id="exploring-parameter-space-smoothly">Exploring parameter space smoothly</h2>
@@ -24,91 +57,104 @@ open up automatically in your browser at http://localhost:5006/sliders_ex</p>
 
 <p>This kind of interactivity is also available with a matplotlib backend through the
 exciting <a href="holoviews.org">holoviews</a> package.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">#</span><span class="n">Data</span> <span class="k">imports</span>
-<span class="n">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="n">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="k">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="n">linear_model</span> <span class="n">import</span> <span class="n">LinearRegression</span>
-<span class="k">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="n">metrics</span> <span class="n">import</span> <span class="n">r2_score</span>
-<span class="p">#</span><span class="n">Bokeh</span> <span class="k">imports</span>
-<span class="k">from</span> <span class="n">bokeh</span><span class="p">.</span><span class="n">io</span> <span class="n">import</span> <span class="n">curdoc</span>
-<span class="k">from</span> <span class="n">bokeh</span><span class="p">.</span><span class="n">models</span><span class="p">.</span><span class="n">glyphs</span> <span class="n">import</span> <span class="n">Text</span>
-<span class="k">from</span> <span class="n">bokeh</span><span class="p">.</span><span class="n">layouts</span> <span class="n">import</span> <span class="n">row</span><span class="p">,</span> <span class="n">widgetbox</span>
-<span class="k">from</span> <span class="n">bokeh</span><span class="p">.</span><span class="n">models</span> <span class="n">import</span> <span class="n">ColumnDataSource</span>
-<span class="k">from</span> <span class="n">bokeh</span><span class="p">.</span><span class="n">models</span><span class="p">.</span><span class="n">widgets</span> <span class="n">import</span> <span class="n">Slider</span><span class="p">,</span> <span class="n">TextInput</span>
-<span class="k">from</span> <span class="n">bokeh</span><span class="p">.</span><span class="n">plotting</span> <span class="n">import</span> <span class="n">figure</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Data imports
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
+#Bokeh imports
+from bokeh.io import curdoc
+from bokeh.models.glyphs import Text
+from bokeh.layouts import row, widgetbox
+from bokeh.models import ColumnDataSource
+from bokeh.models.widgets import Slider, TextInput
+from bokeh.plotting import figure
 
-<span class="p">#</span><span class="n">Create</span> <span class="n">datasets</span>
-<span class="n">t</span> <span class="p">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">120</span><span class="p">,</span><span class="m">120</span><span class="p">)</span> <span class="p">#</span><span class="n">Ten</span> <span class="n">years</span> <span class="k">in</span> <span class="n">months</span>
-<span class="n">freq</span> <span class="p">=</span> <span class="m">2.</span><span class="p">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">/</span><span class="m">18</span> <span class="p">#</span><span class="n">One</span> <span class="n">cycle</span> <span class="n">every</span> <span class="m">18</span> <span class="n">months</span>
-<span class="n">x_in</span> <span class="p">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">cos</span><span class="p">(</span><span class="n">freq</span><span class="p">*</span><span class="n">t</span><span class="p">)</span> <span class="p">#</span>
-<span class="n">y_in</span> <span class="p">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">cos</span><span class="p">(</span><span class="n">freq</span><span class="p">*</span><span class="n">t</span> <span class="p">+</span> <span class="m">2</span><span class="p">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">*(</span><span class="m">0.33</span><span class="p">))</span> <span class="p">+</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nb">random</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">t</span><span class="p">))-</span><span class="m">0.5</span><span class="p">)</span> <span class="p">#</span><span class="n">Lagged</span> <span class="n">by</span> <span class="m">6</span> <span class="n">months</span>
-<span class="n">df</span> <span class="p">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'t'</span><span class="p">:</span><span class="n">t</span><span class="p">,</span> <span class="s1">'x'</span><span class="p">:</span><span class="n">x_in</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">:</span><span class="n">y_in</span><span class="p">})</span>
+#Create datasets
+t = np.linspace(0,120,120) #Ten years in months
+freq = 2.*np.pi/18 #One cycle every 18 months
+x_in = np.cos(freq*t) #
+y_in = np.cos(freq*t + 2*np.pi*(0.33)) + (np.random.rand(len(t))-0.5) #Lagged by 6 months
+df = pd.DataFrame({'t':t, 'x':x_in, 'y':y_in})
 
-<span class="n">def</span> <span class="n">linear_regression</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="s2">"""Calculate the linear regression and r2 score"""</span>
-    <span class="k">model</span> <span class="p">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-    <span class="k">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'x'</span><span class="p">][:,</span><span class="n">np</span><span class="p">.</span><span class="n">newaxis</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">'y'</span><span class="p">])</span>
-    <span class="p">#</span><span class="n">Get</span> <span class="n">the</span> <span class="n">x</span><span class="p">-</span> <span class="k">and</span> <span class="n">y</span><span class="p">-</span><span class="n">values</span> <span class="n">for</span> <span class="n">the</span> <span class="n">best</span> <span class="n">fit</span> <span class="n">line</span>
-    <span class="n">x_plot</span> <span class="p">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(-</span><span class="n">ax_lim</span><span class="p">,</span><span class="n">ax_lim</span><span class="p">)</span>
-    <span class="n">y_plot</span> <span class="p">=</span> <span class="k">model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_plot</span><span class="p">[:,</span><span class="n">np</span><span class="p">.</span><span class="n">newaxis</span><span class="p">])</span>
-    <span class="p">#</span><span class="n">Calculate</span> <span class="n">the</span> <span class="n">r2</span> <span class="n">score</span>
-    <span class="n">r2</span> <span class="p">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'y'</span><span class="p">],</span><span class="k">model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'x'</span><span class="p">][:,</span><span class="n">np</span><span class="p">.</span><span class="n">newaxis</span><span class="p">]))</span>
-    <span class="p">#</span><span class="n">Position</span> <span class="n">for</span> <span class="n">the</span> <span class="n">r2</span> <span class="n">text</span> <span class="n">annotation</span>
-    <span class="n">r2_x</span> <span class="p">=</span> <span class="p">[-</span><span class="n">ax_lim</span> <span class="p">+</span> <span class="m">0.1</span><span class="p">*</span><span class="n">ax_lim</span><span class="p">]</span>
-    <span class="n">r2_y</span> <span class="p">=</span> <span class="p">[</span><span class="n">ax_lim</span> <span class="p">-</span> <span class="m">0.1</span><span class="p">*</span><span class="n">ax_lim</span><span class="p">]</span>
-    <span class="n">text</span> <span class="p">=</span> <span class="p">[</span><span class="s2">"R^2 = %02f"</span> <span class="p">%</span> <span class="n">r2</span><span class="p">]</span>
-    <span class="n">return</span> <span class="n">x_plot</span><span class="p">,</span> <span class="n">y_plot</span><span class="p">,</span> <span class="n">r2</span><span class="p">,</span> <span class="n">r2_x</span><span class="p">,</span> <span class="n">r2_y</span><span class="p">,</span> <span class="n">text</span>
+def linear_regression(df):
+    """Calculate the linear regression and r2 score"""
+    model = LinearRegression()
+    model.fit(df['x'][:,np.newaxis],df['y'])
+    #Get the x- and y-values for the best fit line
+    x_plot = np.linspace(-ax_lim,ax_lim)
+    y_plot = model.predict(x_plot[:,np.newaxis])
+    #Calculate the r2 score
+    r2 = r2_score(df['y'],model.predict(df['x'][:,np.newaxis]))
+    #Position for the r2 text annotation
+    r2_x = [-ax_lim + 0.1*ax_lim]
+    r2_y = [ax_lim - 0.1*ax_lim]
+    text = ["R^2 = %02f" % r2]
+    return x_plot, y_plot, r2, r2_x, r2_y, text
 
-<span class="n">x_plot</span><span class="p">,</span> <span class="n">y_plot</span><span class="p">,</span> <span class="n">r2</span><span class="p">,</span> <span class="n">r2_x</span><span class="p">,</span> <span class="n">r2_y</span><span class="p">,</span> <span class="n">text</span> <span class="p">=</span> <span class="n">linear_regression</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="p">#</span><span class="k">Set</span> <span class="n">the</span> <span class="n">ColumnDataSource</span> <span class="n">for</span> <span class="n">the</span> <span class="n">plot</span>
-<span class="n">source</span> <span class="p">=</span> <span class="n">ColumnDataSource</span><span class="p">(</span><span class="n">data</span><span class="p">=</span><span class="n">dict</span><span class="p">(</span><span class="n">x</span><span class="p">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'x'</span><span class="p">],</span> <span class="n">y</span><span class="p">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'y'</span><span class="p">]))</span> <span class="p">#</span><span class="n">Scatter</span> <span class="n">plot</span>
-<span class="n">text_source</span> <span class="p">=</span> <span class="n">ColumnDataSource</span><span class="p">(</span><span class="n">dict</span><span class="p">(</span><span class="n">x</span><span class="p">=</span><span class="n">r2_x</span><span class="p">,</span> <span class="n">y</span><span class="p">=</span><span class="n">r2_y</span><span class="p">,</span> <span class="n">text</span><span class="p">=</span><span class="n">text</span><span class="p">))</span> <span class="p">#</span><span class="n">R2</span> <span class="n">value</span>
-<span class="n">line_source</span> <span class="p">=</span> <span class="n">ColumnDataSource</span><span class="p">(</span><span class="n">data</span><span class="p">=</span><span class="n">dict</span><span class="p">(</span><span class="n">x</span><span class="p">=</span><span class="n">x_plot</span><span class="p">,</span> <span class="n">y</span><span class="p">=</span><span class="n">y_plot</span><span class="p">))</span> <span class="p">#</span><span class="n">Regression</span> <span class="n">line</span>
+x_plot, y_plot, r2, r2_x, r2_y, text = linear_regression(df)
+#Set the ColumnDataSource for the plot
+source = ColumnDataSource(data=dict(x=df['x'], y=df['y'])) #Scatter plot
+text_source = ColumnDataSource(dict(x=r2_x, y=r2_y, text=text)) #R2 value
+line_source = ColumnDataSource(data=dict(x=x_plot, y=y_plot)) #Regression line
 
-<span class="p">#</span> <span class="k">Set</span> <span class="n">up</span> <span class="n">initial</span> <span class="n">plot</span>
-<span class="n">ax_lim</span> <span class="p">=</span> <span class="m">1.1</span><span class="p">*</span><span class="n">np</span><span class="p">.</span><span class="k">max</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="k">array</span><span class="p">([</span><span class="n">x_in</span><span class="p">,</span><span class="n">y_in</span><span class="p">])))</span> <span class="p">#</span><span class="n">Axis</span> <span class="n">limits</span>
-<span class="n">plot</span> <span class="p">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_height</span><span class="p">=</span><span class="m">900</span><span class="p">,</span> <span class="n">plot_width</span><span class="p">=</span><span class="m">900</span><span class="p">,</span> <span class="n">title</span><span class="p">=</span><span class="s2">"Lagged scatter plot"</span><span class="p">,</span>
-              <span class="n">tools</span><span class="p">=</span><span class="s2">"crosshair,pan,reset,save,wheel_zoom"</span><span class="p">,</span>
-              <span class="n">x_range</span><span class="p">=[-</span><span class="n">ax_lim</span><span class="p">,</span> <span class="n">ax_lim</span><span class="p">],</span>
-              <span class="n">y_range</span><span class="p">=[-</span><span class="n">ax_lim</span><span class="p">,</span> <span class="n">ax_lim</span><span class="p">])</span>
+# Set up initial plot
+ax_lim = 1.1*np.max(np.abs(np.array([x_in,y_in]))) #Axis limits
+plot = figure(plot_height=900, plot_width=900, title="Lagged scatter plot",
+              tools="crosshair,pan,reset,save,wheel_zoom",
+              x_range=[-ax_lim, ax_lim],
+              y_range=[-ax_lim, ax_lim])
 
-<span class="n">plot</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">'x'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">,</span> <span class="n">source</span><span class="p">=</span><span class="n">source</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="s1">'x'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">,</span> <span class="n">source</span> <span class="p">=</span> <span class="n">line_source</span><span class="p">,</span> <span class="n">color</span> <span class="p">=</span> <span class="s1">'black'</span><span class="p">)</span>
-<span class="n">glyph</span> <span class="p">=</span> <span class="n">Text</span><span class="p">(</span><span class="n">x</span><span class="p">=</span><span class="s2">"x"</span><span class="p">,</span> <span class="n">y</span><span class="p">=</span><span class="s2">"y"</span><span class="p">,</span> <span class="n">text</span><span class="p">=</span><span class="s2">"text"</span><span class="p">,</span> <span class="n">text_color</span><span class="p">=</span><span class="s2">"black"</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">.</span><span class="n">add_glyph</span><span class="p">(</span><span class="n">text_source</span><span class="p">,</span> <span class="n">glyph</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">.</span><span class="n">xaxis</span><span class="p">.</span><span class="n">axis_label</span> <span class="p">=</span> <span class="s1">'X'</span>
-<span class="n">plot</span><span class="p">.</span><span class="n">yaxis</span><span class="p">.</span><span class="n">axis_label</span> <span class="p">=</span> <span class="s1">'Y'</span>
+plot.scatter('x', 'y', source=source)
+plot.line('x', 'y', source = line_source, color = 'black')
+glyph = Text(x="x", y="y", text="text", text_color="black")
+plot.add_glyph(text_source, glyph)
+plot.xaxis.axis_label = 'X'
+plot.yaxis.axis_label = 'Y'
 
-<span class="p">#</span> <span class="k">Set</span> <span class="n">up</span> <span class="n">slider</span>
-<span class="n">offset</span> <span class="p">=</span> <span class="n">Slider</span><span class="p">(</span><span class="n">title</span><span class="p">=</span><span class="s2">"Lag in months"</span><span class="p">,</span> <span class="n">value</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> <span class="n">start</span><span class="p">=-</span><span class="m">30</span><span class="p">,</span> <span class="k">end</span><span class="p">=</span><span class="m">30</span><span class="p">,</span> <span class="n">step</span><span class="p">=</span><span class="m">1</span><span class="p">)</span>
+# Set up slider
+offset = Slider(title="Lag in months", value=0, start=-30, end=30, step=1)
 
-<span class="p">#</span><span class="n">Update</span> <span class="n">the</span> <span class="n">plot</span> <span class="k">as</span> <span class="n">the</span> <span class="n">slider</span> <span class="n">changes</span>
-<span class="n">def</span> <span class="n">update_data</span><span class="p">(</span><span class="n">attrname</span><span class="p">,</span> <span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">):</span>
-    <span class="p">#</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">new</span> <span class="n">slider</span> <span class="n">value</span> <span class="n">for</span> <span class="n">the</span> <span class="n">lag</span>
-    <span class="n">lag</span> <span class="p">=</span> <span class="n">offset</span><span class="p">.</span><span class="n">value</span>
-    <span class="p">#</span> <span class="n">Generate</span> <span class="n">the</span> <span class="n">dataframe</span> <span class="n">for</span> <span class="n">the</span> <span class="n">new</span> <span class="n">plot</span>
-    <span class="n">df</span> <span class="p">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">lag</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">:</span>
-        <span class="n">df</span><span class="p">[</span><span class="s1">'x'</span><span class="p">]</span> <span class="p">=</span> <span class="n">x_in</span><span class="p">[:-</span><span class="n">lag</span><span class="p">]</span>
-        <span class="n">df</span><span class="p">[</span><span class="s1">'y'</span><span class="p">]</span> <span class="p">=</span> <span class="n">y_in</span><span class="p">[</span><span class="n">lag</span><span class="p">:]</span>
-    <span class="k">elif</span> <span class="n">lag</span> <span class="p">==</span> <span class="m">0</span><span class="p">:</span>
-        <span class="n">df</span><span class="p">[</span><span class="s1">'x'</span><span class="p">]</span> <span class="p">=</span> <span class="n">x_in</span>
-        <span class="n">df</span><span class="p">[</span><span class="s1">'y'</span><span class="p">]</span> <span class="p">=</span> <span class="n">y_in</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">df</span><span class="p">[</span><span class="s1">'x'</span><span class="p">]</span> <span class="p">=</span> <span class="n">x_in</span><span class="p">[-</span><span class="n">lag</span><span class="p">:]</span>
-        <span class="n">df</span><span class="p">[</span><span class="s1">'y'</span><span class="p">]</span> <span class="p">=</span> <span class="n">y_in</span><span class="p">[:</span><span class="n">lag</span><span class="p">]</span>
-    <span class="p">#</span><span class="n">Update</span> <span class="n">the</span> <span class="n">linear</span> <span class="n">regression</span> <span class="n">values</span>
-    <span class="n">x_plot</span><span class="p">,</span> <span class="n">y_plot</span><span class="p">,</span> <span class="n">r2</span><span class="p">,</span> <span class="n">r2_x</span><span class="p">,</span> <span class="n">r2_y</span><span class="p">,</span> <span class="n">text</span> <span class="p">=</span> <span class="n">linear_regression</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-    <span class="p">#</span><span class="n">Update</span> <span class="n">the</span> <span class="n">plot</span>
-    <span class="n">text_source</span><span class="p">.</span><span class="n">data</span> <span class="p">=</span> <span class="n">dict</span><span class="p">(</span><span class="n">x</span><span class="p">=</span><span class="n">r2_x</span><span class="p">,</span> <span class="n">y</span><span class="p">=</span><span class="n">r2_y</span><span class="p">,</span> <span class="n">text</span> <span class="p">=</span> <span class="n">text</span><span class="p">)</span>
-    <span class="n">source</span><span class="p">.</span><span class="n">data</span> <span class="p">=</span> <span class="n">dict</span><span class="p">(</span><span class="n">x</span><span class="p">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'x'</span><span class="p">],</span> <span class="n">y</span><span class="p">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'y'</span><span class="p">])</span>
-    <span class="n">line_source</span><span class="p">.</span><span class="n">data</span> <span class="p">=</span> <span class="n">dict</span><span class="p">(</span><span class="n">x</span><span class="p">=</span><span class="n">x_plot</span><span class="p">,</span> <span class="n">y</span><span class="p">=</span><span class="n">y_plot</span><span class="p">)</span>
+#Update the plot as the slider changes
+def update_data(attrname, old, new):
+    # Get the new slider value for the lag
+    lag = offset.value
+    # Generate the dataframe for the new plot
+    df = pd.DataFrame()
+    if lag &gt; 0:
+        df['x'] = x_in[:-lag]
+        df['y'] = y_in[lag:]
+    elif lag == 0:
+        df['x'] = x_in
+        df['y'] = y_in
+    else:
+        df['x'] = x_in[-lag:]
+        df['y'] = y_in[:lag]
+    #Update the linear regression values
+    x_plot, y_plot, r2, r2_x, r2_y, text = linear_regression(df)
+    #Update the plot
+    text_source.data = dict(x=r2_x, y=r2_y, text = text)
+    source.data = dict(x=df['x'], y=df['y'])
+    line_source.data = dict(x=x_plot, y=y_plot)
 
-<span class="p">#</span><span class="n">Actions</span> <span class="n">when</span> <span class="n">the</span> <span class="n">slider</span> <span class="n">value</span> <span class="n">is</span> <span class="n">changed</span>
-<span class="n">offset</span><span class="p">.</span><span class="n">on_change</span><span class="p">(</span><span class="s1">'value'</span><span class="p">,</span> <span class="n">update_data</span><span class="p">)</span>
+#Actions when the slider value is changed
+offset.on_change('value', update_data)
 
-<span class="p">#</span> <span class="k">Set</span> <span class="n">up</span> <span class="n">layouts</span> <span class="k">and</span> <span class="n">add</span> <span class="k">to</span> <span class="n">document</span>
-<span class="n">inputs</span> <span class="p">=</span> <span class="n">widgetbox</span><span class="p">(</span><span class="n">offset</span><span class="p">)</span>
-<span class="n">curdoc</span><span class="p">().</span><span class="n">add_root</span><span class="p">(</span><span class="n">row</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">plot</span><span class="p">,</span> <span class="n">width</span><span class="p">=</span><span class="m">800</span><span class="p">))</span>
-<span class="n">curdoc</span><span class="p">().</span><span class="n">title</span> <span class="p">=</span> <span class="s2">"Sliders"</span>
+# Set up layouts and add to document
+inputs = widgetbox(offset)
+curdoc().add_root(row(inputs, plot, width=800))
+curdoc().title = "Sliders"
 </code></pre></div></div>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/braaannigan/braaannigan.github.io/edit/gh-pages/_posts/2017-06-18-sliding_through_data_with_bokeh.markdown">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>

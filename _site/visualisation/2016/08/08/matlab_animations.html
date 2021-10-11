@@ -1,4 +1,37 @@
-<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Easy animations in matlab | Liam Brannigan</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Easy animations in matlab" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data Scientist" />
+<meta property="og:description" content="Data Scientist" />
+<link rel="canonical" href="http://0.0.0.0:4000/visualisation/2016/08/08/matlab_animations.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/visualisation/2016/08/08/matlab_animations.html" />
+<meta property="og:site_name" content="Liam Brannigan" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-08-08T09:35:24-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Easy animations in matlab" />
+<script type="application/ld+json">
+{"url":"http://0.0.0.0:4000/visualisation/2016/08/08/matlab_animations.html","@type":"BlogPosting","headline":"Easy animations in matlab","dateModified":"2016-08-08T09:35:24-05:00","datePublished":"2016-08-08T09:35:24-05:00","description":"Data Scientist","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/visualisation/2016/08/08/matlab_animations.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=7a18c2c95540c5e25cb727688cbebc4ca453676a">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://0.0.0.0:4000/">Liam Brannigan</a></h1>
+      
+
+      <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 <h3 id="flow-animations---dont-you-just-love-them">Flow animations - don’t you just love them?</h3>
@@ -23,17 +56,17 @@ with 50x50 pixels and 120 frames.  It comes out as an .avu file of less than 4 M
 
 <p>First generate the data to be plotted</p>
 
-<p><script type="math/tex">x = \textrm{linspace}(0,2*\pi,50)</script>;</p>
+<p>\(x = \textrm{linspace}(0,2*\pi,50)\);</p>
 
-<p><script type="math/tex">y = x</script>;</p>
+<p>\(y = x\);</p>
 
-<p><script type="math/tex">t = \textrm{linspace}(0,12*\pi,120)</script>;</p>
+<p>\(t = \textrm{linspace}(0,12*\pi,120)\);</p>
 
-<p><script type="math/tex">[X,Y] = \textrm{meshgrid}(x,y)</script>;</p>
+<p>\([X,Y] = \textrm{meshgrid}(x,y)\);</p>
 
-<p>for <script type="math/tex">k = 1</script>:length(<script type="math/tex">t</script>)</p>
+<p>for \(k = 1\):length(\(t\))</p>
 
-<p><script type="math/tex">z(:,:,k) = \textrm{cos}(X+t(k)).*\textrm{cos}(Y)</script>;</p>
+<p>\(z(:,:,k) = \textrm{cos}(X+t(k)).*\textrm{cos}(Y)\);</p>
 
 <p>end</p>
 
@@ -51,7 +84,7 @@ with 50x50 pixels and 120 frames.  It comes out as an .avu file of less than 4 M
 
 <p>pause %Pause to open the figure window full-screen if necessary</p>
 
-<p>for <script type="math/tex">k = 1</script>:length(<script type="math/tex">t</script>)</p>
+<p>for \(k = 1\):length(\(t\))</p>
 
 <p>figure(1);clf</p>
 
@@ -79,3 +112,16 @@ with 50x50 pixels and 120 frames.  It comes out as an .avu file of less than 4 M
 <p>The output can be seen here:</p>
 <iframe src="https://player.vimeo.com/video/179024540" width="640" height="462" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 <p><a href="https://vimeo.com/179024540">Easy animation with matlab</a> from <a href="https://vimeo.com/user50105397">Liam Brannigan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/braaannigan/braaannigan.github.io/edit/gh-pages/_posts/2016-08-08-matlab_animations.markdown">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>
