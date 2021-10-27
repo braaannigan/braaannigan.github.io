@@ -5,27 +5,27 @@ import streamlit as st
 
 df = pd.DataFrame(
     [
-        {"topic": "Basic Python", "votes": 19, "cat": "Programming"},
+        {"topic": "Basic Python", "votes": 22, "cat": "Programming"},
         {
             "topic": "Developing and using functions and modules in Python",
-            "votes": 19,
+            "votes": 26,
             "cat": "Programming",
         },
         {
             "topic": "Version control (i.e. Git)",
-            "votes": 17,
+            "votes": 24,
             "cat": "Reproducibility & Collaboration",
         },
-        {"topic": "Xarray usage", "votes": 16, "cat": "Programming"},
-        {"topic": "Parallel processing in Python", "votes": 12, "cat": "Programming"},
+        {"topic": "Xarray usage", "votes": 20, "cat": "Programming"},
+        {"topic": "Parallel processing in Python", "votes": 14, "cat": "Programming"},
         {
             "topic": "Plotting 2D and 3D, graphics and animations",
-            "votes": 11,
+            "votes": 15,
             "cat": "Visualisation",
         },
         {
             "topic": "Using Docker",
-            "votes": 10,
+            "votes": 12,
             "cat": "Reproducibility & Collaboration",
         },
         {
@@ -33,10 +33,10 @@ df = pd.DataFrame(
             "votes": 8,
             "cat": "Reproducibility & Collaboration",
         },
-        {"topic": "Numpy and Pandas", "votes": 7, "cat": "Programming"},
+        {"topic": "Numpy and Pandas", "votes": 10, "cat": "Programming"},
         {
             "topic": "Creating and managing environments",
-            "votes": 9,
+            "votes": 11,
             "cat": "Reproducibility & Collaboration",
         },
         {"topic": "Jupyter notebooks", "votes": 7, "cat": "Visualisation"},
