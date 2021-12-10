@@ -2,7 +2,7 @@
 layout: post
 title:  "Dev in docker"
 date:   2020-07-26 10:35:24 +0200
-categories: software
+categories: data-science
 ---
 # Dev in Docker
 

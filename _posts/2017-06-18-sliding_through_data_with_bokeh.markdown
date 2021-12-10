@@ -2,7 +2,7 @@
 layout: post
 title:  "Sliding through the data with Bokeh"
 date:   2017-06-21 16:35:24 +0200
-categories: visualisation
+categories: data-science
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">

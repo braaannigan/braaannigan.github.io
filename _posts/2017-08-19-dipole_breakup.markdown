@@ -2,7 +2,7 @@
 layout: post
 title:  "Dipole breakup"
 date:   2017-08-19 16:35:24 +0200
-categories: research
+categories: oceanography
 ---
 
 Our paper on dipole breakup and sub-surface eddy formation has been accepted

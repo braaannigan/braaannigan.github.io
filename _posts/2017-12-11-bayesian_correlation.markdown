@@ -2,7 +2,7 @@
 layout: post
 title:  "Correlation Bayesian style"
 date:   2017-12-11 10:35:24 +0200
-categories: bayesian
+categories: data-science
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">

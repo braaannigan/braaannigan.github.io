@@ -2,7 +2,7 @@
 layout: post
 title:  "Easy animations in matlab"
 date:   2016-08-08 16:35:24 +0200
-categories: visualisation
+categories: data-science
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">

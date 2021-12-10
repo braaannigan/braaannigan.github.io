@@ -2,7 +2,7 @@
 layout: post
 title:  "JPO at 50: Part I"
 date:   2021-01-01 10:35:24 +0200
-categories: oceanography, nlp
+categories: oceanography
 ---
 
 # 50 years of the Journal of Physical Oceanography: using NLP to understand how oceanography has evolved.

@@ -2,7 +2,7 @@
 layout: post
 title:  "And a site was born"
 date:   2016-04-12 15:20:44 +0200
-categories: jekyll overview
+categories: data-science
 ---
 This is my new website where I'll be providing resources related to
 my research and considering some of the bigger challenges facing ocean and climate researchers.

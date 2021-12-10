@@ -2,7 +2,7 @@
 layout: post
 title:  "Bayesian workshop"
 date:   2018-01-26 10:35:24 +0200
-categories: bayesian
+categories: data-science
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">

@@ -2,7 +2,7 @@
 layout: post
 title:  "Career progression"
 date:   2020-06-26 10:35:24 +0200
-categories: career
+categories: data-science
 ---
 # Career progression - lessons learned
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Fast looping with Numba"
 date:   2017-11-20 10:35:24 +0200
-categories: numerics
+categories: data-science
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
