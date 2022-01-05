@@ -10,13 +10,15 @@ categories: software
 I have broken my former cycles of anxiety, frustration and elation when writing software by adopting proven principles of
 software engineering. By adopting these principles, I more frequently attain a state of *flow* where I am highly focused but calm and produce effective software.
 
-If you're interested in applying these principles in your organisation then 
+If you're interested in learning how to apply these principles across your organisation then 
 <a href="mailto:braaannigan@protonmail.com">get in touch</a> as I am developing workshops to spread the word.
 
 ## Writing software: it's all about emotions
 I spent the bulk of my phd writing software to analyse the output of numerical models of the ocean. When I think back to my day-to-day experience during this period what strikes me is how emotionally demanding it was. Over the 4 years my scripts became ever more complex and capable, but the stress and strain of maintaining, developing and running this code grew in the same way.
 
-There were clear emotional cycles to this process. Firstly I would have a new idea that required a modification to my working code base. This caused stress - what if the change didn't work and I couldn't revert back to my working code? Then there was the process of actually making the change - adding a new feature often led to the frustration of something else breaking. 
+There were clear emotional cycles to this process. Firstly I would have a new idea that required a modification to my working code base. This caused stress - what if the change didn't work and I couldn't revert back to my working code?
+Before any of you version control experts start making any comments, you should know that I did have a powerful system of saving my working file as `pipeline_working_version.m` before making changes. The problem was that I was normally so excited about my great new idea that I had already made a bunch of changes before remembering to do that.
+ Then there was the process of actually making the change - adding a new feature often led to the frustration of something else breaking. 
 
 As time went on there was an additional factor - the size of the datasets I was working with kept increasing. These larger datasets meant it was taking longer and longer to figure out if the code was working at all. If the code wasn't working the larger datasets also meant that it was taking longer and longer to understand the bugs.
 
