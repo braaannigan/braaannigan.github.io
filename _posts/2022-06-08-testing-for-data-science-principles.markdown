@@ -4,6 +4,13 @@ title:  "Testing for data science 2: testing in practice"
 date:   2022-06-07 11:35:24 +0200
 categories: software
 ---
+# Automated testing framework
+Regardless of whether you are working with unit tests or functional tests you 
+will need to use a testing framework. The two main options in python today are the built-in `unittest` module and the third party `pytest` module.
+
+I highly recommend using `pytest` as:
+- it has a simpler syntax based on functions rather than classes
+- it has a large ecosystem of extensions that can help to, for example run your tests in parallel
 
 ## Testing principles
 The basic principles for all software testing are: Arrange, Act, Assert

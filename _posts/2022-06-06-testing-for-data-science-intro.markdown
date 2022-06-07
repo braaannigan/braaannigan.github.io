@@ -36,15 +36,6 @@ In a pure test-driven development (TDD) approach the aim is to have 100% test co
 > **The aim is for you to derive value from your tests. For most people going from 0% to 10% test coverages generates the most value if you start by tagetting the most failure-prone part of your pipeline.**
 
 
-# Automated testing framework
-Regardless of whether you are working with unit tests or functional tests you 
-will need to use a testing framework. The two main options in python today are the built-in `unittest` module and the third party `pytest` module.
-
-I highly recommend using `pytest` as:
-- it has a simpler syntax based on functions rather than classes
-- it has a large ecosystem of extensions that can help to run your tests in parallel or 
-
-
 # Learn more
 Want to know more about testing and high performance python for data science? Then you can:
 - [follow me on twitter](https://twitter.com/braaannigan)
