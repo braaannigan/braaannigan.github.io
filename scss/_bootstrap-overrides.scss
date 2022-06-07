@@ -1,6 +1,7 @@
 // Bootstrap overrides for this template
 a {
   color: $primary;
+
   &:focus,
   &:hover,
   &:active {
@@ -13,24 +14,25 @@ a {
 }
 
 .bg-primary {
-  background-color: $primary !important;
+  background-color: $primary  !important;
 }
 
 .bg-secondary {
-  background-color: $secondary !important;
+  background-color: $secondary  !important;
 }
 
 .text-primary {
-  color: $primary !important;
+  color: $primary  !important;
 }
 
 .text-secondary {
-  color: $secondary !important;
+  color: $secondary  !important;
 }
 
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
+
   &:hover,
   &:focus,
   &:active {
@@ -42,6 +44,7 @@ a {
 .btn-secondary {
   background-color: $secondary;
   border-color: $secondary;
+
   &:hover,
   &:focus,
   &:active {
