@@ -41,11 +41,11 @@ Let's look at a simple example. In this example we:
 - create a new `family_size` column that is the sum of the number of siblings (`sibsp`) and parents/children (`parch`):
 ```python
 def loadAndCleanCSV():
-  df = pd.read_csv('data/titanic.csv')
-  df = df.rename(columns={col:col.lower() for col in df.columns})
-  df.loc[:, "survived"] = df["survived"].astype(pd.CategoricalDtype())
-  df['family_size'] = df.loc[:,['sibsp','parch']].sum(axis=1)
-  return df
+    df = pd.read_csv('data/titanic.csv')
+    df = df.rename(columns={col:col.lower() for col in df.columns})
+    df.loc[:, "survived"] = df["survived"].astype(pd.CategoricalDtype())
+    df['family_size'] = df.loc[:,['sibsp','parch']].sum(axis=1)
+    return df
 ```
 In the `pytest` framework we make a test by adding a new function that begins with `test_` or in this case `test_loadAndCleanCSV` so we know which function it is targetting.
 
