@@ -28,7 +28,7 @@ However, the DB approach is very powerful when you are selecting small parts fro
 Follow me if you're interested in learning more about high performance data processing in python!
 
 # Learn more
-Want to know more about testing and high performance python for data science? Then you can:
+Want to know more about Polars for high performance data science? Then you can:
 - [follow me on twitter](https://twitter.com/braaannigan)
 - [connect with me at linkedin](https://www.linkedin.com/in/liam-brannigan-9080b214a/)
 - [check out my youtube videos](https://www.youtube.com/watch?v=nGritAo-71o)
