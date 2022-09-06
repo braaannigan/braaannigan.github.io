@@ -24,7 +24,7 @@ This makes `pl.read_ipc` in Polars fast as it doesn't have to read the data into
 We can test the full performance in practice by doing a full query - in this case on NYC taxi data. We get the mean distance by number of passengers.
 
 So in practice: Polars with IPC is 100x faster than Pandas with CSV. Not bad.
-![Full Query](/img/ipc_query_full.png.svg)
+![Full Query](/img/ipc_query_full.png)
 
 Pandas also supports IPC with pd.read_feather of course. Polars is about 5x faster than Pandas in this comparison.
 
