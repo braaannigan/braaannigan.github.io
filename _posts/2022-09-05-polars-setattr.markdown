@@ -9,7 +9,7 @@ There's a tension between having clear verbose code and code that's quick and ea
 Verbose code is great for production, but when doing rapid data exploration in ipython or jupyter you really want something quick.
 
 To address this you can use setattr to set up an alias for your function.
-
+![Code to set your attribute shortcut](/img/setattr.jpeg)
 In my case I use value_counts() a lot, so I alias the function with vc. This means it goes from 12 characters to 2.
 
 It's also good to drop the underscore - these double press chars put a lot more stress on your fingers when repeated!
