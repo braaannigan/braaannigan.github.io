@@ -33,6 +33,4 @@ Want to know more about Polars for high performance data science? Then you can:
 - [connect with me at linkedin](https://www.linkedin.com/in/liam-brannigan-9080b214a/)
 - [check out my youtube videos](https://www.youtube.com/watch?v=nGritAo-71o)
 
-or [**join me at my next workshop to help teams make the Pandas to Polars transition in Belfast on September 21st 2022**](https://www.eventbrite.com/e/from-pandas-to-polars-tickets-399410917807?aff=ebdssbdestsearch).
-
-Let me know if you would like a workshop for your organisation.
+or **let me know if you would like a Polars workshop for your organisation**.
