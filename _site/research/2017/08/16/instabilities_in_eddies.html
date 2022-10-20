@@ -1,84 +1,133 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Submesoscale instabilities in mesoscale eddies | Liam Brannigan</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Submesoscale instabilities in mesoscale eddies" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Submesoscale instabilities in mesoscale eddies" />
-<meta property="og:description" content="Submesoscale instabilities in mesoscale eddies" />
-<link rel="canonical" href="http://0.0.0.0:4000/research/2017/08/16/instabilities_in_eddies.html" />
-<meta property="og:url" content="http://0.0.0.0:4000/research/2017/08/16/instabilities_in_eddies.html" />
-<meta property="og:site_name" content="Liam Brannigan" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-08-16T14:35:24+00:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Submesoscale instabilities in mesoscale eddies" />
-<script type="application/ld+json">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>Submesoscale instabilities in mesoscale eddies | Liam Brannigan</title>
+  <meta name="generator" content="Jekyll v3.9.0" />
+  <meta property="og:title" content="Submesoscale instabilities in mesoscale eddies" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Submesoscale instabilities in mesoscale eddies" />
+  <meta property="og:description" content="Submesoscale instabilities in mesoscale eddies" />
+  <link rel="canonical" href="http://0.0.0.0:4000/research/2017/08/16/instabilities_in_eddies.html" />
+  <meta property="og:url" content="http://0.0.0.0:4000/research/2017/08/16/instabilities_in_eddies.html" />
+  <meta property="og:site_name" content="Liam Brannigan" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2017-08-16T14:35:24+00:00" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Submesoscale instabilities in mesoscale eddies" />
+  <script type="application/ld+json">
 {"dateModified":"2017-08-16T14:35:24+00:00","datePublished":"2017-08-16T14:35:24+00:00","description":"Submesoscale instabilities in mesoscale eddies","url":"http://0.0.0.0:4000/research/2017/08/16/instabilities_in_eddies.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/research/2017/08/16/instabilities_in_eddies.html"},"headline":"Submesoscale instabilities in mesoscale eddies","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+  <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=58570ead8e9e7eb9f00795e62093bb51c560208d">
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      
-      <h1><a href="http://0.0.0.0:4000/">Liam Brannigan</a></h1>
-      
+  <link rel="stylesheet" href="/assets/css/style.css?v=58570ead8e9e7eb9f00795e62093bb51c560208d">
+</head>
 
-      <h2>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Submesoscale instabilities in mesoscale eddies</h2>
+<body>
+  <div class="container-lg px-3 my-5 markdown-body">
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is symmetric instability?</h3>
-<p>If you aren't familiar with symmetric instability, I describe the basic dynamics in my seminars.  The video below shows an excerpt from an early talk I gave on these results at IMEDEA on Mallorca in Spain in March 2015.<p>
-<iframe width="560" height="315" src="" data-src="https://www.youtube.com/embed/L4cYnVW2dFE?start=685" frameborder="0" allowfullscreen=""></iframe>
-<p> A wonderfully clear explanation of the connection between symmetric instability and potential vorticity is given in this classic note: <a href="http://www.readcube.com/articles/10.1002%2Fqj.49710042520" target="_blank">Hoskins (1974)</a> </p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Physics of the instability</h3>
-
-<p>Idealised simulations of an eddying domain using the MITgcm show that submesoscale filaments emerge inside mesoscale (diameter 80 km) eddies under wind forcing.  These filaments occur in regions of negative potential vorticity. The filament growth is driven by vertical buoyancy fluxes and vertical shear production.  The filaments grow with a large cross-front wavenumber.  For these reasons it was concluded that the filament growth is driven by symmetric instability inside the mesoscale eddies.  These results are set out in this <a href="http://onlinelibrary.wiley.com/doi/10.1002/2016GL067926/full" target="_blank">GRL</a> paper</p>
-
-<p>The instability leads to the upwelling of high potential vorticity fluid into the mixed layer of the anticyclone.  The upwelling occurs in long filaments with a wavenumber oriented in the cross-front direction - or in other words the filaments are banded in the radial direction of the eddy.  The emergence of the filaments can be seen by taking a coarse resolution simulation at 4 km resolution and interpolating it to a submesoscale-permitting resolution of 0.25 km.  The animation below shows the potential vorticity at the base of the mixed layer of the anticyclone in the simulation spun-up at 4 km resolution but run at 0.25 km resolution.</p>
-<iframe src="" data-src="https://player.vimeo.com/video/161776646?loop=1" width="600" height="509" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+    <h1><a href="http://0.0.0.0:4000/">Liam Brannigan</a></h1>
 
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Biogeochemical relevance?</h3>
-<p>Symmetric instability at fronts and in eddies may have important characteristics for biogeochemical tracers such as the nutrients needed for ocean plants to grow.  When symmetric instability develops in a region of negative potential vorticity, stability is not restored unless the negative potential vorticity fluid can be mixed with positive potential vorticity fluid.  The thermocline below the base of the mixed layer can be an important source of positive potential vorticity water in this case.  This thermocline fluid may also have higher nutrient concentrations that the fluid in the mixed layer.  As such, the transport of high potential vorticity water across the base of the mixed layer by symmetric instability may also bring water with high nutrient concentrations into the light-rich mixed layer.<p>
+    <h2>
+      <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span
+          aria-hidden="true" class="octicon octicon-link"></span></a>Submesoscale instabilities in mesoscale eddies
+    </h2>
 
-The animation below shows a vertical section through a mesoscale anticyclone in a limiting nutrient experiment.  The green colour show the concentration of the limiting nutrient.  Solid black lines are isopycnal surfaces.  The dashed black line is the mixing layer depth, as set by the KPP mixing scheme.  Time in the simulations is shown in days in the lower left-hand corner. When the simulation starts, the instability begins to grow in the mixed layer.  After a few days the instability penetrates deeper into the thermocline and starts to transport the high nutrient water towards the mixed layer.  The nutrient transport occurs in submesoscale filaments that are being wrapped around the eddy.  Once the high nutrient fluid reaches the dashed black line, the high vertical diffusion in the mixed layer takes over and spreads the nutrient vertically.
-<iframe src="" data-src="https://player.vimeo.com/video/159205818" width="600" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-<p>The movie can be found on my vimeo account <a href="https://vimeo.com/159205818" target="_blank">here</a></p>
+    <h3>
+      <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span
+          aria-hidden="true" class="octicon octicon-link"></span></a>What is symmetric instability?
+    </h3>
+    <p>If you aren't familiar with symmetric instability, I describe the basic dynamics in my seminars. The video below
+      shows an excerpt from an early talk I gave on these results at IMEDEA on Mallorca in Spain in March 2015.
+    <p>
+      <iframe width="560" height="315" src="" data-src="https://www.youtube.com/embed/L4cYnVW2dFE?start=685"
+        frameborder="0" allowfullscreen=""></iframe>
+    <p> A wonderfully clear explanation of the connection between symmetric instability and potential vorticity is given
+      in this classic note: <a href="http://www.readcube.com/articles/10.1002%2Fqj.49710042520" target="_blank">Hoskins
+        (1974)</a> </p>
+
+    <h3>
+      <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span
+          aria-hidden="true" class="octicon octicon-link"></span></a>Physics of the instability
+    </h3>
+
+    <p>Idealised simulations of an eddying domain using the MITgcm show that submesoscale filaments emerge inside
+      mesoscale (diameter 80 km) eddies under wind forcing. These filaments occur in regions of negative potential
+      vorticity. The filament growth is driven by vertical buoyancy fluxes and vertical shear production. The filaments
+      grow with a large cross-front wavenumber. For these reasons it was concluded that the filament growth is driven by
+      symmetric instability inside the mesoscale eddies. These results are set out in this <a
+        href="http://onlinelibrary.wiley.com/doi/10.1002/2016GL067926/full" target="_blank">GRL</a> paper</p>
+
+    <p>The instability leads to the upwelling of high potential vorticity fluid into the mixed layer of the anticyclone.
+      The upwelling occurs in long filaments with a wavenumber oriented in the cross-front direction - or in other words
+      the filaments are banded in the radial direction of the eddy. The emergence of the filaments can be seen by taking
+      a coarse resolution simulation at 4 km resolution and interpolating it to a submesoscale-permitting resolution of
+      0.25 km. The animation below shows the potential vorticity at the base of the mixed layer of the anticyclone in
+      the simulation spun-up at 4 km resolution but run at 0.25 km resolution.</p>
+    <iframe src="" data-src="https://player.vimeo.com/video/161776646?loop=1" width="600" height="509" frameborder="0"
+      webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+
+    <h3>
+      <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span
+          aria-hidden="true" class="octicon octicon-link"></span></a>Biogeochemical relevance?
+    </h3>
+    <p>Symmetric instability at fronts and in eddies may have important characteristics for biogeochemical tracers such
+      as the nutrients needed for ocean plants to grow. When symmetric instability develops in a region of negative
+      potential vorticity, stability is not restored unless the negative potential vorticity fluid can be mixed with
+      positive potential vorticity fluid. The thermocline below the base of the mixed layer can be an important source
+      of positive potential vorticity water in this case. This thermocline fluid may also have higher nutrient
+      concentrations that the fluid in the mixed layer. As such, the transport of high potential vorticity water across
+      the base of the mixed layer by symmetric instability may also bring water with high nutrient concentrations into
+      the light-rich mixed layer.
+    <p>
+
+      The animation below shows a vertical section through a mesoscale anticyclone in a limiting nutrient experiment.
+      The green colour show the concentration of the limiting nutrient. Solid black lines are isopycnal surfaces. The
+      dashed black line is the mixing layer depth, as set by the KPP mixing scheme. Time in the simulations is shown in
+      days in the lower left-hand corner. When the simulation starts, the instability begins to grow in the mixed layer.
+      After a few days the instability penetrates deeper into the thermocline and starts to transport the high nutrient
+      water towards the mixed layer. The nutrient transport occurs in submesoscale filaments that are being wrapped
+      around the eddy. Once the high nutrient fluid reaches the dashed black line, the high vertical diffusion in the
+      mixed layer takes over and spreads the nutrient vertically.
+      <iframe src="" data-src="https://player.vimeo.com/video/159205818" width="600" height="360" frameborder="0"
+        webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+    <p>The movie can be found on my vimeo account <a href="https://vimeo.com/159205818" target="_blank">here</a></p>
 
 
 
-<script>
-function init() {
-var vidDefer = document.getElementsByTagName('iframe');
-for (var i=0; i<vidDefer.length; i++) {
-if(vidDefer[i].getAttribute('data-src')) {
-vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
-} } }
-window.onload = init;
-</script>
-</p></p></p></p>
+    <script>
+      function init() {
+        var vidDefer = document.getElementsByTagName('iframe');
+        for (var i = 0; i < vidDefer.length; i++) {
+          if (vidDefer[i].getAttribute('data-src')) {
+            vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+          }
+        }
+      }
+      window.onload = init;
+    </script>
+    </p>
+    </p>
+    </p>
+    </p>
 
 
-      
-      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+
+    <!-- <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
         This site is open source. <a href="https://github.com/braaannigan/braaannigan.github.io/edit/gh-pages/_posts/2017-08-17-instabilities_in_eddies.markdown">Improve this page</a>.
-      </div>
-      
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-    
-  </body>
+      </div> -->
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+    integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+  <script>anchors.add();</script>
+
+</body>
+
 </html>

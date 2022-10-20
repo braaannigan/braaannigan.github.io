@@ -1,87 +1,94 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Python repo for MITgcm | Liam Brannigan</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Python repo for MITgcm" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="What’s out there? This week I opened a repo with python code for analysing MITgcm output that I’ve been working on. I’ve just started using python in the last few months, so I doubt that it’s a particularly sophisticated set of code. However, I decided to open it up after doing a search for MITgcm code on github.com and discovering that there is a very limited amount of code out there. Ryan Abernathey has put together what looks like a very nice package for analysing outputs in parallel. Ed Doddridge has a nice object-oriented set of code for analysing the output in serial. Beyond that there a limited array of code from the offical website at mitgcm.org. I decided to make my repo with the idea that there are probably people out there looking for ideas about how to write their own code and who may be able to give me some input into what I’m doing." />
-<meta property="og:description" content="What’s out there? This week I opened a repo with python code for analysing MITgcm output that I’ve been working on. I’ve just started using python in the last few months, so I doubt that it’s a particularly sophisticated set of code. However, I decided to open it up after doing a search for MITgcm code on github.com and discovering that there is a very limited amount of code out there. Ryan Abernathey has put together what looks like a very nice package for analysing outputs in parallel. Ed Doddridge has a nice object-oriented set of code for analysing the output in serial. Beyond that there a limited array of code from the offical website at mitgcm.org. I decided to make my repo with the idea that there are probably people out there looking for ideas about how to write their own code and who may be able to give me some input into what I’m doing." />
-<link rel="canonical" href="http://0.0.0.0:4000/code/intro/2016/04/12/mitgcm_repo.html" />
-<meta property="og:url" content="http://0.0.0.0:4000/code/intro/2016/04/12/mitgcm_repo.html" />
-<meta property="og:site_name" content="Liam Brannigan" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2016-04-12T14:35:24+00:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Python repo for MITgcm" />
-<script type="application/ld+json">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>Python repo for MITgcm | Liam Brannigan</title>
+  <meta name="generator" content="Jekyll v3.9.0" />
+  <meta property="og:title" content="Python repo for MITgcm" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description"
+    content="What’s out there? This week I opened a repo with python code for analysing MITgcm output that I’ve been working on. I’ve just started using python in the last few months, so I doubt that it’s a particularly sophisticated set of code. However, I decided to open it up after doing a search for MITgcm code on github.com and discovering that there is a very limited amount of code out there. Ryan Abernathey has put together what looks like a very nice package for analysing outputs in parallel. Ed Doddridge has a nice object-oriented set of code for analysing the output in serial. Beyond that there a limited array of code from the offical website at mitgcm.org. I decided to make my repo with the idea that there are probably people out there looking for ideas about how to write their own code and who may be able to give me some input into what I’m doing." />
+  <meta property="og:description"
+    content="What’s out there? This week I opened a repo with python code for analysing MITgcm output that I’ve been working on. I’ve just started using python in the last few months, so I doubt that it’s a particularly sophisticated set of code. However, I decided to open it up after doing a search for MITgcm code on github.com and discovering that there is a very limited amount of code out there. Ryan Abernathey has put together what looks like a very nice package for analysing outputs in parallel. Ed Doddridge has a nice object-oriented set of code for analysing the output in serial. Beyond that there a limited array of code from the offical website at mitgcm.org. I decided to make my repo with the idea that there are probably people out there looking for ideas about how to write their own code and who may be able to give me some input into what I’m doing." />
+  <link rel="canonical" href="http://0.0.0.0:4000/code/intro/2016/04/12/mitgcm_repo.html" />
+  <meta property="og:url" content="http://0.0.0.0:4000/code/intro/2016/04/12/mitgcm_repo.html" />
+  <meta property="og:site_name" content="Liam Brannigan" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2016-04-12T14:35:24+00:00" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Python repo for MITgcm" />
+  <script type="application/ld+json">
 {"dateModified":"2016-04-12T14:35:24+00:00","datePublished":"2016-04-12T14:35:24+00:00","description":"What’s out there? This week I opened a repo with python code for analysing MITgcm output that I’ve been working on. I’ve just started using python in the last few months, so I doubt that it’s a particularly sophisticated set of code. However, I decided to open it up after doing a search for MITgcm code on github.com and discovering that there is a very limited amount of code out there. Ryan Abernathey has put together what looks like a very nice package for analysing outputs in parallel. Ed Doddridge has a nice object-oriented set of code for analysing the output in serial. Beyond that there a limited array of code from the offical website at mitgcm.org. I decided to make my repo with the idea that there are probably people out there looking for ideas about how to write their own code and who may be able to give me some input into what I’m doing.","url":"http://0.0.0.0:4000/code/intro/2016/04/12/mitgcm_repo.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/code/intro/2016/04/12/mitgcm_repo.html"},"headline":"Python repo for MITgcm","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+  <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=58570ead8e9e7eb9f00795e62093bb51c560208d">
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      
-      <h1><a href="http://0.0.0.0:4000/">Liam Brannigan</a></h1>
-      
+  <link rel="stylesheet" href="/assets/css/style.css?v=58570ead8e9e7eb9f00795e62093bb51c560208d">
+</head>
 
-      <h3 id="whats-out-there">What’s out there?</h3>
-<p>This week I opened a <a href="https://github.com/braaannigan/mitgcm_python">repo</a>
-with python code for analysing MITgcm output that I’ve
-been working on.  I’ve just started using python in the last few months, so I
-doubt that it’s a particularly sophisticated set of code.  However, I decided to open
-it up after doing a search for MITgcm code on github.com and discovering that
-there is a very limited amount of code out there.<br />
-<a href="https://github.com/rabernat/MITgcm_parallel_analysis">Ryan Abernathey</a>
-has put together what looks like a very nice package for analysing
-outputs in parallel.  <a href="https://bitbucket.org/edoddridge/mitgcm/">Ed Doddridge</a>
-has a nice object-oriented set of code for analysing the output in serial. Beyond that
-there a limited array of code from the offical website at
-<a href="http://mitgcm.org/viewvc/MITgcm/MITgcm/utils/python/MITgcmutils/MITgcmutils/">mitgcm.org</a>.
-I decided to make my repo with the idea that there are probably people out there
-looking for ideas about how to write their own code and who may be able to
-give me some input into what I’m doing.</p>
+<body>
+  <div class="container-lg px-3 my-5 markdown-body">
 
-<h3 id="flat-bottomed">Flat-bottomed</h3>
-<p>I decided to develop my own package primarily to help me learn to code in
-python.  I also wanted code that is tailored to the particular type of
-model configuration that I’ve been working with recently: doubly-periodic
-domains with uniform Cartesian grids in the horizontal and flat bottoms. Code
-written for this kind of set-up can save a lot of time as it only needs
-the first two grid points in a tile to generate the horizontal grid and a single
-column of the vertical grid spacings to generate the vertical grid.  I’ll add
-options for slightly more complicated grids as and when I need them.  The code
-is written so that specified outputs and coordinate ranges - in x,y,z and time - can
-be loaded.  This greatly reduces the amount of reading that must be done.</p>
-
-<h3 id="easy-plotting">Easy plotting</h3>
-<p>One aim of the code is to allow rapid reading and plotting of the model
-output, whether you’re working in a jupyter notebook or from a
-python command line interpreter.  This is particularly useful in the early
-stages of running experiments when a visual check of the model output - including
-derived fields such as vorticity or stratification - is useful.  I hope to add
-more functionality for animations and 3D plotting in the future.</p>
-
-<h3 id="classless">Classless</h3>
-<p>I’ve used matlab for the last few years rather than an object-oriented language.
-That’s probably one reason why the code currently returns numpy data structures
-rather than a class approach that returns an object.</p>
+    <h1><a href="http://0.0.0.0:4000/">Liam Brannigan</a></h1>
 
 
-      
-      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+    <h3 id="whats-out-there">What’s out there?</h3>
+    <p>This week I opened a <a href="https://github.com/braaannigan/mitgcm_python">repo</a>
+      with python code for analysing MITgcm output that I’ve
+      been working on. I’ve just started using python in the last few months, so I
+      doubt that it’s a particularly sophisticated set of code. However, I decided to open
+      it up after doing a search for MITgcm code on github.com and discovering that
+      there is a very limited amount of code out there.<br />
+      <a href="https://github.com/rabernat/MITgcm_parallel_analysis">Ryan Abernathey</a>
+      has put together what looks like a very nice package for analysing
+      outputs in parallel. <a href="https://bitbucket.org/edoddridge/mitgcm/">Ed Doddridge</a>
+      has a nice object-oriented set of code for analysing the output in serial. Beyond that
+      there a limited array of code from the offical website at
+      <a href="http://mitgcm.org/viewvc/MITgcm/MITgcm/utils/python/MITgcmutils/MITgcmutils/">mitgcm.org</a>.
+      I decided to make my repo with the idea that there are probably people out there
+      looking for ideas about how to write their own code and who may be able to
+      give me some input into what I’m doing.
+    </p>
+
+    <h3 id="flat-bottomed">Flat-bottomed</h3>
+    <p>I decided to develop my own package primarily to help me learn to code in
+      python. I also wanted code that is tailored to the particular type of
+      model configuration that I’ve been working with recently: doubly-periodic
+      domains with uniform Cartesian grids in the horizontal and flat bottoms. Code
+      written for this kind of set-up can save a lot of time as it only needs
+      the first two grid points in a tile to generate the horizontal grid and a single
+      column of the vertical grid spacings to generate the vertical grid. I’ll add
+      options for slightly more complicated grids as and when I need them. The code
+      is written so that specified outputs and coordinate ranges - in x,y,z and time - can
+      be loaded. This greatly reduces the amount of reading that must be done.</p>
+
+    <h3 id="easy-plotting">Easy plotting</h3>
+    <p>One aim of the code is to allow rapid reading and plotting of the model
+      output, whether you’re working in a jupyter notebook or from a
+      python command line interpreter. This is particularly useful in the early
+      stages of running experiments when a visual check of the model output - including
+      derived fields such as vorticity or stratification - is useful. I hope to add
+      more functionality for animations and 3D plotting in the future.</p>
+
+    <h3 id="classless">Classless</h3>
+    <p>I’ve used matlab for the last few years rather than an object-oriented language.
+      That’s probably one reason why the code currently returns numpy data structures
+      rather than a class approach that returns an object.</p>
+
+
+
+    <!-- <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
         This site is open source. <a href="https://github.com/braaannigan/braaannigan.github.io/edit/gh-pages/_posts/2016-04-12-mitgcm_repo.markdown">Improve this page</a>.
-      </div>
-      
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-    
-  </body>
+      </div> -->
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+    integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+  <script>anchors.add();</script>
+
+</body>
+
 </html>

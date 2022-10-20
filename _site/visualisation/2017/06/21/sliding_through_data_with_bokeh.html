@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Sliding through the data with Bokeh | Liam Brannigan</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Sliding through the data with Bokeh" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Data Scientist" />
-<meta property="og:description" content="Data Scientist" />
-<link rel="canonical" href="http://0.0.0.0:4000/visualisation/2017/06/21/sliding_through_data_with_bokeh.html" />
-<meta property="og:url" content="http://0.0.0.0:4000/visualisation/2017/06/21/sliding_through_data_with_bokeh.html" />
-<meta property="og:site_name" content="Liam Brannigan" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-06-21T14:35:24+00:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Sliding through the data with Bokeh" />
-<script type="application/ld+json">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>Sliding through the data with Bokeh | Liam Brannigan</title>
+  <meta name="generator" content="Jekyll v3.9.0" />
+  <meta property="og:title" content="Sliding through the data with Bokeh" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Data Scientist" />
+  <meta property="og:description" content="Data Scientist" />
+  <link rel="canonical" href="http://0.0.0.0:4000/visualisation/2017/06/21/sliding_through_data_with_bokeh.html" />
+  <meta property="og:url" content="http://0.0.0.0:4000/visualisation/2017/06/21/sliding_through_data_with_bokeh.html" />
+  <meta property="og:site_name" content="Liam Brannigan" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2017-06-21T14:35:24+00:00" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Sliding through the data with Bokeh" />
+  <script type="application/ld+json">
 {"dateModified":"2017-06-21T14:35:24+00:00","datePublished":"2017-06-21T14:35:24+00:00","description":"Data Scientist","url":"http://0.0.0.0:4000/visualisation/2017/06/21/sliding_through_data_with_bokeh.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/visualisation/2017/06/21/sliding_through_data_with_bokeh.html"},"headline":"Sliding through the data with Bokeh","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+  <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=58570ead8e9e7eb9f00795e62093bb51c560208d">
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      
-      <h1><a href="http://0.0.0.0:4000/">Liam Brannigan</a></h1>
-      
+  <link rel="stylesheet" href="/assets/css/style.css?v=58570ead8e9e7eb9f00795e62093bb51c560208d">
+</head>
 
-      <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<body>
+  <div class="container-lg px-3 my-5 markdown-body">
 
-<h2 id="exploring-parameter-space-smoothly">Exploring parameter space smoothly</h2>
-<p>Tim Hopper has written a great <a href="http://pythonplot.com/">post</a> about exploratory data analysis using a
-variety of libraries that wrap matplotlib. Something that can really help exploratory
-data analysis are dynamic plots that allow you to easily scan through a multidimensional
-parameter space without having to replot your data every time.</p>
+    <h1><a href="http://0.0.0.0:4000/">Liam Brannigan</a></h1>
 
-<p>Slider tools are very handy for this - if creating the slider widget is easier than
-doing the replotting.  The <a href="https://github.com/bokeh/bokeh">Bokeh</a> plot library in python is built with just this
-kind of interactivity in mind.  The code below creates two synthetic data series
-that are lagged in time by 12 months.  Going beyond the basic scatter plot, I’ve
-also added in a linear regression line calculated using sci-kit learn’s linear regression
-and a text annotation with the R^2 coefficient of determination. This simple
-set up satisfies both requirements to be useful - the data exploration with the
-slider is smooth while the code is straightforward to write.</p>
 
-<p>To run the code, you’ll need to have Bokeh installed through conda/pip
-as well as the standard python packages numpy/pandas/sci-kit learn.
-Save the code below to a script called sliders_ex.py.  Then
-in the bash command line from the directory with the script you run $bokeh serve –show sliders_ex.py.  The plot should
-open up automatically in your browser at http://localhost:5006/sliders_ex</p>
+    <script type="text/javascript" async=""
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
 
-<p>This kind of interactivity is also available with a matplotlib backend through the
-exciting <a href="holoviews.org">holoviews</a> package.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Data imports
+    <h2 id="exploring-parameter-space-smoothly">Exploring parameter space smoothly</h2>
+    <p>Tim Hopper has written a great <a href="http://pythonplot.com/">post</a> about exploratory data analysis using a
+      variety of libraries that wrap matplotlib. Something that can really help exploratory
+      data analysis are dynamic plots that allow you to easily scan through a multidimensional
+      parameter space without having to replot your data every time.</p>
+
+    <p>Slider tools are very handy for this - if creating the slider widget is easier than
+      doing the replotting. The <a href="https://github.com/bokeh/bokeh">Bokeh</a> plot library in python is built with
+      just this
+      kind of interactivity in mind. The code below creates two synthetic data series
+      that are lagged in time by 12 months. Going beyond the basic scatter plot, I’ve
+      also added in a linear regression line calculated using sci-kit learn’s linear regression
+      and a text annotation with the R^2 coefficient of determination. This simple
+      set up satisfies both requirements to be useful - the data exploration with the
+      slider is smooth while the code is straightforward to write.</p>
+
+    <p>To run the code, you’ll need to have Bokeh installed through conda/pip
+      as well as the standard python packages numpy/pandas/sci-kit learn.
+      Save the code below to a script called sliders_ex.py. Then
+      in the bash command line from the directory with the script you run $bokeh serve –show sliders_ex.py. The plot
+      should
+      open up automatically in your browser at http://localhost:5006/sliders_ex</p>
+
+    <p>This kind of interactivity is also available with a matplotlib backend through the
+      exciting <a href="holoviews.org">holoviews</a> package.</p>
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>#Data imports
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -144,17 +151,21 @@ offset.on_change('value', update_data)
 inputs = widgetbox(offset)
 curdoc().add_root(row(inputs, plot, width=800))
 curdoc().title = "Sliders"
-</code></pre></div></div>
+</code></pre>
+      </div>
+    </div>
 
 
-      
+    <!--       
       <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
         This site is open source. <a href="https://github.com/braaannigan/braaannigan.github.io/edit/gh-pages/_posts/2017-06-18-sliding_through_data_with_bokeh.markdown">Improve this page</a>.
-      </div>
-      
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-    
-  </body>
+      </div> -->
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+    integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+  <script>anchors.add();</script>
+
+</body>
+
 </html>
