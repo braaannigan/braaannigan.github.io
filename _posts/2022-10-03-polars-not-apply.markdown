@@ -4,7 +4,13 @@ title:  "Breaking your bad habits with Polars"
 date:   2022-10-04 11:35:24 +0200
 categories: software
 ---
+# [Blog posts](/blog/blog_index.html)
+Published on: 4th October 2022
+
 # Breaking your bad habits with Polars
+This post was created while writing my **Data Analysis with Polars course**. 
+[*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
+
 One comment we get on the Polars discourse is that the Polars syntax encourages people to break bad habits they developed in Pandas.
 
 Take the .apply (or .applymap) function for example. I see lots of people using this in Kaggle comps, even though it's bad news.
@@ -44,6 +50,7 @@ The shift away from .apply functions happened for me as well.
 In Pandas I used to call .apply fairly often, but the only time I've used .apply in Polars was...when writing the docs to tell people not to use .apply!
 # Learn more
 Want to know more about Polars for high performance data science and ML? Then you can:
+- [check out my Polars course on Udemy](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A) 
 - [follow me on twitter](https://twitter.com/braaannigan)
 - [connect with me at linkedin](https://www.linkedin.com/in/liam-brannigan-9080b214a/)
 - [check out my youtube videos](https://www.youtube.com/watch?v=nGritAo-71o)

@@ -4,7 +4,12 @@ title:  "Boolean filters in Polars?"
 date:   2022-09-05 11:35:24 +0200
 categories: software
 ---
+# [Blog posts](/blog/blog_index.html)
+Published on: 5th September 2022
+
 # Boolean filters in Polars?
+This post was created while writing my **Data Analysis with Polars course**. 
+[*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
 
 
 Scan some kaggle competitions and you'll see that Boolean masks are a common way to filter Pandas dataframes.

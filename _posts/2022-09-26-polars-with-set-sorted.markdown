@@ -4,7 +4,13 @@ title:  "Polars can help if your data is sorted"
 date:   2022-09-13 11:35:24 +0200
 categories: software
 ---
+# [Blog posts](/blog/blog_index.html)
+Published on: 13th September 2022
+
 # Polars can help if your data is sorted
+This post was created while writing my **Data Analysis with Polars course**. 
+[*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
+
 Polars has optimizations for when you're working with sorted data.
 
 To access them you tell Polars the data is sorted with the `set_sorted` flag.
@@ -30,6 +36,7 @@ You may already be taking advantage of `set_sorted` without realising it. Polars
 
 # Learn more
 Want to know more about Polars for high performance data science and ML? Then you can:
+- [check out my Polars course on Udemy](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A) 
 - [follow me on twitter](https://twitter.com/braaannigan)
 - [connect with me at linkedin](https://www.linkedin.com/in/liam-brannigan-9080b214a/)
 - [check out my youtube videos](https://www.youtube.com/watch?v=nGritAo-71o)

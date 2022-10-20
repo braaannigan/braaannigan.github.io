@@ -4,7 +4,13 @@ title:  "Don't fear the List dtype in Polars"
 date:   2022-10-06 11:35:24 +0200
 categories: software
 ---
+# [Blog posts](/blog/blog_index.html)
+Published on: 6th October 2022
+
 # What is the Polars `pl.List` dtype?
+This post was created while writing my **Data Analysis with Polars course**. 
+[*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
+
 One of the first things you learn doing data analysis in python is that working with lists are slow.
 
 So you might be wary of the `pl.List` dtype in Polars.
@@ -79,6 +85,7 @@ In summary, fear the lists (and maybe fear the `pl.Object`), but don't fear the 
 
 # Learn more
 Want to know more about Polars for high performance data science and ML? Then you can:
+- [check out my Polars course on Udemy](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A) 
 - [follow me on twitter](https://twitter.com/braaannigan)
 - [connect with me at linkedin](https://www.linkedin.com/in/liam-brannigan-9080b214a/)
 - [check out my youtube videos](https://www.youtube.com/watch?v=nGritAo-71o)

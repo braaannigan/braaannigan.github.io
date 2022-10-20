@@ -4,6 +4,12 @@ title:  "Setting an attribute shortcut in python"
 date:   2022-09-05 11:35:24 +0200
 categories: software
 ---
+# [Blog posts](/blog/blog_index.html)
+Published on: 5th September 2022
+
+This post was created while writing my **Data Analysis with Polars course**. 
+[*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
+
 There's a tension between having clear verbose code and code that's quick and easy to type.
 
 Verbose code is great for production, but when doing rapid data exploration in ipython or jupyter you really want something quick.

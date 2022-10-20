@@ -4,7 +4,12 @@ title:  "Flexible time series aggregations in Polars"
 date:   2022-09-12 11:35:24 +0200
 categories: software
 ---
+# [Blog posts](/blog/blog_index.html)
+Published on: 12th September 2022
+
 # Time series aggregations with `groupby_dynamic`
+This post was created while writing my **Data Analysis with Polars course**. 
+[*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
 
 Time series aggregations in Polars are fast and flexible.
 
@@ -39,6 +44,7 @@ df.groupby_dynamic("date",every='1h',period='3h').agg(pl.all().exclude('date').m
 ```
 # Learn more
 Want to know more about Polars for high performance data science and ML? Then you can:
+- [check out my Polars course on Udemy](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A) 
 - [follow me on twitter](https://twitter.com/braaannigan)
 - [connect with me at linkedin](https://www.linkedin.com/in/liam-brannigan-9080b214a/)
 - [check out my youtube videos](https://www.youtube.com/watch?v=nGritAo-71o)

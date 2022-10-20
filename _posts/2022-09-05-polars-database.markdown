@@ -4,7 +4,13 @@ title:  "Loading from a database with Polars"
 date:   2022-09-05 11:35:24 +0200
 categories: software
 ---
+# [Blog posts](/blog/blog_index.html)
+Published on: 5th September 2022
+
 # Loading from a database with Polars
+This post was created while writing my **Data Analysis with Polars course**. 
+[*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
+
 On some projects the challenge is that you've got a big dataset but only want to look at well-defined subsets of the data at any given moment.
 
 One powerful way to approach this is to take advantage of databases and their ability to sub-select data.

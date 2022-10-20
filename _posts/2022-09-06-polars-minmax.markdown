@@ -4,7 +4,13 @@ title:  "Doing ML pre-processing in Polars"
 date:   2022-09-06 11:35:24 +0200
 categories: software
 ---
+# [Blog posts](/blog/blog_index.html)
+Published on: 6th September 2022
+
 # ML in Polars
+This post was created while writing my **Data Analysis with Polars course**. 
+[*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
+
 One thing I'll be exploring in my Polars online course is seeing how far we can go with machine learning (ML) in Polars.
 
 As well as ML models, scikit-learn has lots of data pre-processing functionality. Let's see if it's worth doing some of this pre-processing in Polars.
@@ -37,6 +43,7 @@ This is just the start of the ML journey with Polars! For example, we can make a
 
 # Learn more
 Want to know more about Polars for high performance data science and ML? Then you can:
+- [check out my Polars course on Udemy](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A) 
 - [follow me on twitter](https://twitter.com/braaannigan)
 - [connect with me at linkedin](https://www.linkedin.com/in/liam-brannigan-9080b214a/)
 - [check out my youtube videos](https://www.youtube.com/watch?v=nGritAo-71o)
