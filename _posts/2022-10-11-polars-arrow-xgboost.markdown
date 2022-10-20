@@ -4,10 +4,11 @@ title:  "Fit XGBoost models directly from Polars and Arrow"
 date:   2022-10-11 11:35:24 +0200
 categories: software
 ---
+
+# Can you use Polars and Apache Arrow to fit ML models?
 This post was created while writing my Data Analysis with Polars course. 
 [Check it out on Udemy](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
 
-# Can you use Polars and Apache Arrow to fit ML models?
 Polars is backed by Apache Arrow rather than Numpy.
 One argument you hear against working in Polars is that you'll have to convert back to Numpy to fit ML models.
 
