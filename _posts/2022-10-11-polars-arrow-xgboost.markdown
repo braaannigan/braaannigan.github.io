@@ -53,6 +53,7 @@ In addition, if your library does need a Numpy array then it's often quicker to 
 
 # Learn more
 Want to know more about Polars for high performance data science and ML? Then you can:
+- [check out my Polars course on Udemy](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A) 
 - [follow me on twitter](https://twitter.com/braaannigan)
 - [connect with me at linkedin](https://www.linkedin.com/in/liam-brannigan-9080b214a/)
 - [check out my youtube videos](https://www.youtube.com/watch?v=nGritAo-71o)
