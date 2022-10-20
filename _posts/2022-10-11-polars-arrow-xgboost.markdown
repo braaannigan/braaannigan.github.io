@@ -22,21 +22,17 @@ import polars as pl
 import xgboost as xgb
 
 df = pl.read_csv(csvPath)
-# Do some feature engineering and convert to Arrow
 X = (
     df
     .select(["Pclass"])
     .to_dummies()            
     .to_arrow()
 )
-# Set the labels
 y = df["Survived"]
 
-# Fit the model
 model = xgb.XGBClassifier(objective='binary:logistic')
 model.fit(X, y)
 
-# Add the probabilities back to the dataframe
 df = pl.concat([
         df,
         pl.DataFrame(model.predict_proba(X)[:,1],columns=["pos"])
