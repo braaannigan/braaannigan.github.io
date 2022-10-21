@@ -7,7 +7,7 @@ categories: software
 # [Blog posts](/blog/blog_index.html)
 Published on: 21st October 2022
 
-# Can you use Polars and Apache Arrow to fit ML models?
+# Polars doesn't have an index but what if you want one. Or many?
 This post was created while writing my **Data Analysis with Polars course**. 
 [*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
 
