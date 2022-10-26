@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Polars doesn't have an index but what if you want one. Or many."
+title:  "Polars doesn't have an index but what if you want one? Or many?"
 date:   2022-10-11 11:35:24 +0200
 categories: software
 ---
@@ -53,7 +53,7 @@ The dataframes in the partition_by mapping are copies, so this is memory intensi
 ## Using `groupby`
 But there is an alternative - you can use a humble `groupby`.
 
-What is a `groupby`? It's a mapping from keys to row indices as captured in the `_groups` method .
+What is a `groupby`? It's a mapping from keys to row indices as captured in the `_groups` method.
 ```python
 import polars as pl
 
@@ -87,7 +87,7 @@ And unlike a Pandas `Index` or `MultIindex` you can define lots of different gro
 
 The last step is to make a fast mapping from keys to the sub-`DataFrame` for that key. 
 
-To do this we unwrap the `groupby._groups` `DataFrame` to a dictionary and then we can access our sub-`DataFrame` quickly
+To do this we unwrap the `groupby._groups` `DataFrame` to a dictionary and then we can access our sub-`DataFrame` quickly.
 
 ```python
 

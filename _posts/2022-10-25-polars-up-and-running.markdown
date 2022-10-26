@@ -4,10 +4,11 @@ title:  "Polars up and running"
 date:   2022-10-25 11:35:24 +0200
 categories: software
 ---
-# [Blog posts](/blog/blog_index.html)
-Published on: 25th October 2022
+# [Blog post index](/blog/blog_index.html)
 
 # Polars: up and running!
+Published on: 25th October 2022
+
 This post was created while writing my **Data Analysis with Polars course**. 
 [*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
 
