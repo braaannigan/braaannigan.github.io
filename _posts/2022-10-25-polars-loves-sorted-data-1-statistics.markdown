@@ -51,11 +51,11 @@ df_pandas["column_0"].max()
 ```
 We time execution for a range of `N` (all times in microseconds)
 |N     | Pandas |  Polars |
-|---   |    --- |  ---    |
+|------|--------|---------|
 | 10^6 | 700    | 21      |
 | 10^7 | 5,000  | 20      |
-| 10^8 | 64,000  | 20      |
-| 10^9 | 530,000  | 10      |
+| 10^8 | 64,000 | 20      |
+| 10^9 | 530,000| 10      |
 
 So the time taken is 20 microseconds for Polars regardless of the size of `N` but grows linearly for Pandas.
 
