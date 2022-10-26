@@ -15,7 +15,7 @@ Sometimes the first step is the hardest, so I've made this gentle introduction t
 
 In the video we load up a CSV, explore some data and see the first big differences with Pandas.
 
-[![Up and running](img/up-and-running-thumbnail.png)](http://www.youtube.com/watch?v=k4Lu135R-qc "Video Title")
+[![Up and running](/img/up-and-running-thumbnail.png)](http://www.youtube.com/watch?v=k4Lu135R-qc "Video Title")
 
 Prefer to just go through the notebook yourself? You can find everything you need to get up and running at this Github repo: (https://github.com/braaannigan/data-analysis-with-polars)[https://github.com/braaannigan/data-analysis-with-polars].
 # Learn more
