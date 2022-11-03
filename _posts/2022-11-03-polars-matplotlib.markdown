@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Polars & Matplotlib"
+title:  "Polars 🤝 Matplotlib"
 date:   2022-11-03 11:35:24 +0200
 categories: software
 ---
 # [Blog post index](/blog/blog_index.html)
 
-# Polars & Matplotlib
+# Polars 🤝 Matplotlib
 Published on: 3rd November 2022
 
 This post was created while writing my **Data Analysis with Polars course**. 
