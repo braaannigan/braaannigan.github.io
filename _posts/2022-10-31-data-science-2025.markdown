@@ -57,10 +57,6 @@ GPUs will continue to grow in popularity for data processing but will not become
 ## What's next?
 I've got skin in the game with these predictions. I quit my job last year to develop [the first online course in Polars](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A). 
 
-[!](img/polars-udemy-screenshot.png)
-
-[![Data Science with Polars](/img/polars-udemy-screenshot.png)](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
-
 In fact, I think it is the first online course in any part of the Arrow ecosystem. I believe that anyone who gets good training in Polas and Arrow will be ahead of the game for years to come. 
 
 
