@@ -55,7 +55,12 @@ I recently described Polars as the fastest data science tool on the planet. One 
 GPUs will continue to grow in popularity for data processing but will not become the standard approach in the next few years. As Polars and DuckDB make more efficient use of multi-core CPUs with built-in parallelisation and vectorised instructions the cost-benefit trade-off of using GPUs will only make sense for power users. 
 
 ## What's next?
-I've got skin in the game with these predictions. I quit my job last year to develop [the first online course in Polars](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A). In fact, I think it is the first online course in any part of the Arrow ecosystem. I believe that anyone who gets good training in Polas and Arrow will be ahead of the game for years to come. 
+I've got skin in the game with these predictions. I quit my job last year to develop [the first online course in Polars](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A). 
+
+[!](img/polars-udemy-screenshot.png)
+
+
+In fact, I think it is the first online course in any part of the Arrow ecosystem. I believe that anyone who gets good training in Polas and Arrow will be ahead of the game for years to come. 
 
 
 
