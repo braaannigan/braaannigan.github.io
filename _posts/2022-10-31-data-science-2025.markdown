@@ -13,47 +13,50 @@ This post was created while writing my **Data Analysis with Polars course**.
 [*Check it out on Udemy*](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A)
 
 I started using Polars and DuckDB in late 2021. It was immediately apparent to me that these libraries would soon be at the heart of the of data science ecosystem. Since then the popularity of the libraries has grown exponentially. 
+[Number of GitHub stars for Polars and DuckDB](img/star-history-polars-duckdb2022117.png)
 
-In this post I want to make some public predictions about where we're headed in the data science world in the next few years. This post is here to test my prognostic abilities. But I've also written it to trigger debate about where we're going and help data scientists think about what skills they should consider developing in the coming years. 
+In this post I make some predictions about where we're headed in the data science world in the next few years. 
+
+This post is here to test my prognostic abilities. But I've also written it to trigger debate about where we're going and to help data scientists think about what skills they should develope in the coming years. 
 
 ## Caveats 
-- This is written from the perspective of someone whose work typically involves offline exploratory data analysis in Pandas/Dask/Modin that is then implemented as serverless functions. The production stage might involve an ML model but it might not. 
+- This is written from the perspective of someone whose work has traditionally started with exploratory data analysis in Pandas and productionised in a serverless function. The production stage might involve an ML model but it might also be a set of defined rules and regexes. 
 - My experience also encompasses working as a research scientist where you run large-scale analysis locally or on a cluster without any serverless production stage.
-- My predictions below are about whether a particular approach will gain mass adoption rather than whether there is a particular library that can do X already today.
-- I'm a Polars contributor and have written a udemy course on Polars so I've got skin in the game😜
  
-If your perspective is different please get in touch on social media to share your thoughts (politely!). 
+If your perspective is different please get in touch on social media to share your thoughts! 
 
 ## Prediction 1: Polars and DuckDB replace Pandas as core tools for tabular data
-I predict that Polars and DuckDB will become the standard tools for data analytics as they offer such a jump in performance compared to Pandas. The transition to these toolds will be gradual and starting with users who feel more performance pressure.
+Polars and DuckDB will become the standard tools for data analytics in Python as they offer such a jump in performance compared to Pandas and are much easier to use than Spark. The transition to these tools will be gradual and starte with users who feel most performance pressure.
 
-The advantages of these tools aren't just in their timed performance though. The expression syntax of Polars is a much more natural fit for describing data transformations than the equivalent with Pandas. Both libraries apply automatic query optimisation that avoids the increasingly tedious manual optimisation of Pandas code. Both libraries handle parallelisation without myriad other dependencies.
+The advantages of these tools aren't just in how fast they can compute. The expression syntax of Polars is a much more natural fit for describing data transformations than the equivalent in Pandas. Both libraries also apply automatic query optimisation that avoids the increasingly tedious manual optimisation of Pandas code. Both libraries handle parallelisation without myriad other dependencies.
 
-I see Polars and DuckDB becoming a duopoly rather than one of them replacing Pandas as a monopoly. Although the functionality of these two libraries has a lot of overlap there are some people want a tool that has more trappings of a relational database while others want a tool in the tradition of Pandas (or Spark).
+I see Polars and DuckDB becoming a duopoly rather than one of them replacing Pandas as a monopoly. Although the functionality of these two libraries has a lot of overlap there will be some people who want a tool that has more trappings of a relational database while others do not.
 
 ## Prediction 2: Arrow will be the core technology of the data science ecosystem
 Apache Arrow is a format to represent in-memory data. Arrow is designed to be language agnostic and [libraries that implement this format have emerged in many languages](https://arrow.apache.org/docs/).
 
 Polars is built directly on a Rust Arrow library called [Arrow2](https://github.com/jorgecarleitao/arrow2) created by Jorge Carleitao. DuckDB isn't built on Arrow but can do zero-copy reads from Arrow data.
 
-I predict that Arrow will displace Numpy arrays at the core of the data science ecosystem. This means that visualisation, machine learning and other libraries will accept Arrow arrays or table as inputs. As Arrow allows zero-copy data exchange these libraries will be able to take data directly from dataframes without much of the wasteful data copying that happens at present.
+Arrow will displace Numpy arrays at the core of the data science ecosystem for tabular data. This means that visualisation, machine learning and other libraries will accept Arrow arrays or table as inputs. As Arrow allows zero-copy data exchange these libraries will be able to take data directly from dataframes without much of the wasteful data copying that happens at present. 
 
-The pace of change on this front has been slower than the adoption of Polars and DuckDB. It makes less sense to adopt Arrow for visualisationa and ML if the core data processing libraries are not based on Arrow. However, this is beginning to change. For example, [XGBoost models now accept Arrow Tables as input](https://twitter.com/braaannigan/status/1580121004718034944) while the [Huggingface Datasets library uses Arrow for its local caching system](https://huggingface.co/docs/datasets/about_arrow).
+The pace of change on this front has been slower than the adoption of Polars and DuckDB. However, it will makes more sense to adopt Arrow for visualisationa and ML when users' core data processing libraries are based around Arrow. However, the pace of change is increasing. For example, [XGBoost models now accept Arrow Tables as input](https://twitter.com/braaannigan/status/1580121004718034944) while the [Huggingface Datasets library uses Arrow for its local caching system](https://huggingface.co/docs/datasets/about_arrow).
 
 ## Prediction 3: Rustification
-In the decade of so of the data science boom day-to-day data science work has been dominated by either dynamic languages or languages that use just-in-time compilation like Python, R and Julia (or Spark if you're working at larger scale). Compiled languages like C and C++ are used under the hood for Python extensions or the internals of DuckDB but few data scientists work directly with them.
+In the decade of so of the data science boom day-to-day work has been dominated by either dynamic languages like Python or languages that use just-in-time compilation like R and Julia (or Spark if you're working at larger scale). Compiled languages like C and C++ are used under the hood for Python extensions or the internals of DuckDB but few data scientists work directly with them.
 
-I predict that Rust will be the first pre-compiled language to be commonly used by data scientists. The adoption of Rust among data scientists will be driven by Polars users who see that the jump from using the Python API to the Rust API is relatively small - and much smaller than the jump from using Pandas to C!
+I predict that Rust will be the first pre-compiled language to be commonly used by data scientists (without displacing Python and R as the main languages). The adoption of Rust among data scientists will be driven by Polars where users see that the jump from using the Python API to the Rust API is relatively small - and much smaller than the jump from using Pandas to C!
 
 In particular I predict that we will see a *widely-used* Scikit-Learn alternative written in Rust and built on Apache Arrow.
 
-The benefits of Rust have become very apparent to me in the months I've been working on Polars. The performance gains over Python are massive and paralellisation has been reliably managed. However, it is the modern tooling system around Rust such as Cargo for managing dependencies that make it a much less intimidating prospect than older languages.
+The benefits of Rust have become very apparent to me in the months I've been working on Polars. The performance gains over Python are massive and paralellisation has been reliably managed. However, it is the modern tooling system around Rust such as Cargo for managing dependencies that make it a much less intimidating prospect for Python developers to adopt than older languages.
 
 ## What about GPUs?
-I recently described Polars as the fastest data science tool on the planet. One respondent pointed out the GPU-based cudf library is faster. However, GPUs are more expensive than CPUs and introduce additional operational complexity such as managing GPU instances on cloud services.
+I recently described Polars as the fastest data science tool on the planet. One respondent correctly pointed out the GPU-based cudf library is faster. 
 
-I predict that GPUs will continue to grow in popularity for data processing but will not become the standard approach in the next few years. As Polars and DuckDB make much more efficient use of multi-core CPUs with vectorised instructions the performance differential of using GPUs will only make sense for power users. 
+GPUs will continue to grow in popularity for data processing but will not become the standard approach in the next few years. As Polars and DuckDB make much more efficient use of multi-core CPUs with built-in parallelisation and vectorised instructions the cost-benefit trade-off of using GPUs will only make sense for power users. 
 
+## What's next?
+I've got skin in the game with these predictions. I quit my job last year to develop [the first online course in Polars](https://www.udemy.com/course/data-analysis-with-polars/?referralCode=A29DCDA40D369080C05A). In fact, I think it is the first online course in any part of the Arrow ecosystem. I believe that anyone who gets good training in Polas and Arrow will be ahead of the game for years to come. 
 
 
 
