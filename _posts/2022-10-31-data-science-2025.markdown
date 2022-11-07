@@ -11,7 +11,7 @@ Published on: 7th November 2022
 
 I started using Polars and DuckDB in late 2021. It was immediately apparent to me that these libraries would soon be at the heart of the of data science ecosystem. Since then the popularity of the libraries has grown exponentially. 
 
-<img src="/img/star-history-polars-duckdb2022117.png" alt="Number of GitHub stars for Polars and DuckDB" width="300"/>
+<img src="/img/star-history-polars-duckdb2022117.png" alt="Number of GitHub stars for Polars and DuckDB" width="600"/>
 
 In this post I make some predictions about where we're headed in the data science world in the next few years and why we're heading there. 
 
