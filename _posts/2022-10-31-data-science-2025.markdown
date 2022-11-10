@@ -33,7 +33,7 @@ I see Polars and DuckDB becoming a duopoly rather than one of them replacing Pan
 ## Prediction 2: Arrow will be the core technology of the data science ecosystem
 Apache Arrow is a format to represent in-memory data. Arrow is designed to be language agnostic and [libraries that implement this format have emerged in many languages](https://arrow.apache.org/docs/).
 
-Polars is built directly on a Rust Arrow library called [Arrow2](https://github.com/jorgecarleitao/arrow2) created by Jorge Carleitao. DuckDB isn't built on Arrow but can do zero-copy reads from Arrow data.
+Polars is built directly on a Rust Arrow library called [Arrow2](https://github.com/jorgecarleitao/arrow2). DuckDB isn't built on Arrow but can do zero-copy reads from Arrow data.
 
 Arrow will displace Numpy arrays at the core of the data science ecosystem for tabular data. This means that visualisation, machine learning and other libraries will accept Arrow objects inputs. As Arrow allows zero-copy data exchange these libraries will be able to ingest data directly from dataframes without much of the wasteful data copying that happens at present. 
 
